@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = (env) => {
   return {
     entry: "./src/index",
+    target: "web",
     mode: env.production === true ? "production" : "development",
     module: {
       rules: [
