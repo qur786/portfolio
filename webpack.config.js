@@ -14,6 +14,11 @@ module.exports = (env) => {
                 },
             ],
         },
+        devServer: {
+            port: 3000,
+            hot: true,
+            open: true,
+        },
         resolve: {
             extensions: ['.tsx', '.ts', '.js'],
         },
@@ -22,7 +27,8 @@ module.exports = (env) => {
             path: path.resolve(__dirname, 'dist'),
         },
         plugins: [new HtmlWebpackPlugin({
-            meta: { viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no' }
+            template: path.join(__dirname, "./src/index.ejs"),
+            scriptLoading: "defer"
         })]
     };
 };
