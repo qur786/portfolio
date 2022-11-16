@@ -8,12 +8,14 @@
   "scripts": {
     "build": "webpack --env production",
     "dev": "webpack --env development",
-    "start": "webpack serve --env development"
+    "start": "webpack serve --env development",
+    "pretty": "prettier --write ."
   },
   "devDependencies": {
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
     "html-webpack-plugin": "^5.5.0",
+    "prettier": "^2.7.1",
     "ts-loader": "^9.4.1",
     "typescript": "^4.9.3",
     "webpack": "^5.75.0",
