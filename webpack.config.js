@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = (env) => {
     return {
@@ -20,5 +21,8 @@ module.exports = (env) => {
             filename: 'bundle.js',
             path: path.resolve(__dirname, 'dist'),
         },
+        plugins: [new HtmlWebpackPlugin({
+            meta: { viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no' }
+        })]
     };
 };
