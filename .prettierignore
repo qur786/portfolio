@@ -4,3 +4,4 @@ node_modules
 *.ejs
 *.lock
 .storybook
+storybook-static

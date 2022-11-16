@@ -8,6 +8,7 @@
   "scripts": {
     "build": "webpack --env production",
     "build:sb": "build-storybook",
+    "clean": "shx rm -rf node_modules dist storybook-static",
     "dev": "webpack --env development",
     "lint": "eslint src/**",
     "pretty": "prettier --write . && sort-package-json",
@@ -43,6 +44,7 @@
     "eslint-plugin-react-hooks": "4.3.0",
     "html-webpack-plugin": "^5.5.0",
     "prettier": "^2.7.1",
+    "shx": "^0.3.4",
     "sort-package-json": "^2.1.0",
     "ts-loader": "^9.4.1",
     "typescript": "^4.9.3",
