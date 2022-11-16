@@ -1,18 +1,22 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/qur786/Portfolio.git",
-  "author": "Qurban Ahmad <ahmad76qurban@gmail.com>",
   "license": "MIT",
+  "author": "Qurban Ahmad <ahmad76qurban@gmail.com>",
+  "main": "index.js",
   "scripts": {
     "build": "webpack --env production",
-    "dev": "webpack --env development",
-    "start": "webpack serve --env development",
-    "pretty": "prettier --write .",
-    "start:sb": "start-storybook -p 6006",
     "build:sb": "build-storybook",
-    "lint": "eslint src/**"
+    "dev": "webpack --env development",
+    "lint": "eslint src/**",
+    "pretty": "prettier --write . && sort-package-json",
+    "start": "webpack serve --env development",
+    "start:sb": "start-storybook -p 6006"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
@@ -39,14 +43,11 @@
     "eslint-plugin-react-hooks": "4.3.0",
     "html-webpack-plugin": "^5.5.0",
     "prettier": "^2.7.1",
+    "sort-package-json": "^2.1.0",
     "ts-loader": "^9.4.1",
     "typescript": "^4.9.3",
     "webpack": "^5.75.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.11.1"
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
   }
 }
