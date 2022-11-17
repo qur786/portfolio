@@ -18,6 +18,8 @@
         "namedComponents": ["function-declaration", "arrow-function"],
         "unnamedComponents": ["function-expression", "arrow-function"]
       }
-    ]
+    ],
+    "jsx-a11y/anchor-is-valid": "off",
+    "@typescript-eslint/no-redeclare": "off"
   }
 }
