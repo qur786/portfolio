@@ -16,6 +16,10 @@
     "start:sb": "start-storybook -p 6006"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@fontsource/roboto": "^4.5.8",
+    "@mui/material": "^5.10.14",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
