@@ -13,16 +13,7 @@ import { yellow, grey } from "@mui/material/colors";
 import { useState } from "react";
 import { Menu, Close } from "@mui/icons-material";
 import type { LinkProps, IconButtonProps } from "@mui/material";
-
-const Links = {
-  Home: "home",
-  Contact: "contact",
-  Projects: "projects",
-  Title: "title",
-  About: "about",
-} as const;
-
-type Links = typeof Links[keyof typeof Links];
+import { Links } from "../utils";
 
 export function MobileCustomAppBar() {
   const [isHover, setIsHover] = useState<Record<Links, boolean>>({
