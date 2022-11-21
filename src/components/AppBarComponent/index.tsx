@@ -44,7 +44,7 @@ export function CustomAppBar() {
           <Grid container item xs={6}>
             <Grid item>
               <Link
-                href="https://github.com/qur786"
+                href="/"
                 underline="none"
                 onMouseMove={onMouseMoveHandler}
                 onMouseLeave={onMouseLeaveHandler}

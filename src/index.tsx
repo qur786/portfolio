@@ -3,6 +3,7 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
+import { App } from "./app";
 
 const root = createRoot(document.getElementById("root") as HTMLDivElement);
-root.render(<div>App</div>);
+root.render(<App />);
