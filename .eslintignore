@@ -5,3 +5,4 @@ node_modules
 *.lock
 .storybook
 storybook-static
+*.config.js

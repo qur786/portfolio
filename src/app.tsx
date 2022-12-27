@@ -1,6 +1,7 @@
 import { Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { CustomAppBar } from "./components/AppBarComponent";
 import { MobileCustomAppBar } from "./components/MobileAppBarComponent";
+import ProgrammerImage from "./images/programmer.jpg";
 
 export function App(): JSX.Element {
   const theme = useTheme();
@@ -17,6 +18,7 @@ export function App(): JSX.Element {
         justifyContent="center"
         alignItems="center"
         height="80vh"
+        style={{ backgroundImage: `url(${ProgrammerImage})` }}
       >
         <Grid item>
           <Typography variant="h3" align="center" sx={{ fontWeight: "bolder" }}>
