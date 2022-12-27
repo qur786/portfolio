@@ -9,7 +9,7 @@ import {
   Drawer,
   IconButton,
 } from "@mui/material";
-import { yellow, grey } from "@mui/material/colors";
+import { yellow } from "@mui/material/colors";
 import { useState } from "react";
 import { Menu, Close } from "@mui/icons-material";
 import type { LinkProps, IconButtonProps } from "@mui/material";
@@ -60,7 +60,7 @@ export function MobileCustomAppBar() {
                 underline="none"
                 onMouseMove={onMouseMoveHandler}
                 onMouseLeave={onMouseLeaveHandler}
-                color={isHover.title === true ? yellow[600] : grey[900]}
+                color={isHover.title === true ? yellow[600] : "primary"}
                 data-name={Links.Title}
               >
                 <Stack direction="row" alignItems="center" spacing={2}>
@@ -99,7 +99,7 @@ export function MobileCustomAppBar() {
                 underline="none"
                 variant="button"
                 data-name={Links.Home}
-                color={isHover.home === true ? yellow[600] : grey[900]}
+                color={isHover.home === true ? yellow[600] : "primary"}
                 onMouseMove={onMouseMoveHandler}
                 onMouseLeave={onMouseLeaveHandler}
                 sx={{ fontWeight: "bolder" }}
@@ -113,7 +113,7 @@ export function MobileCustomAppBar() {
                 underline="none"
                 variant="button"
                 data-name={Links.About}
-                color={isHover.about === true ? yellow[600] : grey[900]}
+                color={isHover.about === true ? yellow[600] : "primary"}
                 onMouseMove={onMouseMoveHandler}
                 onMouseLeave={onMouseLeaveHandler}
                 sx={{ fontWeight: "bolder" }}
@@ -127,7 +127,7 @@ export function MobileCustomAppBar() {
                 underline="none"
                 variant="button"
                 data-name={Links.Projects}
-                color={isHover.projects === true ? yellow[600] : grey[900]}
+                color={isHover.projects === true ? yellow[600] : "primary"}
                 onMouseMove={onMouseMoveHandler}
                 onMouseLeave={onMouseLeaveHandler}
                 sx={{ fontWeight: "bolder" }}
@@ -141,7 +141,7 @@ export function MobileCustomAppBar() {
                 underline="none"
                 variant="button"
                 data-name={Links.Contact}
-                color={isHover.contact === true ? yellow[600] : grey[900]}
+                color={isHover.contact === true ? yellow[600] : "primary"}
                 onMouseMove={onMouseMoveHandler}
                 onMouseLeave={onMouseLeaveHandler}
                 sx={{ fontWeight: "bolder" }}

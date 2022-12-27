@@ -7,7 +7,7 @@ import {
   Grid,
   Stack,
 } from "@mui/material";
-import { yellow, grey } from "@mui/material/colors";
+import { yellow } from "@mui/material/colors";
 import { useState } from "react";
 import type { LinkProps } from "@mui/material";
 import { Links } from "../utils";
@@ -48,7 +48,7 @@ export function CustomAppBar() {
                 underline="none"
                 onMouseMove={onMouseMoveHandler}
                 onMouseLeave={onMouseLeaveHandler}
-                color={isHover.title === true ? yellow[600] : grey[900]}
+                color={isHover.title === true ? yellow[600] : "primary"}
                 data-name={Links.Title}
               >
                 <Stack direction="row" alignItems="center" spacing={2}>
@@ -73,7 +73,7 @@ export function CustomAppBar() {
                 underline="none"
                 variant="button"
                 data-name={Links.Home}
-                color={isHover.home === true ? yellow[600] : grey[900]}
+                color={isHover.home === true ? yellow[600] : "primary"}
                 onMouseMove={onMouseMoveHandler}
                 onMouseLeave={onMouseLeaveHandler}
                 sx={{ fontWeight: "bolder" }}
@@ -87,7 +87,7 @@ export function CustomAppBar() {
                 underline="none"
                 variant="button"
                 data-name={Links.About}
-                color={isHover.about === true ? yellow[600] : grey[900]}
+                color={isHover.about === true ? yellow[600] : "primary"}
                 onMouseMove={onMouseMoveHandler}
                 onMouseLeave={onMouseLeaveHandler}
                 sx={{ fontWeight: "bolder" }}
@@ -101,7 +101,7 @@ export function CustomAppBar() {
                 underline="none"
                 variant="button"
                 data-name={Links.Projects}
-                color={isHover.projects === true ? yellow[600] : grey[900]}
+                color={isHover.projects === true ? yellow[600] : "primary"}
                 onMouseMove={onMouseMoveHandler}
                 onMouseLeave={onMouseLeaveHandler}
                 sx={{ fontWeight: "bolder" }}
@@ -115,7 +115,7 @@ export function CustomAppBar() {
                 underline="none"
                 variant="button"
                 data-name={Links.Contact}
-                color={isHover.contact === true ? yellow[600] : grey[900]}
+                color={isHover.contact === true ? yellow[600] : "primary"}
                 onMouseMove={onMouseMoveHandler}
                 onMouseLeave={onMouseLeaveHandler}
                 sx={{ fontWeight: "bolder" }}
