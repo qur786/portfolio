@@ -1,5 +1,7 @@
-import { Header } from "./components/Header";
-
 export function App(): JSX.Element {
-  return <Header />;
+  return (
+    <main>
+      <p>Qurban</p>
+    </main>
+  );
 }
