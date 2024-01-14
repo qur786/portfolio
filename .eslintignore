@@ -1,8 +1,0 @@
-dist
-node_modules
-.gitignore
-*.ejs
-*.lock
-.storybook
-storybook-static
-*.config.js
