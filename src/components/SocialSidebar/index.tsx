@@ -1,4 +1,5 @@
 import { GithubIcon } from "../../Icons/github";
+import { GmailIcon } from "../../Icons/gmail";
 import { LinkedInIcon } from "../../Icons/linked-in";
 import { TwitterIcon } from "../../Icons/twitter";
 import { WhatsappIcon } from "../../Icons/whatsapp";
@@ -17,6 +18,9 @@ export function SocialSidebar(): JSX.Element {
       </a>
       <a href="https://wa.me/+916204789892">
         <WhatsappIcon />
+      </a>
+      <a href="mailto:ahmad76qurban@gmail.com">
+        <GmailIcon />
       </a>
     </div>
   );
