@@ -1,6 +1,7 @@
 import { GithubIcon } from "../../Icons/github";
 import { LinkedInIcon } from "../../Icons/linked-in";
 import { TwitterIcon } from "../../Icons/twitter";
+import { WhatsappIcon } from "../../Icons/whatsapp";
 
 export function SocialSidebar(): JSX.Element {
   return (
@@ -14,7 +15,9 @@ export function SocialSidebar(): JSX.Element {
       <a href="https://github.com/qur786">
         <GithubIcon />
       </a>
-      <a href=""></a>
+      <a href="https://wa.me/+916204789892">
+        <WhatsappIcon />
+      </a>
     </div>
   );
 }
