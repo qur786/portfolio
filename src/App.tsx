@@ -2,6 +2,7 @@ import { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { useEffect, useState } from "react";
 import { Introduction } from "./components/Introduction";
+import { SocialSidebar } from "./components/SocialSidebar";
 
 export function App(): JSX.Element {
   const [isParticlesEngineLoaded, setIsParticlesEngineLoaded] = useState(false);
@@ -18,6 +19,7 @@ export function App(): JSX.Element {
   return (
     <main>
       <Introduction isParticlesEngineLoaded={isParticlesEngineLoaded} />
+      <SocialSidebar />
     </main>
   );
 }
