@@ -6,7 +6,7 @@ export function App(): JSX.Element {
           Hello, I'm <b className="text-red-600">Qurban</b>
         </p>
         <p className="text-5xl">
-          I am a <b className="text-green-600">MERN</b> stack developer
+          A <b className="text-green-600">MERN</b> stack developer.
         </p>
       </div>
     </main>
