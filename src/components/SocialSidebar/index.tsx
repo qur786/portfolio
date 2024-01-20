@@ -1,3 +1,4 @@
+import { GithubIcon } from "../../Icons/github";
 import { LinkedInIcon } from "../../Icons/linked-in";
 import { TwitterIcon } from "../../Icons/twitter";
 
@@ -10,7 +11,9 @@ export function SocialSidebar(): JSX.Element {
       <a href="https://twitter.com/fantasticnerd67">
         <TwitterIcon />
       </a>
-      <a href=""></a>
+      <a href="https://github.com/qur786">
+        <GithubIcon />
+      </a>
       <a href=""></a>
     </div>
   );
