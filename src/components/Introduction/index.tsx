@@ -1,4 +1,5 @@
 import Particles from "@tsparticles/react";
+import styles from "./index.module.css";
 
 interface IntroductionProps {
   isParticlesEngineLoaded: boolean;
@@ -22,22 +23,18 @@ export function Introduction({
             fpsLimit: 120,
             interactivity: {
               events: {
-                onClick: {
-                  enable: true,
-                  mode: "push",
-                },
                 onHover: {
                   enable: true,
-                  mode: "grab",
+                  mode: "repulse",
                 },
                 resize: {
                   enable: true,
                 },
               },
               modes: {
-                grab: {
-                  distance: 250,
-                  opacity: 1,
+                repulse: {
+                  distance: 100,
+                  duration: 0.5,
                 },
               },
             },
@@ -82,13 +79,16 @@ export function Introduction({
           }}
         />
       ) : undefined}
-      <div className="h-screen flex justify-center items-center flex-col">
+      <div className="h-screen flex justify-center items-center flex-col gap-6">
         <p className="text-5xl">
           Hello, I'm <b className="text-red-600">Qurban</b>
         </p>
         <p className="text-5xl">
           A <b className="text-green-600">MERN</b> stack developer.
         </p>
+        <button className={`${styles.btn} py-4 px-8 text-lg`}>
+          <a href="#about">View my work &#x2193;</a>
+        </button>
       </div>
     </>
   );

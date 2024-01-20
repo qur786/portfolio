@@ -1,0 +1,12 @@
+.btn {
+  font-weight: 100;
+  box-shadow: 0 0 30px #ff020a;
+  border-radius: 10px;
+  transition: all 0.35s ease-in;
+}
+
+.btn:hover {
+  font-weight: 900;
+  letter-spacing: 3px;
+  transition: all 0.35s ease-in;
+}
