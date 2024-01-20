@@ -5,6 +5,7 @@ import { Introduction } from "./components/Introduction";
 
 export function App(): JSX.Element {
   const [isParticlesEngineLoaded, setIsParticlesEngineLoaded] = useState(false);
+
   // this should be run only once per application lifetime
   useEffect(() => {
     initParticlesEngine(async (engine) => {
