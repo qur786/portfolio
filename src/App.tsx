@@ -16,6 +16,11 @@ export function App(): JSX.Element {
         id="tsparticles"
         particlesLoaded={async (c) => console.log(c)}
         options={{
+          fullScreen: false, // To only show particles for thr intro
+          style: {
+            height: "100vh",
+            position: "absolute",
+          }, // To position the particles as absolute to show particles in the background of the intro
           fpsLimit: 120,
           interactivity: {
             events: {
