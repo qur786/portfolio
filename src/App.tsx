@@ -1,81 +1,93 @@
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export function App(): JSX.Element {
+  const [isParticleEngineLoaded, setIsParticleEngineLoaded] = useState(false);
   // this should be run only once per application lifetime
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
+    }).then(() => {
+      setIsParticleEngineLoaded(true);
     });
   }, []);
 
   return (
     <main>
-      <Particles
-        id="tsparticles"
-        particlesLoaded={async (c) => console.log(c)}
-        options={{
-          fullScreen: false, // To only show particles for thr intro
-          style: {
-            height: "100vh",
-            position: "absolute",
-          }, // To position the particles as absolute to show particles in the background of the intro
-          fpsLimit: 120,
-          interactivity: {
-            events: {
-              onClick: {
+      {isParticleEngineLoaded === true ? (
+        <Particles
+          id="tsparticles"
+          particlesLoaded={async (c) => console.log(c)}
+          options={{
+            fullScreen: false, // To only show particles for thr intro
+            style: {
+              height: "100vh",
+              position: "absolute",
+            }, // To position the particles as absolute to show particles in the background of the intro
+            fpsLimit: 120,
+            interactivity: {
+              events: {
+                onClick: {
+                  enable: true,
+                  mode: "push",
+                },
+                onHover: {
+                  enable: true,
+                  mode: "grab",
+                },
+                resize: {
+                  enable: true,
+                },
+              },
+              modes: {
+                grab: {
+                  distance: 250,
+                  opacity: 1,
+                },
+              },
+            },
+            particles: {
+              color: {
+                value: "#E71C23",
+              },
+              links: {
+                color: "#B83227",
+                distance: 150,
                 enable: true,
-                mode: "push",
+                opacity: 0.5,
+                width: 1,
               },
-              onHover: {
+              collisions: {
                 enable: true,
               },
-              resize: {
+              move: {
+                direction: "none",
                 enable: true,
+                outModes: {
+                  default: "bounce",
+                },
+                random: false,
+                speed: 2,
+                straight: false,
+              },
+              number: {
+                value: 200,
+              },
+              opacity: {
+                value: 0.5,
+              },
+              shape: {
+                type: "circle",
+              },
+              size: {
+                value: { min: 1, max: 5 },
               },
             },
-          },
-          particles: {
-            color: {
-              value: "#E71C23",
-            },
-            links: {
-              color: "#B83227",
-              distance: 150,
-              enable: true,
-              opacity: 0.5,
-              width: 1,
-            },
-            collisions: {
-              enable: true,
-            },
-            move: {
-              direction: "none",
-              enable: true,
-              outModes: {
-                default: "bounce",
-              },
-              random: false,
-              speed: 1,
-              straight: false,
-            },
-            number: {
-              value: 200,
-            },
-            opacity: {
-              value: 0.5,
-            },
-            shape: {
-              type: "circle",
-            },
-            size: {
-              value: { min: 1, max: 5 },
-            },
-          },
-          detectRetina: true,
-        }}
-      />
+            detectRetina: true,
+          }}
+        />
+      ) : undefined}
       <div className="h-screen flex justify-center items-center flex-col">
         <p className="text-5xl">
           Hello, I'm <b className="text-red-600">Qurban</b>
