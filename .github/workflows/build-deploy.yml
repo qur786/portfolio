@@ -24,7 +24,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
-          node-version: 14 # Use a compatible Node.js version
+          node-version: 18 # Use a compatible Node.js version
       - name: Install yarn
         run: npm install -g yarn
       - name: Install dependencies
