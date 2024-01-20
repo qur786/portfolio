@@ -1,4 +1,5 @@
 import { LinkedInIcon } from "../../Icons/linked-in";
+import { TwitterIcon } from "../../Icons/twitter";
 
 export function SocialSidebar(): JSX.Element {
   return (
@@ -6,7 +7,9 @@ export function SocialSidebar(): JSX.Element {
       <a href="https://www.linkedin.com/in/qurban-ahmad-qur786/">
         <LinkedInIcon />
       </a>
-      <a href=""></a>
+      <a href="https://twitter.com/fantasticnerd67">
+        <TwitterIcon />
+      </a>
       <a href=""></a>
       <a href=""></a>
     </div>

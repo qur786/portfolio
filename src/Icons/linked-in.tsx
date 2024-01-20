@@ -1,9 +1,8 @@
 export function LinkedInIcon(): JSX.Element {
   return (
     <svg
-      height="100%"
       fill="#ff020a"
-      className="h-8 hover:fill-cyan-600"
+      className="h-8 hover:fill-[#0077B5]"
       version="1.1"
       viewBox="0 0 512 512"
       width="100%"
