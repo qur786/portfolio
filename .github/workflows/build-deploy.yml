@@ -25,7 +25,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 14 # Use a compatible Node.js version
-          cache: 'yarn'
+      - name: Install yarn
+        run: npm install -g yarn
       - name: Install dependencies
         run: yarn install
       - name: Build
