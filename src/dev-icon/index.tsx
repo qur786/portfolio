@@ -1,3 +1,5 @@
+import "./devicon.min.css";
+
 interface DevIconProps {
   name: string;
   colored?: boolean;
