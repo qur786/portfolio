@@ -7,7 +7,7 @@ import { WhatsappIcon } from "../../Icons/whatsapp";
 export function SocialSidebar(): JSX.Element {
   return (
     <>
-      <div className="fixed top-1/4 left-0 py-2 px-4 flex flex-col gap-4 border-2 border-[#FF020A]">
+      <div className="fixed top-1/4 left-0 py-2 px-4 flex-col gap-4 border-2 border-[#FF020A] sm:flex hidden">
         <a href="https://www.linkedin.com/in/qurban-ahmad-qur786/">
           <LinkedInIcon />
         </a>
