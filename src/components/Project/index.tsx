@@ -1,14 +1,12 @@
 interface ProjectProps {
-  image?: string;
+  image: string;
   imageAlt?: string;
   title: string;
-  description: string;
   deployedLink?: string;
   githubLink: string;
 }
 
 export function Project({
-  description,
   githubLink,
   title,
   deployedLink,
@@ -16,13 +14,10 @@ export function Project({
   imageAlt,
 }: ProjectProps): JSX.Element {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-800">
+    <div className="max-w-[280px] h-[440px] rounded overflow-hidden bg-[#222222]">
       <img className="w-full h-60 object-cover" src={image} alt={imageAlt} />
-      <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{title}</div>
-        <p className="text-base">{description}</p>
-      </div>
-      <div className="px-6 pt-4 pb-2">
+      <div className="px-6 py-4 font-bold text-xl">{title}</div>
+      <div className="px-6">
         {githubLink}
         {deployedLink}
       </div>
