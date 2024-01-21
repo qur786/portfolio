@@ -79,7 +79,7 @@ export function Introduction({
           }}
         />
       ) : undefined}
-      <div className="h-screen flex justify-center items-center flex-col gap-6">
+      <div className="h-screen flex justify-center items-center flex-col gap-6 font-mono">
         <p className="text-5xl">
           Hello, I'm <b className="text-red-600">Qurban</b>
         </p>
