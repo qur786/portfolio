@@ -43,7 +43,7 @@ export function ExperienceItem({
             </h4>
           </div>
         </div>
-        <ul className="list-disc">
+        <ul className="list-disc px-4">
           {work.map((ele) => (
             <li key={ele}>{ele}</li>
           ))}
