@@ -1,7 +1,7 @@
 export function JobIcon(): JSX.Element {
   return (
     <svg
-      enable-background="new 0 0 200 200"
+      enableBackground="new 0 0 200 200"
       height="200px"
       id="Layer_1"
       version="1.1"
