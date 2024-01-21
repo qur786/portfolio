@@ -10,6 +10,7 @@ export function Projects(): JSX.Element {
           image={CurrencyConverterImage}
           title="Currency Converter Mobile App"
           githubLink="https://github.com/qur786/react-native-currency-converter"
+          stacks={["react native", "typescript", "fixer.api", "react"]}
         />
       </div>
     </div>
