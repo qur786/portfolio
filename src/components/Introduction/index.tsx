@@ -1,5 +1,7 @@
 import Particles from "@tsparticles/react";
 import styles from "./index.module.css";
+import { useContext } from "react";
+import { MobileContext } from "../../context";
 
 interface IntroductionProps {
   isParticlesEngineLoaded: boolean;
@@ -8,6 +10,7 @@ interface IntroductionProps {
 export function Introduction({
   isParticlesEngineLoaded,
 }: IntroductionProps): JSX.Element {
+  const { isMobile } = useContext(MobileContext);
   return (
     <>
       {isParticlesEngineLoaded === true ? (
@@ -63,7 +66,7 @@ export function Introduction({
                 straight: false,
               },
               number: {
-                value: 150,
+                value: isMobile === true ? 30 : 150,
               },
               opacity: {
                 value: 0.5,
