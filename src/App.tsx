@@ -18,7 +18,7 @@ export function App(): JSX.Element {
   }, []);
 
   return (
-    <main>
+    <main className="select-none">
       <Introduction isParticlesEngineLoaded={isParticlesEngineLoaded} />
       <SocialSidebar />
       <div className="px-16">
