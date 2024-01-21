@@ -26,7 +26,11 @@ export function ExperienceItem({
       contentStyle={{ background: "#222222" }}
       contentArrowStyle={{ borderRight: "7px solid #222222" }}
       date={date}
-      iconStyle={{ background: "#222222" }}
+      iconStyle={{
+        background: "#222222",
+        boxShadow:
+          "0 0 0 4px #FF020A, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05)", // Icon container outer border
+      }}
       icon={icon}
     >
       <div className="flex flex-col gap-2">
