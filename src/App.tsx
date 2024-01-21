@@ -5,6 +5,7 @@ import { Introduction } from "./components/Introduction";
 import { SocialSidebar } from "./components/SocialSidebar";
 import { About } from "./components/About";
 import { Skills } from "./components/Skills";
+import "devicon/devicon.min.css";
 
 export function App(): JSX.Element {
   const [isParticlesEngineLoaded, setIsParticlesEngineLoaded] = useState(false);

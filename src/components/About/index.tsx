@@ -9,7 +9,7 @@ export function About(): JSX.Element {
       <img
         src={Profile}
         alt="Profile"
-        className="bg-contain w-48 h-48 relative left-16 -top-12 rounded-xl"
+        className="bg-contain w-48 h-48 relative left-16 -top-12 rounded-xl border-[#FF020A] border-2"
       />
       <div className="rounded-lg pl-20 pr-10 py-6 border-[#FF020A] border-2">
         <h2 className="text-3xl text-[#FF020A] font-bold py-2">About me</h2>
