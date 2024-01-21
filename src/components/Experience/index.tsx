@@ -49,6 +49,17 @@ export function Experience(): JSX.Element {
             "Collaborated with team to integrate PayPal payment API in the company's web app.",
           ]}
         />
+        <ExperienceItem
+          date="Feb 2021 - Apr 2021"
+          icon={<JobIcon />}
+          location={{ city: "Jamshedpur", country: "India" }}
+          company="Adityapur Auto Cluster"
+          role="Web Developer Intern"
+          work={[
+            "Analyzed issues and collaborated with teams to create a storage management web app in PHP. Achieved a 40% boost in productivity compared to the previous system.",
+            "Completed research, compiled data, and produced timely reports.",
+          ]}
+        />
         <VerticalTimelineElement
           icon={<JobIcon />}
           iconStyle={{ background: "#222222" }}
