@@ -83,10 +83,10 @@ export function Introduction({
         />
       ) : undefined}
       <div className="h-screen flex justify-center items-center flex-col gap-6 font-mono">
-        <p className="text-5xl">
+        <p className="text-5xl text-center">
           Hello, I'm <b className="text-red-600">Qurban</b>
         </p>
-        <p className="text-5xl">
+        <p className="text-5xl text-center">
           A <b className="text-green-600">MERN</b> stack developer.
         </p>
         <button className={`${styles.btn} py-4 px-8 text-lg`}>
