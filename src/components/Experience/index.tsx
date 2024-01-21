@@ -5,10 +5,11 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { JobIcon } from "../../Icons/job";
 import { ExperienceItem } from "../ExperienceItem";
+import { CompleteIcon } from "../../Icons/complete";
 
 export function Experience(): JSX.Element {
   return (
-    <div id="skills" className="h-screen px-4 py-8 flex flex-col gap-8">
+    <div id="skills" className="px-4 py-8 flex flex-col gap-8">
       <h2 className="text-3xl text-[#FF020A] font-bold">Experience</h2>
       <VerticalTimeline>
         <ExperienceItem
@@ -61,7 +62,7 @@ export function Experience(): JSX.Element {
           ]}
         />
         <VerticalTimelineElement
-          icon={<JobIcon />}
+          icon={<CompleteIcon />}
           iconStyle={{ background: "#222222" }}
         />
       </VerticalTimeline>
