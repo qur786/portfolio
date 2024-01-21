@@ -1,4 +1,4 @@
-import Profile from "../../../public/square-profile.ico";
+import Profile from "./square-profile.ico";
 
 export function About(): JSX.Element {
   return (
