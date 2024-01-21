@@ -6,6 +6,7 @@ import { SocialSidebar } from "./components/SocialSidebar";
 import { About } from "./components/About";
 import { Skills } from "./components/Skills";
 import "./Icons/devicon.min.css";
+import { Experience } from "./components/Experience";
 
 export function App(): JSX.Element {
   const [isParticlesEngineLoaded, setIsParticlesEngineLoaded] = useState(false);
@@ -26,6 +27,7 @@ export function App(): JSX.Element {
       <div className="px-16">
         <About />
         <Skills />
+        <Experience />
       </div>
     </main>
   );
