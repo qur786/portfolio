@@ -2,9 +2,9 @@ import { DevIcon } from "../../dev-icon";
 
 export function Skills(): JSX.Element {
   return (
-    <div id="skills" className="sm:h-screen px-4 py-8 flex flex-col gap-8">
+    <div id="skills" className="md:h-screen px-4 py-8 flex flex-col gap-8">
       <h2 className="text-3xl text-[#FF020A] font-bold">My Skills</h2>
-      <div className="grid sm:grid-cols-6 grid-cols-2 gap-4">
+      <div className="grid md:grid-cols-6 grid-cols-2 gap-4">
         <DevIcon name="devicon-mongodb-plain-wordmark" />
         <DevIcon name="devicon-express-original-wordmark" colored={false} />
         <DevIcon name="devicon-react-original-wordmark" />

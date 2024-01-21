@@ -4,15 +4,15 @@ export function About(): JSX.Element {
   return (
     <div
       id="about"
-      className="flex sm:flex-row flex-col justify-center items-center sm:items-start sm:h-screen pt-20 pb-10"
+      className="flex md:flex-row flex-col justify-center items-center md:items-start md:h-screen pt-20 pb-10"
     >
       <img
         src={Profile}
         alt="Profile"
-        className="bg-contain w-48 h-48 relative sm:left-16 sm:-top-12 top-16 rounded-xl border-[#FF020A] border-2"
+        className="bg-contain w-48 h-48 relative md:left-16 md:-top-12 top-16 rounded-xl border-[#FF020A] border-2"
       />
-      <div className="rounded-lg sm:pl-20 sm:pr-10 pb-6 sm:pt-6 pt-16 px-4 border-[#FF020A] border-2">
-        <h2 className="text-3xl text-[#FF020A] font-bold py-2 sm:text-start text-center">
+      <div className="rounded-lg md:pl-20 md:pr-10 pb-6 md:pt-6 pt-16 px-4 border-[#FF020A] border-2">
+        <h2 className="text-3xl text-[#FF020A] font-bold py-2 md:text-start text-center">
           About me
         </h2>
         <div className="text-lg">

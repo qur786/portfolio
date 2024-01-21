@@ -7,7 +7,7 @@ export function Projects(): JSX.Element {
   return (
     <div id="projects" className="h-screen px-4 py-8 ">
       <h2 className="text-3xl text-[#FF020A] font-bold">Projects</h2>
-      <div className="grid sm:grid-cols-3 grid-cols-1 gap-20 py-6 justify-items-center">
+      <div className="grid md:grid-cols-3 grid-cols-1 gap-20 py-6 justify-items-center">
         <Project
           image={CurrencyConverterImage}
           title="Currency Converter Mobile App"
