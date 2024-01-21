@@ -1,6 +1,6 @@
 import { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { Introduction } from "./components/Introduction";
 import { SocialSidebar } from "./components/SocialSidebar";
 import { About } from "./components/About";
@@ -8,12 +8,13 @@ import { Skills } from "./components/Skills";
 import { Experience } from "./components/Experience";
 import { Projects } from "./components/Projects";
 import { useMobile } from "./hooks";
+import { MobileContext } from "./context";
 
 export function App(): JSX.Element {
   const [isParticlesEngineLoaded, setIsParticlesEngineLoaded] = useState(false);
   const mainRef = useRef<HTMLDivElement>(null);
   const isMobile = useMobile(mainRef);
-  console.log(isMobile); // Provide it in the react context
+  const { setIsMobile } = useContext(MobileContext);
 
   // this should be run only once per application lifetime
   useEffect(() => {
@@ -23,6 +24,10 @@ export function App(): JSX.Element {
       setIsParticlesEngineLoaded(true);
     });
   }, []);
+
+  useEffect(() => {
+    setIsMobile(isMobile);
+  }, [isMobile, setIsMobile]);
 
   return (
     <main className="select-none" ref={mainRef}>
