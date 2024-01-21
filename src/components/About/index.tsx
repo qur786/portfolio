@@ -11,8 +11,8 @@ export function About(): JSX.Element {
         alt="Profile"
         className="bg-contain w-48 h-48 relative left-16 -top-12 rounded-xl"
       />
-      <div className="rounded-lg pl-20 pr-10 py-6 bg-teal-800">
-        <h2 className="text-3xl text-cyan-500 py-2">About me</h2>
+      <div className="rounded-lg pl-20 pr-10 py-6 border-[#FF020A] border-2">
+        <h2 className="text-3xl text-[#FF020A] font-bold py-2">About me</h2>
         <div className="text-lg">
           Hello there! I'm Qurban, a passionate individual whose love for
           technology blossomed after my high school journey.

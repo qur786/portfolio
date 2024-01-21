@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Introduction } from "./components/Introduction";
 import { SocialSidebar } from "./components/SocialSidebar";
 import { About } from "./components/About";
+import { Skills } from "./components/Skills";
 
 export function App(): JSX.Element {
   const [isParticlesEngineLoaded, setIsParticlesEngineLoaded] = useState(false);
@@ -23,6 +24,7 @@ export function App(): JSX.Element {
       <SocialSidebar />
       <div className="px-16">
         <About />
+        <Skills />
       </div>
     </main>
   );
