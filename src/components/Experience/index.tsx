@@ -11,7 +11,7 @@ export function Experience(): JSX.Element {
   return (
     <div id="skills" className="px-4 py-8 flex flex-col gap-8">
       <h2 className="text-3xl text-[#FF020A] font-bold">Experience</h2>
-      <VerticalTimeline>
+      <VerticalTimeline lineColor="#FF020A">
         <ExperienceItem
           date="Apr 2023 - Sept 2023"
           icon={<JobIcon />}
