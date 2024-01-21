@@ -37,7 +37,14 @@ export function Project({
           </div>
         ) : undefined}
         <div className="px-6 flex flex-row justify-between ">
-          <a href={deployedLink} title="Live">
+          <a
+            href={deployedLink}
+            title="Live"
+            style={{
+              cursor:
+                typeof deployedLink === "string" ? "pointer" : "not-allowed",
+            }}
+          >
             <ServerIcon />
           </a>
           <a href={githubLink} title="Repository">
