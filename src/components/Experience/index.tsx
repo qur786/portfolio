@@ -37,7 +37,10 @@ export function Experience(): JSX.Element {
             "Developed and debugged the company's core product, API. Improving reliability by 10%.",
           ]}
         />
-        <VerticalTimelineElement icon={<JobIcon />} />
+        <VerticalTimelineElement
+          icon={<JobIcon />}
+          iconStyle={{ background: "#222222" }}
+        />
       </VerticalTimeline>
     </div>
   );
