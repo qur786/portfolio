@@ -5,7 +5,6 @@ import { Introduction } from "./components/Introduction";
 import { SocialSidebar } from "./components/SocialSidebar";
 import { About } from "./components/About";
 import { Skills } from "./components/Skills";
-import "./Icons/devicon.min.css";
 import { Experience } from "./components/Experience";
 import { Projects } from "./components/Projects";
 

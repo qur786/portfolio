@@ -1,4 +1,4 @@
-import { DevIcon } from "../../Icons/dev-icon";
+import { DevIcon } from "../../dev-icon";
 
 export function Skills(): JSX.Element {
   return (
