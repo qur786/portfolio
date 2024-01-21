@@ -24,7 +24,7 @@ export function Project({
         alt={imageAlt}
       />
       <div className="h-10 flex flex-col gap-14">
-        <div className="px-6 py-4 font-bold text-xl ">{title}</div>
+        <div className="px-6 py-4 font-bold text-xl text-center">{title}</div>
         <div className="px-6 flex flex-row justify-between ">
           <a href={deployedLink}>
             <ServerIcon />
