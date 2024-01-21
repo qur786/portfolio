@@ -31,8 +31,8 @@ export function App(): JSX.Element {
 
   return (
     <main className="select-none" ref={mainRef}>
-      <Introduction isParticlesEngineLoaded={isParticlesEngineLoaded} />
       <SocialSidebar />
+      <Introduction isParticlesEngineLoaded={isParticlesEngineLoaded} />
       <div className="px-16">
         <About />
         <Skills />
