@@ -7,6 +7,7 @@ import { About } from "./components/About";
 import { Skills } from "./components/Skills";
 import "./Icons/devicon.min.css";
 import { Experience } from "./components/Experience";
+import { Projects } from "./components/Projects";
 
 export function App(): JSX.Element {
   const [isParticlesEngineLoaded, setIsParticlesEngineLoaded] = useState(false);
@@ -28,6 +29,7 @@ export function App(): JSX.Element {
         <About />
         <Skills />
         <Experience />
+        <Projects />
       </div>
     </main>
   );
