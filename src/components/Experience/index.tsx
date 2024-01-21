@@ -14,7 +14,8 @@ export function Experience(): JSX.Element {
         <ExperienceItem
           date="Apr 2023 - Sept 2023"
           icon={<JobIcon />}
-          location="Gurugram, India"
+          location={{ city: "Gurugram", country: "India" }}
+          company="Manufac Analytics Pvt Ltd"
           role="Software Development Engineer 1"
           work={[
             "Engineered diverse, innovative projects, spanning single and multi-page React applications, CLI tools, web applications, and crossplatform Electron apps strategically addressing complex challenges and delivering effective solutions.",
@@ -26,7 +27,8 @@ export function Experience(): JSX.Element {
         <ExperienceItem
           date="Jan 2022 - Mar 2023"
           icon={<JobIcon />}
-          location="Gurugram, India"
+          location={{ city: "Gurugram", country: "India" }}
+          company="Manufac Analytics Pvt Ltd"
           role="Front End Developer"
           work={[
             "Engineered diverse projects: web apps, single-page apps, and Electron apps. Innovations include tracking user activity with Python and Electron, and real-time IoT tracking with AWS IoT, Geofencing, Lambda, and SNS",

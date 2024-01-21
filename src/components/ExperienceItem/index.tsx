@@ -5,16 +5,21 @@ interface ExperienceItemProps {
   date: string;
   icon: ReactNode;
   role: string;
-  location: string;
+  location: {
+    city: string;
+    country: string;
+  };
   work: string[];
+  company: string;
 }
 
 export function ExperienceItem({
   date,
   icon,
   role,
-  location,
+  location: { city, country },
   work,
+  company,
 }: ExperienceItemProps): JSX.Element {
   return (
     <VerticalTimelineElement
@@ -26,7 +31,14 @@ export function ExperienceItem({
     >
       <div className="flex flex-col gap-2">
         <h3 className="text-lg font-bold">{role}</h3>
-        <h4 className="text-md font-[500]">{location}</h4>
+        <div className="flex flex-row justify-between items-center">
+          <h4 className="text-md text-gray-200 font-light">{company}</h4>
+          <div>
+            <h4 className="text-sm text-right font-light">
+              {city}, {country}
+            </h4>
+          </div>
+        </div>
         <ul className="list-disc">
           {work.map((ele) => (
             <li key={ele}>{ele}</li>
