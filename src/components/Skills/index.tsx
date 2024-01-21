@@ -21,6 +21,14 @@ export function Skills(): JSX.Element {
         <DevIcon name="devicon-d3js-plain" />
         <DevIcon name="devicon-graphql-plain-wordmark" />
         <DevIcon name="devicon-socketio-original-wordmark" colored={false} />
+        <DevIcon name="devicon-amazonwebservices-plain-wordmark" />
+        <DevIcon name="devicon-electron-original-wordmark" colored={false} />
+        <DevIcon name="devicon-mysql-plain-wordmark" colored={false} />
+        <DevIcon name="devicon-jest-plain" />
+        <DevIcon name="devicon-cplusplus-line-wordmark" />
+        <DevIcon name="devicon-c-line-wordmark" />
+        <DevIcon name="devicon-webpack-plain-wordmark" />
+        <DevIcon name="devicon-babel-plain" />
       </div>
     </div>
   );
