@@ -1,5 +1,7 @@
 import Particles from "@tsparticles/react";
 import styles from "./index.module.css";
+import { useContext } from "react";
+import { MobileContext } from "../../context";
 
 interface IntroductionProps {
   isParticlesEngineLoaded: boolean;
@@ -8,6 +10,7 @@ interface IntroductionProps {
 export function Introduction({
   isParticlesEngineLoaded,
 }: IntroductionProps): JSX.Element {
+  const { isMobile } = useContext(MobileContext);
   return (
     <>
       {isParticlesEngineLoaded === true ? (
@@ -63,7 +66,7 @@ export function Introduction({
                 straight: false,
               },
               number: {
-                value: 150,
+                value: isMobile === true ? 30 : 150,
               },
               opacity: {
                 value: 0.5,
@@ -80,10 +83,10 @@ export function Introduction({
         />
       ) : undefined}
       <div className="h-screen flex justify-center items-center flex-col gap-6 font-mono">
-        <p className="text-5xl">
+        <p className="text-5xl text-center">
           Hello, I'm <b className="text-red-600">Qurban</b>
         </p>
-        <p className="text-5xl">
+        <p className="text-5xl text-center">
           A <b className="text-green-600">MERN</b> stack developer.
         </p>
         <button className={`${styles.btn} py-4 px-8 text-lg`}>
