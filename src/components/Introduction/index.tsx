@@ -63,7 +63,7 @@ export function Introduction({
                 straight: false,
               },
               number: {
-                value: 200,
+                value: 150,
               },
               opacity: {
                 value: 0.5,
