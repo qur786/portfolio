@@ -1,18 +1,27 @@
+import { Suspense } from "react";
 import Profile from "./square-profile.ico";
 
 export function About(): JSX.Element {
   return (
     <div
       id="about"
-      className="flex flex-row justify-center h-screen pt-20 pb-10"
+      className="flex sm:flex-row flex-col justify-center items-center sm:items-start sm:h-screen pt-20 pb-10"
     >
-      <img
-        src={Profile}
-        alt="Profile"
-        className="bg-contain w-48 h-48 relative left-16 -top-12 rounded-xl border-[#FF020A] border-2"
-      />
-      <div className="rounded-lg pl-20 pr-10 py-6 border-[#FF020A] border-2">
-        <h2 className="text-3xl text-[#FF020A] font-bold py-2">About me</h2>
+      <Suspense
+        fallback={
+          <div className="bg-contain w-48 h-48 relative sm:left-16 sm:-top-12 top-16 rounded-xl border-[#FF020A] border-2" />
+        }
+      >
+        <img
+          src={Profile}
+          alt="Profile"
+          className="bg-contain w-48 h-48 relative sm:left-16 sm:-top-12 top-16 rounded-xl border-[#FF020A] border-2"
+        />
+      </Suspense>
+      <div className="rounded-lg sm:pl-20 sm:pr-10 pb-6 sm:pt-6 pt-16 px-4 border-[#FF020A] border-2">
+        <h2 className="text-3xl text-[#FF020A] font-bold py-2 sm:text-start text-center">
+          About me
+        </h2>
         <div className="text-lg">
           Hello there! I'm Qurban, a passionate individual whose love for
           technology blossomed after my high school journey.
