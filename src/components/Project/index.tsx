@@ -26,10 +26,10 @@ export function Project({
       <div className="h-10 flex flex-col gap-14">
         <div className="px-6 py-4 font-bold text-xl text-center">{title}</div>
         <div className="px-6 flex flex-row justify-between ">
-          <a href={deployedLink}>
+          <a href={deployedLink} title="Live">
             <ServerIcon />
           </a>
-          <a href={githubLink}>
+          <a href={githubLink} title="Repository">
             <GithubCircleIcon />
           </a>
         </div>
