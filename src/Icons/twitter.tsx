@@ -2,7 +2,7 @@ export function TwitterIcon(): JSX.Element {
   return (
     <svg
       fill="#FF020A"
-      className="h-8 hover:fill-[#1DA1F2]"
+      className="h-6 hover:fill-[#1DA1F2]"
       version="1.1"
       viewBox="0 0 512 512"
       width="100%"

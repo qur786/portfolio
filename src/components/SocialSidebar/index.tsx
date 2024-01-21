@@ -7,7 +7,7 @@ import { WhatsappIcon } from "../../Icons/whatsapp";
 export function SocialSidebar(): JSX.Element {
   return (
     <>
-      <div className="md:fixed md:top-1/4 md:left-0 bg-[#121111] md:bg-transparent md:mx-0 md:py-2 md:px-4 p-4 md:flex-col flex-row justify-evenly items-center gap-4 md:border-2 border-primary md:flex flex">
+      <div className="fixed bottom-0 left-0 p-4 flex flex-col gap-4">
         <a href="https://www.linkedin.com/in/qurban-ahmad-qur786/">
           <LinkedInIcon />
         </a>
@@ -27,7 +27,7 @@ export function SocialSidebar(): JSX.Element {
       <div>
         <a
           href="mailto:ahmad76qurban@gmail.com"
-          className="fixed right-0 top-1/4 hover:text-red-600"
+          className="fixed right-0 top-2 hover:text-red-600"
           style={{ writingMode: "vertical-rl" }}
         >
           ahmad76qurban@gmail.com

@@ -6,7 +6,7 @@ export function useMobile(targetElement: RefObject<HTMLElement>): boolean {
     let resizeObserver: ResizeObserver | undefined;
     if (targetElement.current !== null) {
       resizeObserver = new ResizeObserver(() => {
-        const { matches } = window.matchMedia("(max-width: 640px)");
+        const { matches } = window.matchMedia("(max-width: 768px)");
         setIsMobile(matches);
       });
 

@@ -2,7 +2,7 @@ export function GithubIcon(): JSX.Element {
   return (
     <svg
       enableBackground="new 0 0 32 32"
-      className="h-8"
+      className="h-6"
       id="Layer_1"
       version="1.0"
       viewBox="0 0 32 32"

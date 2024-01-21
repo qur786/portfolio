@@ -3,7 +3,7 @@ export function GmailIcon(): JSX.Element {
     <svg
       role="img"
       fill="#FF020A"
-      className="h-8 hover:fill-[#4caf50]"
+      className="h-6 hover:fill-[#4caf50]"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >

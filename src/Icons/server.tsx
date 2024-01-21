@@ -2,7 +2,7 @@ export function ServerIcon(): JSX.Element {
   return (
     <svg
       enableBackground="new 0 0 32 32"
-      className="h-8"
+      className="h-6"
       height="32px"
       id="svg2"
       version="1.1"
