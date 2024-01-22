@@ -1,7 +1,7 @@
 import { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { useContext, useEffect, useRef, useState } from "react";
-import { Introduction } from "./components/Introduction";
+import { Introduction, IntroductionProps } from "./components/Introduction";
 import { SocialSidebar } from "./components/SocialSidebar";
 import { About } from "./components/About";
 import { Skills } from "./components/Skills";
@@ -14,8 +14,13 @@ import { Fade, Slide } from "react-awesome-reveal";
 export function App(): JSX.Element {
   const [isParticlesEngineLoaded, setIsParticlesEngineLoaded] = useState(false);
   const mainRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
   const isMobile = useMobile(mainRef);
   const { setIsMobile } = useContext(MobileContext);
+
+  const handleViewButtonClick: IntroductionProps["onViewWorkClick"] = () => {
+    aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   // this should be run only once per application lifetime
   useEffect(() => {
@@ -34,9 +39,12 @@ export function App(): JSX.Element {
     <main className="select-none" ref={mainRef}>
       <SocialSidebar />
       <Fade triggerOnce duration={5000}>
-        <Introduction isParticlesEngineLoaded={isParticlesEngineLoaded} />
+        <Introduction
+          onViewWorkClick={handleViewButtonClick}
+          isParticlesEngineLoaded={isParticlesEngineLoaded}
+        />
       </Fade>
-      <div className="px-16">
+      <div className="px-16" ref={aboutRef}>
         <Slide triggerOnce={isMobile}>
           <About />
         </Slide>

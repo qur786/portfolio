@@ -1,14 +1,16 @@
 import Particles from "@tsparticles/react";
 import styles from "./index.module.css";
-import { useContext } from "react";
+import { MouseEventHandler, useContext } from "react";
 import { MobileContext } from "../../context";
 
-interface IntroductionProps {
+export interface IntroductionProps {
   isParticlesEngineLoaded: boolean;
+  onViewWorkClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
 export function Introduction({
   isParticlesEngineLoaded,
+  onViewWorkClick,
 }: IntroductionProps): JSX.Element {
   const { isMobile } = useContext(MobileContext);
   return (
@@ -91,8 +93,9 @@ export function Introduction({
         </p>
         <button
           className={`${styles.btn} shadow-inner shadow-red-100/100 rounded-md py-4 px-8 text-lg`}
+          onClick={onViewWorkClick}
         >
-          <a href="#about">View my work &#x2193;</a>
+          View my work &#x2193;
         </button>
       </div>
     </>
