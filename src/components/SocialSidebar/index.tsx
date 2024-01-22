@@ -41,6 +41,11 @@ export function SocialSidebar(): JSX.Element {
           </a>
         </Slide>
       </div>
+      <a href="/portfolio/Qurban-Ahmad-Latest.pdf">
+        <button className="absolute top-2 right-8 shadow-xl shadow-cyan-500/50 bg-[#67E6DC] text-black font-bold rounded-lg px-6 py-2">
+          Resume
+        </button>
+      </a>
     </>
   );
 }
