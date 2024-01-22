@@ -66,7 +66,7 @@ export function Introduction({
                 straight: false,
               },
               number: {
-                value: isMobile === true ? 30 : 150,
+                value: isMobile === true ? 30 : 100,
               },
               opacity: {
                 value: 0.5,
