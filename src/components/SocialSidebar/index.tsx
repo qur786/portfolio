@@ -10,19 +10,22 @@ export function SocialSidebar(): JSX.Element {
     <>
       <div className="fixed bottom-0 left-0 p-4 flex flex-col gap-4">
         <Fade cascade damping={0.5} triggerOnce>
-          <a href="https://www.linkedin.com/in/qurban-ahmad-qur786/">
+          <a
+            href="https://www.linkedin.com/in/qurban-ahmad-qur786/"
+            title="LinkedIn"
+          >
             <LinkedInIcon />
           </a>
-          <a href="https://twitter.com/fantasticnerd67">
+          <a href="https://twitter.com/fantasticnerd67" title="Twitter">
             <TwitterIcon />
           </a>
-          <a href="https://github.com/qur786">
+          <a href="https://github.com/qur786" title="Github">
             <GithubIcon />
           </a>
-          <a href="https://wa.me/+916204789892">
+          <a href="https://wa.me/+916204789892" title="Whatsapp">
             <WhatsappIcon />
           </a>
-          <a href="mailto:ahmad76qurban@gmail.com">
+          <a href="mailto:ahmad76qurban@gmail.com" title="Email">
             <GmailIcon />
           </a>
         </Fade>
