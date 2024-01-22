@@ -1,7 +1,5 @@
 .btn {
   font-weight: 100;
-  box-shadow: 0 0 30px #ff020a;
-  border-radius: 10px;
   transition: all 0.35s ease-in;
 }
 

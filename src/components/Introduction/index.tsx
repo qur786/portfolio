@@ -89,7 +89,9 @@ export function Introduction({
         <p className="text-5xl text-center">
           A <b className="text-green-600">MERN</b> stack developer.
         </p>
-        <button className={`${styles.btn} py-4 px-8 text-lg`}>
+        <button
+          className={`${styles.btn} shadow-inner shadow-red-100/100 rounded-md py-4 px-8 text-lg`}
+        >
           <a href="#about">View my work &#x2193;</a>
         </button>
       </div>
