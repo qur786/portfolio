@@ -30,15 +30,17 @@ export function SocialSidebar(): JSX.Element {
           </a>
         </Fade>
       </div>
-      <Slide triggerOnce delay={5 * 500}>
-        <a
-          href="mailto:ahmad76qurban@gbouncemail.com"
-          className="fixed right-0 top-2 hover:text-red-600"
-          style={{ writingMode: "vertical-rl" }}
-        >
-          ahmad76qurban@gmail.com
-        </a>
-      </Slide>
+      <div className="fixed right-0 top-2">
+        <Slide direction="right" triggerOnce delay={5 * 500}>
+          <a
+            href="mailto:ahmad76qurban@gbouncemail.com"
+            className="hover:text-red-600"
+            style={{ writingMode: "vertical-rl" }}
+          >
+            ahmad76qurban@gmail.com
+          </a>
+        </Slide>
+      </div>
     </>
   );
 }
