@@ -9,6 +9,7 @@ import { Experience } from "./components/Experience";
 import { Projects } from "./components/Projects";
 import { useMobile } from "./hooks";
 import { MobileContext } from "./context";
+import { Fade, Slide } from "react-awesome-reveal";
 
 export function App(): JSX.Element {
   const [isParticlesEngineLoaded, setIsParticlesEngineLoaded] = useState(false);
@@ -32,9 +33,13 @@ export function App(): JSX.Element {
   return (
     <main className="select-none" ref={mainRef}>
       <SocialSidebar />
-      <Introduction isParticlesEngineLoaded={isParticlesEngineLoaded} />
+      <Fade triggerOnce>
+        <Introduction isParticlesEngineLoaded={isParticlesEngineLoaded} />
+      </Fade>
       <div className="px-16">
-        <About />
+        <Slide>
+          <About />
+        </Slide>
         <Skills />
         <Experience />
         <Projects />
