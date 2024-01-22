@@ -33,11 +33,11 @@ export function App(): JSX.Element {
   return (
     <main className="select-none" ref={mainRef}>
       <SocialSidebar />
-      <Fade triggerOnce>
+      <Fade triggerOnce duration={5000}>
         <Introduction isParticlesEngineLoaded={isParticlesEngineLoaded} />
       </Fade>
       <div className="px-16">
-        <Slide>
+        <Slide triggerOnce={isMobile}>
           <About />
         </Slide>
         <Skills />
