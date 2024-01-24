@@ -11,7 +11,7 @@ export function SocialSidebar(): JSX.Element {
   const handleResumeClick: MouseEventHandler<HTMLAnchorElement> = () => {
     ReactGA.event({
       category: "Resume",
-      action: "click",
+      action: "open_resume",
     });
   };
   return (
