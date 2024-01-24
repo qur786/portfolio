@@ -10,6 +10,7 @@ import { Projects } from "./components/Projects";
 import { useMobile } from "./hooks";
 import { MobileContext } from "./context";
 import { Fade, Slide } from "react-awesome-reveal";
+import ReactGA from "react-ga4";
 
 export function App(): JSX.Element {
   const [isParticlesEngineLoaded, setIsParticlesEngineLoaded] = useState(false);
@@ -34,6 +35,14 @@ export function App(): JSX.Element {
   useEffect(() => {
     setIsMobile(isMobile);
   }, [isMobile, setIsMobile]);
+
+  useEffect(() => {
+    ReactGA.send({
+      hitType: "pageview",
+      pageTitle: "Home",
+      page: "/",
+    });
+  }, []);
 
   return (
     <main className="select-none" ref={mainRef}>

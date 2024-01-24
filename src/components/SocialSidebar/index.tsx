@@ -4,8 +4,16 @@ import { GmailIcon } from "../../Icons/gmail";
 import { LinkedInIcon } from "../../Icons/linked-in";
 import { TwitterIcon } from "../../Icons/twitter";
 import { WhatsappIcon } from "../../Icons/whatsapp";
+import ReactGA from "react-ga4";
+import { MouseEventHandler } from "react";
 
 export function SocialSidebar(): JSX.Element {
+  const handleResumeClick: MouseEventHandler<HTMLAnchorElement> = () => {
+    ReactGA.event({
+      category: "Resume",
+      action: "click",
+    });
+  };
   return (
     <>
       <div className="fixed bottom-0 left-0 p-4 flex flex-col gap-4">
@@ -41,7 +49,11 @@ export function SocialSidebar(): JSX.Element {
           </a>
         </Slide>
       </div>
-      <a href="/portfolio/Qurban-Ahmad-Latest.pdf" target="_blank">
+      <a
+        href="/portfolio/Qurban-Ahmad-Latest.pdf"
+        onClick={handleResumeClick}
+        target="_blank"
+      >
         <button className="absolute top-2 right-8 shadow-xl shadow-cyan-500/50 bg-[#67E6DC] text-black font-bold rounded-lg px-6 py-2">
           Resume
         </button>
