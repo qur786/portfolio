@@ -9,7 +9,7 @@ import { CompleteIcon } from "../../Icons/complete";
 
 export function Experience(): JSX.Element {
   return (
-    <div id="skills" className="px-4 py-8 flex flex-col gap-8">
+    <div id="skills" className="px-0 py-8 flex flex-col gap-8">
       <h2 className="text-3xl text-primary font-bold">Experience</h2>
       <VerticalTimeline lineColor="#FF020A">
         <ExperienceItem
