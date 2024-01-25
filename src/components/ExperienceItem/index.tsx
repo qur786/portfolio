@@ -36,7 +36,7 @@ export function ExperienceItem({
       icon={icon}
     >
       <div className="flex flex-col gap-2">
-        <h3 className="text-lg font-bold">{role}</h3>
+        <h3 className="text-lg font-bold md:text-start text-center">{role}</h3>
         <div className="flex md:flex-row flex-col justify-between md:items-center">
           <div className="flex flex-row md:gap-x-0 gap-x-1 items-center">
             <CompanyIcon className="h-4" />
