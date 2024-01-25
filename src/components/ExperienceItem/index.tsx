@@ -1,5 +1,6 @@
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import { ReactNode } from "react";
+import { CompanyIcon } from "../../Icons/company";
 
 interface ExperienceItemProps {
   date: string;
@@ -36,8 +37,11 @@ export function ExperienceItem({
       <div className="flex flex-col gap-2">
         <h3 className="text-lg font-bold">{role}</h3>
         <div className="flex md:flex-row flex-col justify-between md:items-center">
-          <h4 className="text-md p-2 text-gray-200 font-light">{company}</h4>
-          <h4 className="text-sm p-2 md:text-right text-left font-light text-gray-400">
+          <div className="flex flex-row md:gap-x-0 gap-1 items-center">
+            <CompanyIcon className="h-4" />
+            <h4 className="text-md py-2 text-gray-200 font-light">{company}</h4>
+          </div>
+          <h4 className="text-sm py-2 md:text-right text-left font-light text-gray-400">
             {city}, {country}
           </h4>
         </div>
