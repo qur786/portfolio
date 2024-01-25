@@ -1,5 +1,4 @@
 import Particles from "@tsparticles/react";
-import styles from "./index.module.css";
 import { MouseEventHandler, useContext } from "react";
 import { MobileContext } from "../../context";
 
@@ -20,7 +19,6 @@ export function Introduction({
           id="tsparticles"
           particlesLoaded={async (c) => console.log(c)}
           options={{
-            fullScreen: false, // To only show particles for thr intro
             style: {
               height: "100vh",
               position: "absolute",
@@ -71,7 +69,7 @@ export function Introduction({
                 value: isMobile === true ? 50 : 100,
               },
               opacity: {
-                value: 0.5,
+                value: 0.7,
               },
               shape: {
                 type: "circle",
@@ -84,7 +82,7 @@ export function Introduction({
           }}
         />
       ) : undefined}
-      <div className="h-screen flex justify-center items-center flex-col gap-6 font-mono">
+      <div className="h-screen relative flex justify-center items-center flex-col gap-6 font-mono">
         <p className="text-5xl text-center">
           Hello, I'm <b className="text-red-600">Qurban</b>
         </p>
@@ -92,7 +90,7 @@ export function Introduction({
           A <b className="text-green-600">MERN</b> stack developer.
         </p>
         <button
-          className={`${styles.btn} shadow-inner shadow-red-100/100 rounded-md py-4 px-8 text-lg`}
+          className={`transition-[font-weight,letter-spacing] duration-700 hover:font-bold font-extralight hover:tracking-widest bg-stone-700 shadow-inner shadow-red-100/100 rounded-md py-4 px-8 text-lg`}
           onClick={onViewWorkClick}
         >
           View my work &#x2193;
