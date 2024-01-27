@@ -54,7 +54,7 @@ export function SocialSidebar(): JSX.Element {
         onClick={handleResumeClick}
         target="_blank"
       >
-        <button className="absolute top-2 right-8 shadow-xl shadow-cyan-500/50 bg-[#67E6DC] text-black font-bold rounded-lg px-6 py-2">
+        <button className="absolute z-10 top-2 right-8 shadow-xl shadow-cyan-500/50 bg-[#67E6DC] text-black font-bold rounded-lg px-6 py-2">
           Resume
         </button>
       </a>
