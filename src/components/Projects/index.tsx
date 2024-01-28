@@ -9,7 +9,7 @@ import { MobileContext } from "../../context";
 export function Projects(): JSX.Element {
   const { isMobile } = useContext(MobileContext);
   return (
-    <div id="projects" className="h-screen px-4 py-8 ">
+    <div id="projects" className="min-h-screen px-4 py-8">
       <h2 className="text-3xl text-primary font-bold">Projects</h2>
       <div className="grid md:grid-cols-3 grid-cols-1 gap-20 py-6 justify-items-center">
         <Zoom cascade damping={0.5} triggerOnce={isMobile}>

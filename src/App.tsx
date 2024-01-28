@@ -11,6 +11,7 @@ import { useMobile } from "./hooks";
 import { MobileContext } from "./context";
 import { Fade, Slide } from "react-awesome-reveal";
 import ReactGA from "react-ga4";
+import { Footer } from "./components/Footer";
 
 export function App(): JSX.Element {
   const [isParticlesEngineLoaded, setIsParticlesEngineLoaded] = useState(false);
@@ -61,6 +62,7 @@ export function App(): JSX.Element {
         <Experience />
         <Projects />
       </div>
+      <Footer />
     </main>
   );
 }
