@@ -1,8 +1,10 @@
-export function ServerIcon(): JSX.Element {
+import type { IconProps } from "./utils";
+
+export function ServerIcon({ className }: IconProps): JSX.Element {
   return (
     <svg
       enableBackground="new 0 0 32 32"
-      className="h-6"
+      className={className}
       height="32px"
       id="svg2"
       version="1.1"

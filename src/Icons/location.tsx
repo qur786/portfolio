@@ -1,8 +1,6 @@
-export function LocationIcon({
-  className,
-}: {
-  className: string;
-}): JSX.Element {
+import type { IconProps } from "./utils";
+
+export function LocationIcon({ className }: IconProps): JSX.Element {
   return (
     <svg
       className={className}

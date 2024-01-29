@@ -1,8 +1,9 @@
-export function LinkedInIcon(): JSX.Element {
+import type { IconProps } from "./utils";
+
+export function LinkedInIcon({ className }: IconProps): JSX.Element {
   return (
     <svg
-      fill="#FF020A"
-      className="h-6 hover:fill-[#0077B5]"
+      className={className}
       version="1.1"
       viewBox="0 0 512 512"
       width="100%"

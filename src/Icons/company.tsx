@@ -1,4 +1,6 @@
-export function CompanyIcon({ className }: { className: string }): JSX.Element {
+import type { IconProps } from "./utils";
+
+export function CompanyIcon({ className }: IconProps): JSX.Element {
   return (
     <svg
       height="8.4666mm"

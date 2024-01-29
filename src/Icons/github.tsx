@@ -1,8 +1,10 @@
-export function GithubIcon(): JSX.Element {
+import type { IconProps } from "./utils";
+
+export function GithubIcon({ className }: IconProps): JSX.Element {
   return (
     <svg
       enableBackground="new 0 0 32 32"
-      className="h-6"
+      className={className}
       id="Layer_1"
       version="1.0"
       viewBox="0 0 32 32"

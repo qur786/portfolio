@@ -22,19 +22,19 @@ export function SocialSidebar(): JSX.Element {
             href="https://www.linkedin.com/in/qurban-ahmad-qur786/"
             title="LinkedIn"
           >
-            <LinkedInIcon />
+            <LinkedInIcon className="h-6 fill-primary hover:fill-[#0077B5]" />
           </a>
           <a href="https://twitter.com/fantasticnerd67" title="Twitter">
-            <TwitterIcon />
+            <TwitterIcon className="h-6 fill-primary hover:fill-[#1DA1F2]" />
           </a>
           <a href="https://github.com/qur786" title="Github">
-            <GithubIcon />
+            <GithubIcon className="h-6" />
           </a>
           <a href="https://wa.me/+916204789892" title="Whatsapp">
-            <WhatsappIcon />
+            <WhatsappIcon className="h-6 fill-primary hover:fill-[#25D366]" />
           </a>
           <a href="mailto:ahmad76qurban@gmail.com" title="Email">
-            <GmailIcon />
+            <GmailIcon className="h-6 fill-primary hover:fill-[#F2A60C]" />
           </a>
         </Fade>
       </div>

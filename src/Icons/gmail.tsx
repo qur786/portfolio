@@ -1,9 +1,10 @@
-export function GmailIcon(): JSX.Element {
+import type { IconProps } from "./utils";
+
+export function GmailIcon({ className }: IconProps): JSX.Element {
   return (
     <svg
       role="img"
-      fill="#FF020A"
-      className="h-6 hover:fill-[#4caf50]"
+      className={className}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >

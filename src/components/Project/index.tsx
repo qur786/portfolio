@@ -47,10 +47,10 @@ export function Project({
                 typeof deployedLink === "string" ? "pointer" : "not-allowed",
             }}
           >
-            <ServerIcon />
+            <ServerIcon className="h-6" />
           </a>
           <a href={githubLink} title="Repository">
-            <GithubCircleIcon />
+            <GithubCircleIcon className="h-8" />
           </a>
         </div>
       </div>

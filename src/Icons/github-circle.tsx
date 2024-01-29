@@ -1,8 +1,10 @@
-export function GithubCircleIcon(): JSX.Element {
+import type { IconProps } from "./utils";
+
+export function GithubCircleIcon({ className }: IconProps): JSX.Element {
   return (
     <svg
       enableBackground="new 0 0 512 512"
-      className="h-8"
+      className={className}
       height="512px"
       id="Layer_1"
       version="1.1"
