@@ -11,10 +11,10 @@ export function Footer(): JSX.Element {
     });
   };
   return (
-    <div className="relative h-56">
+    <div className="h-56">
       <div
         id="slope"
-        className="h-2/3 before:absolute before:top-0 before:left-0 before:w-full before:h-2/3 before:bg-gradient-to-bl before:from-transparent before:from-50% before:to-[#211E1E] before:to-50%"
+        className="h-2/3 w-full bg-gradient-to-bl from-transparent from-50% to-[#211E1E] to-50%"
       ></div>
       <div className="h-full bg-[#211E1E]">
         <h5 className="text-primary font-semibold text-2xl bottom-0 text-center pt-6 pb-12">
