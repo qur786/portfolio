@@ -1,3 +1,6 @@
+import { UpArrow } from "../../Icons/up-arrow";
+import { FooterButton } from "../FooterButton";
+
 export function Footer(): JSX.Element {
   return (
     <div className="h-72 pt-8">
@@ -5,9 +8,9 @@ export function Footer(): JSX.Element {
         Thanks for visiting!
       </h5>
       <div className="flex flex-row justify-center gap-8">
-        <button>Back to top</button>
-        <button>Send message</button>
-        <button>Give me a call</button>
+        <FooterButton title="Back to top" icon={UpArrow} />
+        <FooterButton title="Send message" icon={UpArrow} />
+        <FooterButton title="Give me a call" icon={UpArrow} />
       </div>
     </div>
   );
