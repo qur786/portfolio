@@ -1,3 +1,4 @@
+import { CallIcon } from "../../Icons/call";
 import { MessageIcon } from "../../Icons/message";
 import { UpArrowIcon } from "../../Icons/up-arrow";
 import { FooterButton } from "../FooterButton";
@@ -11,7 +12,7 @@ export function Footer(): JSX.Element {
       <div className="flex flex-row justify-center gap-8">
         <FooterButton title="Back to top" icon={UpArrowIcon} />
         <FooterButton title="Send message" icon={MessageIcon} />
-        <FooterButton title="Give me a call" icon={UpArrowIcon} />
+        <FooterButton title="Give me a call" icon={CallIcon} />
       </div>
     </div>
   );
