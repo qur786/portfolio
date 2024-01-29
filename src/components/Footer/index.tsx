@@ -1,3 +1,4 @@
+import { MessageIcon } from "../../Icons/message";
 import { UpArrow } from "../../Icons/up-arrow";
 import { FooterButton } from "../FooterButton";
 
@@ -9,7 +10,7 @@ export function Footer(): JSX.Element {
       </h5>
       <div className="flex flex-row justify-center gap-8">
         <FooterButton title="Back to top" icon={UpArrow} />
-        <FooterButton title="Send message" icon={UpArrow} />
+        <FooterButton title="Send message" icon={MessageIcon} />
         <FooterButton title="Give me a call" icon={UpArrow} />
       </div>
     </div>
