@@ -1,6 +1,6 @@
 import { IconProps } from "./utils";
 
-export function UpArrow({ className }: IconProps): JSX.Element {
+export function UpArrowIcon({ className }: IconProps): JSX.Element {
   return (
     <svg
       height="16"
