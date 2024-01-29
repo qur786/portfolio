@@ -12,7 +12,7 @@ export function FooterButton({
 }: FooterButtonProps): JSX.Element {
   return (
     <button className="hover:text-primary hover:scale-110 transition-[color,transform] font-bold text-gray-500">
-      <Icon className="fill-primary h-4 inline" />
+      <Icon className="fill-primary h-6 inline" />
       <p>{title}</p>
     </button>
   );
