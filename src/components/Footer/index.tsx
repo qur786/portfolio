@@ -22,7 +22,11 @@ export function Footer(): JSX.Element {
           onClick={handleBackToTopClick}
         />
         <FooterButton title="Send message" icon={MessageIcon} />
-        <FooterButton title="Give me a call" icon={CallIcon} />
+        <FooterButton
+          title="Give me a call"
+          icon={CallIcon}
+          link="tel:+916204789892"
+        />
       </div>
     </div>
   );
