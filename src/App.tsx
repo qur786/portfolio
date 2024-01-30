@@ -55,7 +55,7 @@ export function App(): JSX.Element {
         />
       </Fade>
       <div className="px-16" ref={aboutRef}>
-        <Slide triggerOnce={isMobile}>
+        <Slide triggerOnce>
           <About />
         </Slide>
         <Skills />
