@@ -11,7 +11,8 @@ export function Footer(): JSX.Element {
     });
   };
   return (
-    <div className="h-56">
+    // z-index is provided to show footer above social provider
+    <div className="h-56 relative z-[2]">
       <div
         id="slope"
         className="h-2/3 w-full bg-gradient-to-bl from-transparent from-50% to-[#211E1E] to-50%"

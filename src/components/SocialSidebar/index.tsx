@@ -16,7 +16,8 @@ export function SocialSidebar(): JSX.Element {
   };
   return (
     <>
-      <div className="fixed bottom-0 left-0 p-4 flex flex-col gap-4">
+      {/* z-index is provided because this component is getting overlaid by Introduction and Footer. */}
+      <div className="fixed bottom-0 left-0 p-4 flex flex-col gap-4 z-[1]">
         <Fade cascade damping={0.5} triggerOnce>
           <a
             href="https://www.linkedin.com/in/qurban-ahmad-qur786/"
