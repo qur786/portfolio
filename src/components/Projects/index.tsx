@@ -3,16 +3,13 @@ import { Project } from "../Project";
 import CurrencyConverterImage from "./currency-converter.png";
 import PongImage from "./pong.png";
 import TicTacToeImage from "./tic-tac-toe.jpg";
-import { useContext } from "react";
-import { MobileContext } from "../../context";
 
 export function Projects(): JSX.Element {
-  const { isMobile } = useContext(MobileContext);
   return (
     <div id="projects" className="min-h-screen px-4 py-8">
       <h2 className="text-3xl text-primary font-bold">Projects</h2>
       <div className="grid md:grid-cols-3 grid-cols-1 gap-20 py-6 justify-items-center">
-        <Zoom cascade damping={0.5} triggerOnce={isMobile}>
+        <Zoom cascade damping={0.5} triggerOnce>
           <Project
             image={CurrencyConverterImage}
             title="Currency Converter Mobile App"
