@@ -1,4 +1,4 @@
-import { JackInTheBox } from "react-awesome-reveal";
+import { Zoom } from "react-awesome-reveal";
 import { DevIcon } from "../../dev-icon";
 
 export function Skills(): JSX.Element {
@@ -6,7 +6,7 @@ export function Skills(): JSX.Element {
     <div id="skills" className="md:h-screen px-4 py-8 flex flex-col gap-8">
       <h2 className="text-3xl text-primary font-bold">My Skills</h2>
       <div className="grid md:grid-cols-6 grid-cols-2 gap-4">
-        <JackInTheBox cascade delay={0.01} triggerOnce>
+        <Zoom cascade triggerOnce>
           <DevIcon name="devicon-mongodb-plain-wordmark" />
           <DevIcon name="devicon-express-original-wordmark" colored={false} />
           <DevIcon name="devicon-react-original-wordmark" />
@@ -31,7 +31,7 @@ export function Skills(): JSX.Element {
           <DevIcon name="devicon-c-line-wordmark" />
           <DevIcon name="devicon-webpack-plain-wordmark" />
           <DevIcon name="devicon-babel-plain" />
-        </JackInTheBox>
+        </Zoom>
       </div>
     </div>
   );
