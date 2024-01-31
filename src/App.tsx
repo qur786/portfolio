@@ -12,6 +12,7 @@ import { MobileContext } from "./context";
 import { Fade, Slide } from "react-awesome-reveal";
 import ReactGA from "react-ga4";
 import { Footer } from "./components/Footer";
+import { Modal } from "./components/Modal";
 
 export function App(): JSX.Element {
   const [isParticlesEngineLoaded, setIsParticlesEngineLoaded] = useState(false);
@@ -61,6 +62,36 @@ export function App(): JSX.Element {
         <Skills />
         <Experience />
         <Projects />
+        <Modal>
+          <div className="pb-8 pt-6 px-12 flex flex-col gap-4 justify-center items-center">
+            <h6>Message</h6>
+            <form className="flex flex-col gap-2">
+              <label htmlFor="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                autoComplete="name"
+                className="bg-[#616C6F] rounded-md px-2 outline-primary"
+              />
+              <label htmlFor="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autoComplete="email"
+                className="bg-[#616C6F] rounded-md px-2 outline-primary"
+              />
+              <label htmlFor="message">Message:</label>
+              <textarea
+                id="message"
+                name="message"
+                rows={4}
+                className="bg-[#616C6F] rounded-md px-2 outline-primary resize-none"
+              />
+            </form>
+          </div>
+        </Modal>
       </div>
       <Footer />
     </main>
