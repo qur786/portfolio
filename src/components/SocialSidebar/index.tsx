@@ -1,4 +1,4 @@
-import { Fade, Slide } from "react-awesome-reveal";
+import { AttentionSeeker, Fade, Slide } from "react-awesome-reveal";
 import { GithubIcon } from "../../Icons/github";
 import { GmailIcon } from "../../Icons/gmail";
 import { LinkedInIcon } from "../../Icons/linked-in";
@@ -63,27 +63,33 @@ export function SocialSidebar({
         </Slide>
       </div>
       <div className="absolute z-10 right-8 top-2 flex flex-row gap-4">
-        <button
-          onClick={toggleTheme}
-          title={
-            theme === "dark" ? "Toggle to Light Theme" : "Toggle to Dark Theme"
-          }
-        >
-          {theme === "dark" ? (
-            <SunIcon className="h-8 fill-white" />
-          ) : (
-            <MoonIcon className="h-8 fill-black" />
-          )}
-        </button>
-        <a
-          href="/portfolio/Qurban-Ahmad-Latest.pdf"
-          onClick={handleResumeClick}
-          target="_blank"
-        >
-          <button className="text-white dark:text-black shadow-xl shadow-cyan-500/50 bg-[#67E6DC] font-bold rounded-lg px-6 py-2">
-            Resume
+        <AttentionSeeker effect="bounce" delay={1500}>
+          <button
+            onClick={toggleTheme}
+            title={
+              theme === "dark"
+                ? "Toggle to Light Theme"
+                : "Toggle to Dark Theme"
+            }
+          >
+            {theme === "dark" ? (
+              <SunIcon className="h-8 fill-white" />
+            ) : (
+              <MoonIcon className="h-8 fill-black" />
+            )}
           </button>
-        </a>
+        </AttentionSeeker>
+        <Slide direction="left" delay={1000}>
+          <a
+            href="/portfolio/Qurban-Ahmad-Latest.pdf"
+            onClick={handleResumeClick}
+            target="_blank"
+          >
+            <button className="text-white dark:text-black shadow-xl shadow-cyan-500/50 bg-[#67E6DC] font-bold rounded-lg px-6 py-2">
+              Resume
+            </button>
+          </a>
+        </Slide>
       </div>
     </>
   );
