@@ -8,7 +8,7 @@ import { Skills } from "./components/Skills";
 import { Experience } from "./components/Experience";
 import { Projects } from "./components/Projects";
 import { useMobile } from "./hooks";
-import { MobileContext } from "./context";
+import { MobileContext } from "./context/mobile-context";
 import { Fade, Slide } from "react-awesome-reveal";
 import ReactGA from "react-ga4";
 import { Footer } from "./components/Footer";
