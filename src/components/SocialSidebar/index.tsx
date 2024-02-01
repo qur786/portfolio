@@ -6,8 +6,19 @@ import { TwitterIcon } from "../../Icons/twitter";
 import { WhatsappIcon } from "../../Icons/whatsapp";
 import ReactGA from "react-ga4";
 import { MouseEventHandler } from "react";
+import { MoonIcon } from "../../Icons/moon";
+import { SunIcon } from "../../Icons/sun";
+import type { Theme } from "../../context/utils";
 
-export function SocialSidebar(): JSX.Element {
+interface SocialSidebarProps {
+  theme?: Theme;
+  toggleTheme?: () => void;
+}
+
+export function SocialSidebar({
+  theme,
+  toggleTheme,
+}: SocialSidebarProps): JSX.Element {
   const handleResumeClick: MouseEventHandler<HTMLAnchorElement> = () => {
     ReactGA.event({
       category: "Resume",
@@ -39,7 +50,8 @@ export function SocialSidebar(): JSX.Element {
           </a>
         </Fade>
       </div>
-      <div className="fixed right-0 top-2">
+      {/* z-index is provided because this component is getting overlaid by Introduction and Footer. */}
+      <div className="fixed right-0 top-2 z-[1]">
         <Slide direction="right" triggerOnce delay={5 * 500}>
           <a
             href="mailto:ahmad76qurban@gbouncemail.com"
@@ -50,15 +62,29 @@ export function SocialSidebar(): JSX.Element {
           </a>
         </Slide>
       </div>
-      <a
-        href="/portfolio/Qurban-Ahmad-Latest.pdf"
-        onClick={handleResumeClick}
-        target="_blank"
-      >
-        <button className="absolute z-10 top-2 right-8 shadow-xl shadow-cyan-500/50 bg-[#67E6DC] text-black font-bold rounded-lg px-6 py-2">
-          Resume
+      <div className="absolute z-10 right-8 top-2 flex flex-row gap-4">
+        <button
+          onClick={toggleTheme}
+          title={
+            theme === "dark" ? "Toggle to Light Theme" : "Toggle to Dark Theme"
+          }
+        >
+          {theme === "dark" ? (
+            <SunIcon className="h-8 fill-white" />
+          ) : (
+            <MoonIcon className="h-8 fill-black" />
+          )}
         </button>
-      </a>
+        <a
+          href="/portfolio/Qurban-Ahmad-Latest.pdf"
+          onClick={handleResumeClick}
+          target="_blank"
+        >
+          <button className="text-white dark:text-black shadow-xl shadow-cyan-500/50 bg-[#67E6DC] font-bold rounded-lg px-6 py-2">
+            Resume
+          </button>
+        </a>
+      </div>
     </>
   );
 }

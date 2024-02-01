@@ -8,13 +8,15 @@ import { Skills } from "./components/Skills";
 import { Experience } from "./components/Experience";
 import { Projects } from "./components/Projects";
 import { useMobile } from "./hooks";
-import { MobileContext } from "./context";
+import { MobileContext } from "./context/mobile-context";
 import { Fade, Slide } from "react-awesome-reveal";
 import ReactGA from "react-ga4";
 import { Footer } from "./components/Footer";
+import { ThemeContext } from "./context/theme-context";
 
 export function App(): JSX.Element {
   const [isParticlesEngineLoaded, setIsParticlesEngineLoaded] = useState(false);
+  const { theme, toggleTheme } = useContext<ThemeContext>(ThemeContext);
   const mainRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const isMobile = useMobile(mainRef);
@@ -47,7 +49,7 @@ export function App(): JSX.Element {
 
   return (
     <main className="select-none" ref={mainRef}>
-      <SocialSidebar />
+      <SocialSidebar theme={theme} toggleTheme={toggleTheme} />
       <Fade triggerOnce duration={5000}>
         <Introduction
           onViewWorkClick={handleViewButtonClick}
@@ -59,7 +61,7 @@ export function App(): JSX.Element {
           <About />
         </Slide>
         <Skills />
-        <Experience />
+        <Experience theme={theme} />
         <Projects />
       </div>
       <Footer />

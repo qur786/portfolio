@@ -15,9 +15,9 @@ export function Footer(): JSX.Element {
     <div className="h-56 relative z-[2]">
       <div
         id="slope"
-        className="h-2/3 w-full bg-gradient-to-bl from-transparent from-50% to-[#211E1E] to-50%"
+        className="h-2/3 w-full bg-gradient-to-bl from-transparent from-50% to-slate-200 dark:to-[#211E1E] to-50%"
       ></div>
-      <div className="h-full bg-[#211E1E]">
+      <div className="h-full bg-slate-200 dark:bg-[#211E1E]">
         <h5 className="text-primary font-semibold text-2xl bottom-0 text-center pt-6 pb-12">
           Thanks for visiting!
         </h5>

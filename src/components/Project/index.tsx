@@ -21,7 +21,7 @@ export function Project({
   imageClipPosition = "0px_25%",
 }: ProjectProps): JSX.Element {
   return (
-    <div className="max-w-[280px] h-[440px] rounded-lg bg-[#222222]">
+    <div className="max-w-[280px] h-[440px] rounded-lg shadow-2xl bg-gray-50 dark:bg-[#222222]">
       <img
         className={`w-full h-60 object-cover rounded-tl-lg rounded-tr-lg object-[${imageClipPosition}]`}
         src={image}
@@ -32,7 +32,10 @@ export function Project({
         {stacks.length > 0 ? (
           <div className="flex flex-row justify-start flex-wrap px-2 gap-2">
             {stacks.slice(0, 6).map((stack) => (
-              <p key={stack} className="rounded-xl text-sm bg-[#1f1f86] px-2">
+              <p
+                key={stack}
+                className="rounded-xl text-sm bg-sky-500 dark:bg-[#1f1f86] px-2"
+              >
                 {stack}
               </p>
             ))}
@@ -47,10 +50,10 @@ export function Project({
                 typeof deployedLink === "string" ? "pointer" : "not-allowed",
             }}
           >
-            <ServerIcon className="h-6" />
+            <ServerIcon className="h-6 dark:fill-white fill-black" />
           </a>
           <a href={githubLink} title="Repository">
-            <GithubCircleIcon className="h-8" />
+            <GithubCircleIcon className="h-8 dark:fill-white fill-black" />
           </a>
         </div>
       </div>
