@@ -14,7 +14,7 @@ ReactGA.initialize("G-ZQW766DHW5");
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <MobileProvider>
-      <div className="dark:bg-[#121212] dark:color-white font-normal font-robot">
+      <div className="dark:bg-[#121212] dark:text-white font-normal font-roboto">
         <App />
       </div>
     </MobileProvider>

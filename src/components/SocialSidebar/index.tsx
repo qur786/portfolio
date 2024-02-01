@@ -39,7 +39,8 @@ export function SocialSidebar(): JSX.Element {
           </a>
         </Fade>
       </div>
-      <div className="fixed right-0 top-2">
+      {/* z-index is provided because this component is getting overlaid by Introduction and Footer. */}
+      <div className="fixed right-0 top-2 z-[1]">
         <Slide direction="right" triggerOnce delay={5 * 500}>
           <a
             href="mailto:ahmad76qurban@gbouncemail.com"
@@ -55,7 +56,7 @@ export function SocialSidebar(): JSX.Element {
         onClick={handleResumeClick}
         target="_blank"
       >
-        <button className="absolute z-10 top-2 right-8 shadow-xl shadow-cyan-500/50 bg-[#67E6DC] text-black font-bold rounded-lg px-6 py-2">
+        <button className="absolute text-white z-10 top-2 right-8 shadow-xl shadow-cyan-500/50 bg-[#67E6DC] font-bold rounded-lg px-6 py-2">
           Resume
         </button>
       </a>
