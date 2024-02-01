@@ -40,13 +40,13 @@ export function ExperienceItem({
         <div className="flex md:flex-row flex-col justify-between md:items-center">
           <div className="flex flex-row md:gap-x-0 gap-x-1 items-center">
             <CompanyIcon className="h-4" />
-            <h4 className="md:text-sm text-xs py-2 text-gray-200 font-light">
+            <h4 className="md:text-sm text-xs py-2 dark:bg:text-gray-200 font-light">
               {company}
             </h4>
           </div>
           <div className="flex flex-row md:gap-x-0 gap-x-1 items-center md:text-right text-left">
             <LocationIcon className="h-4" />
-            <h4 className="md:text-sm text-xs py-2 font-light text-gray-200">
+            <h4 className="md:text-sm text-xs py-2 font-light dark:text-gray-200">
               {city}, {country}
             </h4>
           </div>
