@@ -11,7 +11,8 @@ export function MessageForm(): JSX.Element {
           id="name"
           name="name"
           autoComplete="name"
-          className="bg-[#616C6F] text-sm font-[500] opacity-75 focus:outline-none rounded-md px-2"
+          required
+          className="bg-[#616C6F] text-mdfont-[500] opacity-75 focus:outline-none rounded-md px-2"
         />
         <label htmlFor="email" className="font-bold">
           Email:
@@ -21,7 +22,8 @@ export function MessageForm(): JSX.Element {
           id="email"
           name="email"
           autoComplete="email"
-          className="bg-[#616C6F] text-sm font-[500] opacity-75 focus:outline-none rounded-md px-2"
+          required
+          className="bg-[#616C6F] text-md font-[500] opacity-75 focus:outline-none rounded-md px-2"
         />
         <label htmlFor="message" className="font-bold">
           Message:
@@ -30,9 +32,17 @@ export function MessageForm(): JSX.Element {
           id="message"
           name="message"
           rows={4}
+          minLength={10}
           maxLength={500}
-          className="bg-[#616C6F] text-sm font-[500] opacity-75 focus:outline-none rounded-md px-2 resize-none"
+          required
+          className="bg-[#616C6F] text-mdfont-[500] opacity-75 focus:outline-none rounded-md px-2 resize-none"
         />
+        <button
+          type="submit"
+          className="py-1 self-end mt-2 font-bold transition-[transform, letter-spacing] duration-300 hover:tracking-wider hover:scale-105 rounded-md bg-sky-400 w-1/3"
+        >
+          Submit
+        </button>
       </form>
     </div>
   );
