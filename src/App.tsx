@@ -12,9 +12,11 @@ import { MobileContext } from "./context/mobile-context";
 import { Fade, Slide } from "react-awesome-reveal";
 import ReactGA from "react-ga4";
 import { Footer } from "./components/Footer";
+import { ThemeContext } from "./context/theme-context";
 
 export function App(): JSX.Element {
   const [isParticlesEngineLoaded, setIsParticlesEngineLoaded] = useState(false);
+  const { theme } = useContext<ThemeContext>(ThemeContext);
   const mainRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const isMobile = useMobile(mainRef);
@@ -59,7 +61,7 @@ export function App(): JSX.Element {
           <About />
         </Slide>
         <Skills />
-        <Experience />
+        <Experience theme={theme} />
         <Projects />
       </div>
       <Footer />
