@@ -18,7 +18,7 @@ export function FooterButton({
     <a href="tel:+916204789892">
       <button
         onClick={onClick}
-        className="hover:text-primary hover:scale-110 transition-[color,transform] font-bold text-gray-500"
+        className="hover:text-primary hover:scale-110 transition-[color,transform] font-bold dark:text-gray-500"
       >
         <Icon className="fill-primary h-6 inline" />
         <p>{title}</p>
@@ -27,7 +27,7 @@ export function FooterButton({
   ) : (
     <button
       onClick={onClick}
-      className="hover:text-primary hover:scale-110 transition-[color,transform] font-bold text-gray-500"
+      className="hover:text-primary hover:scale-110 transition-[color,transform] font-bold dark:text-gray-500"
     >
       <Icon className="fill-primary h-6 inline" />
       <p>{title}</p>
