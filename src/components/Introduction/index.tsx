@@ -1,6 +1,6 @@
 import Particles from "@tsparticles/react";
 import { MouseEventHandler, useContext } from "react";
-import { MobileContext } from "../../context";
+import { MobileContext } from "../../context/mobile-context";
 
 export interface IntroductionProps {
   isParticlesEngineLoaded: boolean;
