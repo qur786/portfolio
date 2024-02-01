@@ -63,7 +63,7 @@ export function SocialSidebar({
         </Slide>
       </div>
       <div className="absolute z-10 right-8 top-2 flex flex-row gap-4">
-        <AttentionSeeker effect="bounce" delay={1500}>
+        <AttentionSeeker effect="bounce" triggerOnce delay={1500}>
           <button
             onClick={toggleTheme}
             title={
@@ -79,7 +79,7 @@ export function SocialSidebar({
             )}
           </button>
         </AttentionSeeker>
-        <Slide direction="left" delay={1000}>
+        <Slide direction="left" triggerOnce delay={1000}>
           <a
             href="/portfolio/Qurban-Ahmad-Latest.pdf"
             onClick={handleResumeClick}
