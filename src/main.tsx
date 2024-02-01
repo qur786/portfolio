@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import { App } from "./App.tsx";
-import { MobileProvider } from "./context/index.tsx";
+import { MobileProvider } from "./context/mobile-context.tsx";
 import ReactGA from "react-ga4";
 import "@fontsource/roboto/100.css";
 import "@fontsource/roboto/300.css";
