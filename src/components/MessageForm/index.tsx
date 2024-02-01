@@ -1,4 +1,10 @@
+import { MouseEventHandler } from "react";
+
 export function MessageForm(): JSX.Element {
+  const handleSubmit: MouseEventHandler<HTMLButtonElement> = (e) => {
+    e.preventDefault();
+    // TODO: add logic to send emails
+  };
   return (
     <div className="pb-8 pt-6 px-12 flex flex-col gap-4 justify-center items-center">
       <h6 className="font-bold text-xl">Message</h6>
@@ -39,6 +45,7 @@ export function MessageForm(): JSX.Element {
         />
         <button
           type="submit"
+          onClick={handleSubmit}
           className="py-1 self-end mt-2 font-bold transition-[transform, letter-spacing] duration-300 hover:tracking-wider hover:scale-105 rounded-md bg-sky-400 w-1/3"
         >
           Submit
