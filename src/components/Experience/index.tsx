@@ -63,11 +63,7 @@ export function Experience(): JSX.Element {
         />
         <VerticalTimelineElement
           icon={<CompleteIcon />}
-          iconStyle={{
-            background: "#222222",
-            boxShadow:
-              "0 0 0 4px #45CE30, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05)", // Icon container outer border
-          }}
+          iconClassName="bg-white dark:bg-[#222222] shadow-experience-icon-border-success"
         />
       </VerticalTimeline>
     </div>

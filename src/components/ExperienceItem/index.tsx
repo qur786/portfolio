@@ -29,7 +29,7 @@ export function ExperienceItem({
       contentArrowStyle={{ borderRight: "7px solid #222222" }}
       date={date}
       dateClassName="dark:text-white"
-      iconClassName="bg-white dark:fill-white fill-black dark:bg-[#222222] shadow-experience-icon-border"
+      iconClassName="bg-white dark:bg-[#222222] dark:fill-white fill-black shadow-experience-icon-border"
       icon={icon}
     >
       <div className="flex flex-col gap-2">
