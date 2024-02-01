@@ -16,7 +16,7 @@ import { ThemeContext } from "./context/theme-context";
 
 export function App(): JSX.Element {
   const [isParticlesEngineLoaded, setIsParticlesEngineLoaded] = useState(false);
-  const { theme } = useContext<ThemeContext>(ThemeContext);
+  const { theme, toggleTheme } = useContext<ThemeContext>(ThemeContext);
   const mainRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const isMobile = useMobile(mainRef);
@@ -49,7 +49,7 @@ export function App(): JSX.Element {
 
   return (
     <main className="select-none" ref={mainRef}>
-      <SocialSidebar />
+      <SocialSidebar theme={theme} toggleTheme={toggleTheme} />
       <Fade triggerOnce duration={5000}>
         <Introduction
           onViewWorkClick={handleViewButtonClick}

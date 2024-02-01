@@ -5,14 +5,20 @@ import { LinkedInIcon } from "../../Icons/linked-in";
 import { TwitterIcon } from "../../Icons/twitter";
 import { WhatsappIcon } from "../../Icons/whatsapp";
 import ReactGA from "react-ga4";
-import { MouseEventHandler, useContext } from "react";
+import { MouseEventHandler } from "react";
 import { MoonIcon } from "../../Icons/moon";
 import { SunIcon } from "../../Icons/sun";
-import { ThemeContext } from "../../context/theme-context";
+import type { Theme } from "../../context/utils";
 
-export function SocialSidebar(): JSX.Element {
-  const { theme, toggleTheme } = useContext<ThemeContext>(ThemeContext);
+interface SocialSidebarProps {
+  theme?: Theme;
+  toggleTheme?: () => void;
+}
 
+export function SocialSidebar({
+  theme,
+  toggleTheme,
+}: SocialSidebarProps): JSX.Element {
   const handleResumeClick: MouseEventHandler<HTMLAnchorElement> = () => {
     ReactGA.event({
       category: "Resume",
