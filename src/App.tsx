@@ -83,7 +83,7 @@ export function App(): JSX.Element {
                 id="name"
                 name="name"
                 autoComplete="name"
-                className="bg-[#616C6F] opacity-75 focus:outline-none rounded-md px-2"
+                className="bg-[#616C6F] text-sm font-[500] opacity-75 focus:outline-none rounded-md px-2"
               />
               <label htmlFor="email" className="font-bold">
                 Email:
@@ -93,7 +93,7 @@ export function App(): JSX.Element {
                 id="email"
                 name="email"
                 autoComplete="email"
-                className="bg-[#616C6F] opacity-75 focus:outline-none rounded-md px-2"
+                className="bg-[#616C6F] text-sm font-[500] opacity-75 focus:outline-none rounded-md px-2"
               />
               <label htmlFor="message" className="font-bold">
                 Message:
@@ -103,7 +103,7 @@ export function App(): JSX.Element {
                 name="message"
                 rows={4}
                 maxLength={500}
-                className="bg-[#616C6F] opacity-75 focus:outline-none rounded-md px-2 resize-none"
+                className="bg-[#616C6F] text-sm font-[500] opacity-75 focus:outline-none rounded-md px-2 resize-none"
               />
             </form>
           </div>
