@@ -5,13 +5,14 @@ import { LinkedInIcon } from "../../Icons/linked-in";
 import { TwitterIcon } from "../../Icons/twitter";
 import { WhatsappIcon } from "../../Icons/whatsapp";
 import ReactGA from "react-ga4";
-import { MouseEventHandler, useState } from "react";
-import { isDarkMode, toggleTheme } from "../utils";
+import { MouseEventHandler, useContext } from "react";
 import { MoonIcon } from "../../Icons/moon";
 import { SunIcon } from "../../Icons/sun";
+import { ThemeContext } from "../../context/theme-context";
 
 export function SocialSidebar(): JSX.Element {
-  const [darkMode, setDarkMode] = useState(isDarkMode());
+  const { theme, toggleTheme } = useContext<ThemeContext>(ThemeContext);
+
   const handleResumeClick: MouseEventHandler<HTMLAnchorElement> = () => {
     ReactGA.event({
       category: "Resume",
@@ -57,15 +58,12 @@ export function SocialSidebar(): JSX.Element {
       </div>
       <div className="absolute z-10 right-8 top-2 flex flex-row gap-4">
         <button
-          onClick={() => {
-            toggleTheme();
-            setDarkMode(isDarkMode());
-          }}
+          onClick={toggleTheme}
           title={
-            darkMode === true ? "Toggle to Light Theme" : "Toggle to Dark Theme"
+            theme === "dark" ? "Toggle to Light Theme" : "Toggle to Dark Theme"
           }
         >
-          {darkMode === true ? (
+          {theme === "dark" ? (
             <SunIcon className="h-8 fill-white" />
           ) : (
             <MoonIcon className="h-8 fill-black" />
