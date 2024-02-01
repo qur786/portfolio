@@ -12,7 +12,7 @@ import { MobileContext } from "./context";
 import { Fade, Slide } from "react-awesome-reveal";
 import ReactGA from "react-ga4";
 import { Footer, FooterProps } from "./components/Footer";
-import { Modal } from "./components/Modal";
+import { Modal, ModalProps } from "./components/Modal";
 
 export function App(): JSX.Element {
   const [isParticlesEngineLoaded, setIsParticlesEngineLoaded] = useState(false);
@@ -27,11 +27,11 @@ export function App(): JSX.Element {
   };
 
   const handleModalOpen: FooterProps["onMessageButtonClick"] = () => {
-    if (messageDialogRef.current?.open === false) {
-      messageDialogRef.current?.showModal();
-    } else {
-      messageDialogRef.current?.close();
-    }
+    messageDialogRef.current?.showModal();
+  };
+
+  const handleModalClose: ModalProps["onClose"] = () => {
+    messageDialogRef.current?.close();
   };
 
   // this should be run only once per application lifetime
@@ -71,7 +71,7 @@ export function App(): JSX.Element {
         <Skills />
         <Experience />
         <Projects />
-        <Modal ref={messageDialogRef}>
+        <Modal ref={messageDialogRef} onClose={handleModalClose}>
           <div className="pb-8 pt-6 px-12 flex flex-col gap-4 justify-center items-center">
             <h6 className="font-bold text-xl">Message</h6>
             <form className="flex flex-col w-full gap-2">

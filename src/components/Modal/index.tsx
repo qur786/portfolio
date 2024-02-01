@@ -1,8 +1,12 @@
 import { ForwardedRef, forwardRef, PropsWithChildren } from "react";
 
+export interface ModalProps extends PropsWithChildren {
+  onClose?: () => void;
+}
+
 export const Modal = forwardRef(
   (
-    { children }: PropsWithChildren,
+    { children, onClose }: ModalProps,
     modalRef: ForwardedRef<HTMLDialogElement>
   ): JSX.Element => {
     return (
@@ -10,6 +14,12 @@ export const Modal = forwardRef(
         ref={modalRef}
         className="bg-[#242124] text-white min-w-[30%] backdrop:backdrop-blur-sm rounded-lg"
       >
+        <button
+          className="p-4 absolute top-0 right-0 hover:text-red-600 font-bold"
+          onClick={onClose}
+        >
+          X
+        </button>
         {children}
       </dialog>
     );
