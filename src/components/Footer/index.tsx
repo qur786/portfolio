@@ -3,7 +3,11 @@ import { MessageIcon } from "../../Icons/message";
 import { UpArrowIcon } from "../../Icons/up-arrow";
 import { FooterButton, FooterButtonProps } from "../FooterButton";
 
-export function Footer(): JSX.Element {
+export interface FooterProps {
+  onMessageButtonClick?: () => void;
+}
+
+export function Footer({ onMessageButtonClick }: FooterProps): JSX.Element {
   const handleBackToTopClick: FooterButtonProps["onClick"] = () => {
     window.scroll({
       top: 0,
@@ -27,7 +31,11 @@ export function Footer(): JSX.Element {
             icon={UpArrowIcon}
             onClick={handleBackToTopClick}
           />
-          <FooterButton title="Send message" icon={MessageIcon} />
+          <FooterButton
+            title="Send message"
+            icon={MessageIcon}
+            onClick={onMessageButtonClick}
+          />
           <FooterButton
             title="Give me a call"
             icon={CallIcon}

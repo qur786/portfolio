@@ -11,18 +11,27 @@ import { useMobile } from "./hooks";
 import { MobileContext } from "./context";
 import { Fade, Slide } from "react-awesome-reveal";
 import ReactGA from "react-ga4";
-import { Footer } from "./components/Footer";
+import { Footer, FooterProps } from "./components/Footer";
 import { Modal } from "./components/Modal";
 
 export function App(): JSX.Element {
   const [isParticlesEngineLoaded, setIsParticlesEngineLoaded] = useState(false);
   const mainRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
+  const messageDialogRef = useRef<HTMLDialogElement>(null);
   const isMobile = useMobile(mainRef);
   const { setIsMobile } = useContext(MobileContext);
 
   const handleViewButtonClick: IntroductionProps["onViewWorkClick"] = () => {
     aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleModalOpen: FooterProps["onMessageButtonClick"] = () => {
+    if (messageDialogRef.current?.open === false) {
+      messageDialogRef.current?.showModal();
+    } else {
+      messageDialogRef.current?.close();
+    }
   };
 
   // this should be run only once per application lifetime
@@ -62,38 +71,45 @@ export function App(): JSX.Element {
         <Skills />
         <Experience />
         <Projects />
-        <Modal>
+        <Modal ref={messageDialogRef}>
           <div className="pb-8 pt-6 px-12 flex flex-col gap-4 justify-center items-center">
-            <h6>Message</h6>
-            <form className="flex flex-col gap-2">
-              <label htmlFor="name">Name:</label>
+            <h6 className="font-bold text-xl">Message</h6>
+            <form className="flex flex-col w-full gap-2">
+              <label htmlFor="name" className="font-bold">
+                Name:
+              </label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 autoComplete="name"
-                className="bg-[#616C6F] rounded-md px-2 outline-primary"
+                className="bg-[#616C6F] opacity-75 focus:outline-none rounded-md px-2"
               />
-              <label htmlFor="email">Email:</label>
+              <label htmlFor="email" className="font-bold">
+                Email:
+              </label>
               <input
                 type="email"
                 id="email"
                 name="email"
                 autoComplete="email"
-                className="bg-[#616C6F] rounded-md px-2 outline-primary"
+                className="bg-[#616C6F] opacity-75 focus:outline-none rounded-md px-2"
               />
-              <label htmlFor="message">Message:</label>
+              <label htmlFor="message" className="font-bold">
+                Message:
+              </label>
               <textarea
                 id="message"
                 name="message"
                 rows={4}
-                className="bg-[#616C6F] rounded-md px-2 outline-primary resize-none"
+                maxLength={500}
+                className="bg-[#616C6F] opacity-75 focus:outline-none rounded-md px-2 resize-none"
               />
             </form>
           </div>
         </Modal>
       </div>
-      <Footer />
+      <Footer onMessageButtonClick={handleModalOpen} />
     </main>
   );
 }

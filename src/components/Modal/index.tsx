@@ -1,11 +1,17 @@
-import type { PropsWithChildren } from "react";
+import { ForwardedRef, forwardRef, PropsWithChildren } from "react";
 
-export function Modal({ children }: PropsWithChildren): JSX.Element {
-  return (
-    <div className="h-screen w-full z-20 backdrop-blur-sm fixed flex flex-col items-center justify-center top-0 left-0">
-      <div className="bg-[#2C3335] shadow-lg shadow-[#2F363F] rounded-lg">
+export const Modal = forwardRef(
+  (
+    { children }: PropsWithChildren,
+    modalRef: ForwardedRef<HTMLDialogElement>
+  ): JSX.Element => {
+    return (
+      <dialog
+        ref={modalRef}
+        className="bg-[#242124] text-white min-w-[30%] backdrop:backdrop-blur-sm rounded-lg"
+      >
         {children}
-      </div>
-    </div>
-  );
-}
+      </dialog>
+    );
+  }
+);
