@@ -41,7 +41,7 @@ export function SocialSidebar({
             <TwitterIcon className="h-6 hover:scale-150 transition-transform fill-primary hover:fill-[#1DA1F2]" />
           </a>
           <a href="https://github.com/qur786" title="Github">
-            <GithubIcon className="h-6 hover:scale-150 transition-transform fill-primary hover:fill-black" />
+            <GithubIcon className="h-6 hover:scale-150 transition-transform fill-primary hover:fill-black dark:hover:fill-white" />
           </a>
           <a href="https://wa.me/+916204789892" title="Whatsapp">
             <WhatsappIcon className="h-6 hover:scale-150 transition-transform fill-primary hover:fill-[#25D366]" />
