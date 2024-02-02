@@ -7,7 +7,6 @@ export function SunIcon({ className }: IconProps): JSX.Element {
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title />
       <circle cx="12" cy="12" r="5" />
       <path d="M21,13H20a1,1,0,0,1,0-2h1a1,1,0,0,1,0,2Z" />
       <path d="M4,13H3a1,1,0,0,1,0-2H4a1,1,0,0,1,0,2Z" />
