@@ -35,19 +35,19 @@ export function SocialSidebar({
             href="https://www.linkedin.com/in/qurban-ahmad-qur786/"
             title="LinkedIn"
           >
-            <LinkedInIcon className="h-6 fill-primary hover:fill-[#0077B5]" />
+            <LinkedInIcon className="h-6 hover:scale-150 transition-transform fill-primary hover:fill-[#0077B5]" />
           </a>
           <a href="https://twitter.com/fantasticnerd67" title="Twitter">
-            <TwitterIcon className="h-6 fill-primary hover:fill-[#1DA1F2]" />
+            <TwitterIcon className="h-6 hover:scale-150 transition-transform fill-primary hover:fill-[#1DA1F2]" />
           </a>
           <a href="https://github.com/qur786" title="Github">
-            <GithubIcon className="h-6" />
+            <GithubIcon className="h-6 hover:scale-150 transition-transform fill-primary hover:fill-black" />
           </a>
           <a href="https://wa.me/+916204789892" title="Whatsapp">
-            <WhatsappIcon className="h-6 fill-primary hover:fill-[#25D366]" />
+            <WhatsappIcon className="h-6 hover:scale-150 transition-transform fill-primary hover:fill-[#25D366]" />
           </a>
           <a href="mailto:ahmad76qurban@gmail.com" title="Email">
-            <GmailIcon className="h-6 fill-primary hover:fill-[#F2A60C]" />
+            <GmailIcon className="h-6 hover:scale-150 transition-transform fill-primary hover:fill-[#F2A60C]" />
           </a>
         </Fade>
       </div>
@@ -74,9 +74,9 @@ export function SocialSidebar({
             }
           >
             {theme === "dark" ? (
-              <SunIcon className="h-8 fill-[#01CBC6] hover:scale-125 transition-transform" />
+              <SunIcon className="h-8 fill-[#01CBC6] hover:scale-150 transition-transform" />
             ) : (
-              <MoonIcon className="h-8 fill-[#01CBC6] hover:scale-125 transition-transform" />
+              <MoonIcon className="h-8 fill-[#01CBC6] hover:scale-150 transition-transform" />
             )}
           </button>
           <a
@@ -85,7 +85,7 @@ export function SocialSidebar({
             target="_blank"
           >
             <button title="resume">
-              <ResumeIcon className="h-8 fill-[#25CCF7] hover:scale-125 transition-transform" />
+              <ResumeIcon className="h-8 fill-[#25CCF7] hover:scale-150 transition-transform" />
             </button>
           </a>
         </AttentionSeeker>
