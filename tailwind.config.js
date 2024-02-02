@@ -7,6 +7,7 @@ export default {
       colors: {
         primary: "#FF020A",
         "black-elevation-1": "#2C2C2C",
+        "black-shadow": "#1F1E1E",
       },
       boxShadow: {
         "experience-icon-border":
