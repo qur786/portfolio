@@ -1,4 +1,4 @@
-import { GithubCircleIcon } from "../../Icons/github-circle";
+import { GithubIcon } from "../../Icons/github";
 import { ServerIcon } from "../../Icons/server";
 
 interface ProjectProps {
@@ -50,10 +50,10 @@ export function Project({
                 typeof deployedLink === "string" ? "pointer" : "not-allowed",
             }}
           >
-            <ServerIcon className="h-6 dark:fill-white fill-black" />
+            <ServerIcon className="h-6 dark:fill-white hover:scale-150 transition-transform fill-black" />
           </a>
           <a href={githubLink} title="Repository">
-            <GithubCircleIcon className="h-8 dark:fill-white fill-black" />
+            <GithubIcon className="h-8 dark:fill-white hover:scale-150 transition-transform fill-black" />
           </a>
         </div>
       </div>
