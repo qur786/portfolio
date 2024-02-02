@@ -6,6 +6,7 @@ export default {
     extend: {
       colors: {
         primary: "#FF020A",
+        "black-elevation-1": "#2C2C2C",
       },
       boxShadow: {
         "experience-icon-border":
