@@ -30,16 +30,15 @@ export function ExperienceItem({
 }: ExperienceItemProps): JSX.Element {
   return (
     <VerticalTimelineElement
-      contentStyle={{ background: theme === "dark" ? "#222222" : "#DAE0E2" }}
+      contentStyle={{ background: theme === "dark" ? "#2C2C2C" : "white" }}
       contentArrowStyle={{
-        borderRight:
-          theme === "dark" ? "7px solid #222222" : "7px solid #DAE0E2",
+        borderRight: theme === "dark" ? "7px solid #2C2C2C" : "7px solid white",
       }}
       date={date}
       dateClassName="dark:text-white"
-      iconClassName="bg-white dark:bg-[#222222] dark:fill-white fill-[#616C6F] shadow-experience-icon-border"
+      iconClassName="bg-white dark:bg-[#222222] dark:fill-white fill-[#CECECE] shadow-experience-icon-border"
       icon={icon}
-      className="drop-shadow-2xl"
+      className="drop-shadow-2xl dark:shadow-black-shadow"
     >
       <div className="flex flex-col gap-2">
         <h3 className="text-lg font-bold md:text-start text-center">{role}</h3>
