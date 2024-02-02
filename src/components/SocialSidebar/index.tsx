@@ -73,9 +73,9 @@ export function SocialSidebar({
             }
           >
             {theme === "dark" ? (
-              <SunIcon className="h-8 fill-white" />
+              <SunIcon className="h-8 fill-primary hover:fill-white" />
             ) : (
-              <MoonIcon className="h-8 fill-black" />
+              <MoonIcon className="h-8 fill-primary hover:fill-black-elevation-1" />
             )}
           </button>
         </AttentionSeeker>
