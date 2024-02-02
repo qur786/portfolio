@@ -9,6 +9,7 @@ import { MouseEventHandler } from "react";
 import { MoonIcon } from "../../Icons/moon";
 import { SunIcon } from "../../Icons/sun";
 import type { Theme } from "../../context/utils";
+import { ResumeIcon } from "../../Icons/resume";
 
 interface SocialSidebarProps {
   theme?: Theme;
@@ -63,7 +64,7 @@ export function SocialSidebar({
         </Slide>
       </div>
       <div className="absolute z-10 right-8 top-2 flex flex-row gap-4">
-        <AttentionSeeker effect="bounce" triggerOnce delay={1500}>
+        <AttentionSeeker effect="bounce" cascade triggerOnce delay={1500}>
           <button
             onClick={toggleTheme}
             title={
@@ -73,23 +74,21 @@ export function SocialSidebar({
             }
           >
             {theme === "dark" ? (
-              <SunIcon className="h-8 fill-primary hover:fill-white" />
+              <SunIcon className="h-8 fill-[#01CBC6] hover:scale-125 transition-transform" />
             ) : (
-              <MoonIcon className="h-8 fill-primary hover:fill-black-elevation-1" />
+              <MoonIcon className="h-8 fill-[#01CBC6] hover:scale-125 transition-transform" />
             )}
           </button>
-        </AttentionSeeker>
-        <Slide direction="left" triggerOnce delay={1000}>
           <a
             href="/portfolio/Qurban-Ahmad-Latest.pdf"
             onClick={handleResumeClick}
             target="_blank"
           >
-            <button className="text-white dark:text-black shadow-xl shadow-cyan-500/50 bg-[#67E6DC] font-bold rounded-lg px-6 py-2">
-              Resume
+            <button title="resume">
+              <ResumeIcon className="h-8 fill-[#25CCF7] hover:scale-125 transition-transform" />
             </button>
           </a>
-        </Slide>
+        </AttentionSeeker>
       </div>
     </>
   );
