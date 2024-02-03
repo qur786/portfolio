@@ -4,7 +4,7 @@ export function About(): JSX.Element {
   return (
     <div
       id="about"
-      className="flex md:flex-row flex-col justify-center items-center md:items-start md:h-screen pt-20 pb-10"
+      className="flex md:flex-row flex-col justify-center items-center md:items-start md:min-h-screen pt-20 pb-10"
     >
       <img
         src={Profile}
