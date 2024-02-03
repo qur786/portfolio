@@ -18,6 +18,23 @@ export default {
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
       },
+      animation: {
+        "slide-down": "slide-down 1s ease-in-out",
+        "slide-up": "slide-down 1s ease-in-out reverse",
+      },
+      keyframes: {
+        "slide-down": {
+          "0%": {
+            transform: "translateY(-200%)",
+          },
+          "75%": {
+            transform: "translateY(20%)",
+          },
+          "100%": {
+            transform: "translateY(0px)",
+          },
+        },
+      },
     },
   },
   plugins: [],
