@@ -11,17 +11,20 @@ import "@fontsource/roboto/700.css";
 import "@fontsource/roboto/900.css";
 import "./index.css";
 import { ThemeProvider } from "./context/theme-context.tsx";
+import { SnackbarProvider } from "notistack";
 
 ReactGA.initialize("G-ZQW766DHW5");
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <MobileProvider>
-      <ThemeProvider>
-        <div className="dark:bg-[#121212] dark:text-white font-normal font-roboto">
-          <App />
-        </div>
-      </ThemeProvider>
-    </MobileProvider>
+    <SnackbarProvider>
+      <MobileProvider>
+        <ThemeProvider>
+          <div className="dark:bg-[#121212] dark:text-white font-normal font-roboto">
+            <App />
+          </div>
+        </ThemeProvider>
+      </MobileProvider>
+    </SnackbarProvider>
   </StrictMode>
 );

@@ -16,6 +16,7 @@ import { Modal, ModalProps } from "./components/Modal";
 import { MessageForm, MessageFormProps } from "./components/MessageForm";
 import { ThemeContext } from "./context/theme-context";
 import { send } from "@emailjs/browser";
+import { useSnackbar } from "notistack";
 
 export function App(): JSX.Element {
   const [isParticlesEngineLoaded, setIsParticlesEngineLoaded] = useState(false);
@@ -25,6 +26,7 @@ export function App(): JSX.Element {
   const messageDialogRef = useRef<HTMLDialogElement>(null);
   const isMobile = useMobile(mainRef);
   const { setIsMobile } = useContext(MobileContext);
+  const { enqueueSnackbar } = useSnackbar();
 
   const handleViewButtonClick: IntroductionProps["onViewWorkClick"] = () => {
     aboutRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -52,11 +54,15 @@ export function App(): JSX.Element {
       },
       "7gN_gfh4gzeFqVDUK"
     )
-      .then((m) => {
-        console.log(m);
+      .then(() => {
+        enqueueSnackbar("Successfully sent the message.", {
+          variant: "success",
+        });
       })
-      .catch((err) => {
-        console.log(err);
+      .catch(() => {
+        enqueueSnackbar("Some error occured while sending the message.", {
+          variant: "error",
+        });
       })
       .finally(() => {
         handleModalClose();
