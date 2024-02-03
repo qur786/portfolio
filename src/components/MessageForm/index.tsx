@@ -46,7 +46,7 @@ export function MessageForm(): JSX.Element {
         <button
           type="submit"
           onClick={handleSubmit}
-          className="py-1 self-end mt-2 font-bold transition-[transform, letter-spacing] duration-300 hover:tracking-wider hover:scale-105 rounded-md bg-sky-400 w-1/3"
+          className="py-1 self-end mt-2 font-bold transition-transform hover:scale-110 rounded-md bg-sky-400 w-1/3"
         >
           Submit
         </button>
