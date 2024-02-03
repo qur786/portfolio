@@ -13,7 +13,7 @@ import { Fade, Slide } from "react-awesome-reveal";
 import ReactGA from "react-ga4";
 import { Footer, FooterProps } from "./components/Footer";
 import { Modal, ModalProps } from "./components/Modal";
-import { MessageForm } from "./components/MessageForm";
+import { MessageForm, MessageFormProps } from "./components/MessageForm";
 import { ThemeContext } from "./context/theme-context";
 
 export function App(): JSX.Element {
@@ -35,6 +35,13 @@ export function App(): JSX.Element {
 
   const handleModalClose: ModalProps["onClose"] = () => {
     messageDialogRef.current?.close();
+  };
+
+  const handleMessageFormSubmit: MessageFormProps["onSubmit"] = (
+    messageData
+  ) => {
+    console.log(messageData);
+    handleModalClose();
   };
 
   // this should be run only once per application lifetime
@@ -75,7 +82,7 @@ export function App(): JSX.Element {
         <Experience theme={theme} />
         <Projects />
         <Modal ref={messageDialogRef} onClose={handleModalClose}>
-          <MessageForm />
+          <MessageForm onSubmit={handleMessageFormSubmit} />
         </Modal>
       </div>
       <Footer onMessageButtonClick={handleModalOpen} />

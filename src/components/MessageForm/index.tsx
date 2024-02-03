@@ -1,10 +1,33 @@
-import { MouseEventHandler } from "react";
+import { ChangeEventHandler, MouseEventHandler, useState } from "react";
 
-export function MessageForm(): JSX.Element {
+interface MessageDatum {
+  name: string;
+  email: string;
+  message: string;
+}
+
+export interface MessageFormProps {
+  onSubmit?: (formData: MessageDatum) => void;
+}
+
+export function MessageForm({ onSubmit }: MessageFormProps): JSX.Element {
+  const [messageData, setMessageData] = useState<MessageDatum>({
+    name: "",
+    email: "",
+    message: "",
+  });
+
   const handleSubmit: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.preventDefault();
-    // TODO: add logic to send emails
+    onSubmit?.(messageData);
   };
+
+  const handleInputChange: ChangeEventHandler<
+    HTMLInputElement | HTMLTextAreaElement
+  > = (e) => {
+    setMessageData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
   return (
     <div className="pb-8 pt-6 px-12 flex flex-col gap-4 justify-center items-center">
       <h6 className="font-bold text-xl">Message</h6>
@@ -17,6 +40,8 @@ export function MessageForm(): JSX.Element {
           id="name"
           name="name"
           autoComplete="name"
+          onChange={handleInputChange}
+          value={messageData.name}
           required
           className="dark:bg-[#4a4e4f] bg-[#ecebeb] dark:border dark:border-white text-md font-[500] opacity-75 shadow-inner rounded-md px-2"
         />
@@ -28,6 +53,8 @@ export function MessageForm(): JSX.Element {
           id="email"
           name="email"
           autoComplete="email"
+          onChange={handleInputChange}
+          value={messageData.email}
           required
           className="dark:bg-[#4a4e4f] bg-[#ecebeb] dark:border dark:border-white text-md font-[500] opacity-75 rounded-md px-2"
         />
@@ -40,6 +67,8 @@ export function MessageForm(): JSX.Element {
           rows={4}
           minLength={10}
           maxLength={500}
+          onChange={handleInputChange}
+          value={messageData.message}
           required
           className="dark:bg-[#4a4e4f] bg-[#ecebeb] dark:border dark:border-white text-md font-[500] opacity-75 rounded-md px-2 resize-none"
         />
