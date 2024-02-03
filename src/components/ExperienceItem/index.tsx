@@ -38,7 +38,7 @@ export function ExperienceItem({
       dateClassName="dark:text-white"
       iconClassName="bg-white dark:bg-[#222222] dark:fill-white fill-[#CECECE] shadow-experience-icon-border"
       icon={icon}
-      className="drop-shadow-2xl dark:shadow-black-shadow"
+      className="drop-shadow-xl md:drop-shadow-2xl dark:shadow-black-shadow"
     >
       <div className="flex flex-col gap-2">
         <h3 className="text-lg font-bold md:text-start text-center">{role}</h3>
