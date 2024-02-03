@@ -20,6 +20,11 @@ export function MessageForm({ onSubmit }: MessageFormProps): JSX.Element {
   const handleSubmit: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.preventDefault();
     onSubmit?.(messageData);
+    setMessageData({
+      name: "",
+      email: "",
+      message: "",
+    }); // Reset the form
   };
 
   const handleInputChange: ChangeEventHandler<
