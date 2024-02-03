@@ -25,6 +25,7 @@
     "react-awesome-reveal": "^4.2.7",
     "react-dom": "^18.2.0",
     "react-ga4": "^2.1.0",
+    "react-google-recaptcha": "^3.1.0",
     "react-vertical-timeline-component": "^3.6.0"
   },
   "devDependencies": {

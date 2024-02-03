@@ -19,23 +19,12 @@ export function MessageForm({ onSubmit }: MessageFormProps): JSX.Element {
 
   const handleSubmit: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.preventDefault();
-    // @ts-expect-error abc
-    grecaptcha.ready(() => {
-      // @ts-expect-error abc
-      grecaptcha
-        .execute("6LcxwmUpAAAAAC0_NxQ7n2rI-AZGF3KuT0D0772d", {
-          action: "message-form-submit",
-        })
-        .then((token: string) => {
-          console.log(token);
-          onSubmit?.(messageData);
-          setMessageData({
-            name: "",
-            email: "",
-            message: "",
-          }); // Reset the form
-        });
-    });
+    onSubmit?.(messageData);
+    setMessageData({
+      name: "",
+      email: "",
+      message: "",
+    }); // Reset the form
   };
 
   const handleInputChange: ChangeEventHandler<
