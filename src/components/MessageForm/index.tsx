@@ -18,7 +18,7 @@ export function MessageForm(): JSX.Element {
           name="name"
           autoComplete="name"
           required
-          className="bg-[#616C6F] text-mdfont-[500] opacity-75 focus:outline-none rounded-md px-2"
+          className="dark:bg-[#4a4e4f] bg-[#ecebeb] dark:border dark:border-white text-md font-[500] opacity-75 shadow-inner rounded-md px-2"
         />
         <label htmlFor="email" className="font-bold">
           Email:
@@ -29,7 +29,7 @@ export function MessageForm(): JSX.Element {
           name="email"
           autoComplete="email"
           required
-          className="bg-[#616C6F] text-md font-[500] opacity-75 focus:outline-none rounded-md px-2"
+          className="dark:bg-[#4a4e4f] bg-[#ecebeb] dark:border dark:border-white text-md font-[500] opacity-75 rounded-md px-2"
         />
         <label htmlFor="message" className="font-bold">
           Message:
@@ -41,12 +41,12 @@ export function MessageForm(): JSX.Element {
           minLength={10}
           maxLength={500}
           required
-          className="bg-[#616C6F] text-mdfont-[500] opacity-75 focus:outline-none rounded-md px-2 resize-none"
+          className="dark:bg-[#4a4e4f] bg-[#ecebeb] dark:border dark:border-white text-md font-[500] opacity-75 rounded-md px-2 resize-none"
         />
         <button
           type="submit"
           onClick={handleSubmit}
-          className="py-1 self-end mt-2 font-bold transition-transform hover:scale-110 rounded-md bg-sky-400 w-1/3"
+          className="dark:text-black-elevation-1 text-white py-1 self-end mt-2 font-bold transition-transform hover:scale-110 rounded-md bg-sky-400 w-1/3"
         >
           Submit
         </button>
