@@ -1,5 +1,16 @@
-import { PropsWithChildren, createContext, useCallback, useState } from "react";
-import { Theme, getTheme, changeTheme } from "./utils";
+import {
+  PropsWithChildren,
+  createContext,
+  useCallback,
+  useEffect,
+  useState,
+} from "react";
+import {
+  Theme,
+  getTheme,
+  toggleAppTheme,
+  setTheme as setAppTheme,
+} from "./utils";
 
 export interface ThemeContext {
   theme: Theme;
@@ -15,9 +26,14 @@ export function ThemeProvider({ children }: PropsWithChildren): JSX.Element {
   const [theme, setTheme] = useState<Theme>(getTheme());
 
   const toggleTheme = useCallback(() => {
-    changeTheme();
+    toggleAppTheme();
     setTheme(getTheme());
   }, []);
+
+  useEffect(() => {
+    setAppTheme(theme);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Update theme only one for the first time as per 'getTheme'
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
