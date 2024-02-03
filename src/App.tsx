@@ -15,6 +15,7 @@ import { Footer, FooterProps } from "./components/Footer";
 import { Modal, ModalProps } from "./components/Modal";
 import { MessageForm, MessageFormProps } from "./components/MessageForm";
 import { ThemeContext } from "./context/theme-context";
+import { send } from "@emailjs/browser";
 
 export function App(): JSX.Element {
   const [isParticlesEngineLoaded, setIsParticlesEngineLoaded] = useState(false);
@@ -40,8 +41,26 @@ export function App(): JSX.Element {
   const handleMessageFormSubmit: MessageFormProps["onSubmit"] = (
     messageData
   ) => {
-    console.log(messageData);
-    handleModalClose();
+    send(
+      "default_service",
+      "template_3r9yy7s",
+      {
+        to_name: "Qurban",
+        from_name: messageData.name,
+        message: messageData.message,
+        from_email: messageData.email,
+      },
+      "7gN_gfh4gzeFqVDUK"
+    )
+      .then((m) => {
+        console.log(m);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => {
+        handleModalClose();
+      });
   };
 
   // this should be run only once per application lifetime

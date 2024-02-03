@@ -62,6 +62,11 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
+"@emailjs/browser@^3.12.1":
+  version "3.12.1"
+  resolved "https://registry.yarnpkg.com/@emailjs/browser/-/browser-3.12.1.tgz#c1b058a09b99e5e19fa42911725c0227a8b7c12f"
+  integrity sha512-C5nK07CgSCFx3onsuRt/ZaaMvIi0T3SHHanM7fKozjSvbZu+OjHHP9W608fYpic0OavF7yIlfy4+lRDO33JdbA==
+
 "@emotion/babel-plugin@^11.11.0":
   version "11.11.0"
   resolved "https://registry.yarnpkg.com/@emotion/babel-plugin/-/babel-plugin-11.11.0.tgz#c2d872b6a7767a9d176d007f5b31f7d504bb5d6c"
