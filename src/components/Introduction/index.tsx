@@ -90,7 +90,7 @@ export function Introduction({
           A <b className="text-green-600">MERN</b> stack developer.
         </p>
         <button
-          className={`transition-[font-weight,letter-spacing] drop-shadow-xl md:shadow-2xl dark:text-white duration-300 hover:font-black font-bold hover:tracking-widest bg-white shadow-xl md:shadow-2xl dark:bg-black-elevation-1 dark:shadow-black-shadow dark:shadow-inner rounded-md py-4 px-8 text-lg`}
+          className={`transition-[font-weight,letter-spacing] dark:text-white duration-300 hover:font-black font-bold hover:tracking-widest bg-white shadow-xl md:shadow-2xl dark:bg-black-elevation-1 dark:shadow-black-shadow dark:shadow-inner rounded-md py-4 px-8 text-lg`}
           onClick={onViewWorkClick}
         >
           View my work &#x2193;
