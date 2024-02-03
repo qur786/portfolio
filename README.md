@@ -8,6 +8,7 @@ Welcome to the repository for my personal portfolio! This portfolio is built usi
 - [Technologies Used](#technologies-used)
 - [Features](#features)
 - [How to Use](#how-to-use)
+- [Dark and Light Theme](#dark-and-light-theme)
 - [Social Media](#social-media)
 
 ## About
@@ -33,27 +34,31 @@ This repository contains the source code for my personal portfolio. It includes 
 
 ## How to Use
 
-1.  Clone the repository:
+1. Clone the repository:
 
-    ```bash
-    git clone https://github.com/your-username/your-portfolio-repo.git
-    ```
+   ```bash
+   git clone https://github.com/your-username/your-portfolio-repo.git
+   ```
 
-2.  Install dependencies:
+2. Install dependencies:
 
-    ```bash
-     cd your-portfolio-repo
-     yarn install
-    ```
+   ```bash
+    cd your-portfolio-repo
+    yarn install
+   ```
 
-3.  Run the development server:
+3. Run the development server:
 
-    ```bash
-     yarn start
-    ```
+   ```bash
+    yarn start
+   ```
 
-    This will start the development server, and you can view your portfolio at `http://localhost:3000/portfolio`.
+   This will start the development server, and you can view your portfolio at `http://localhost:3000/portfolio`.
 
-4.  Customize the content in the source files to reflect your personal information, experiences, and skills.
+4. Customize the content in the source files to reflect your personal information, experiences, and skills.
+
+## Dark and Light Theme
+
+- **Dark and Light Theme:** I have significantly updated my portfolio to include both dark and light themes, providing users with a more consistent and personalized experience. You can easily toggle between these themes based on your preference.
 
 Feel free to explore the code, make modifications, and use it as a template for your own portfolio.

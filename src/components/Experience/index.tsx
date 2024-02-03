@@ -6,13 +6,19 @@ import "react-vertical-timeline-component/style.min.css";
 import { JobIcon } from "../../Icons/job";
 import { ExperienceItem } from "../ExperienceItem";
 import { CompleteIcon } from "../../Icons/complete";
+import type { Theme } from "../../context/utils";
 
-export function Experience(): JSX.Element {
+interface ExperienceProps {
+  theme?: Theme;
+}
+
+export function Experience({ theme }: ExperienceProps): JSX.Element {
   return (
     <div id="skills" className="px-0 py-8 flex flex-col gap-8">
       <h2 className="text-3xl text-primary font-bold">Experience</h2>
       <VerticalTimeline lineColor="#FF020A">
         <ExperienceItem
+          theme={theme}
           date="Apr 2023 - Sept 2023"
           icon={<JobIcon />}
           location={{ city: "Gurugram", country: "India" }}
@@ -26,6 +32,7 @@ export function Experience(): JSX.Element {
           ]}
         />
         <ExperienceItem
+          theme={theme}
           date="Jan 2022 - Mar 2023"
           icon={<JobIcon />}
           location={{ city: "Gurugram", country: "India" }}
@@ -39,6 +46,7 @@ export function Experience(): JSX.Element {
           ]}
         />
         <ExperienceItem
+          theme={theme}
           date="July 2021 - Jan 2022"
           icon={<JobIcon />}
           location={{ city: "Gurugram", country: "India" }}
@@ -51,6 +59,7 @@ export function Experience(): JSX.Element {
           ]}
         />
         <ExperienceItem
+          theme={theme}
           date="Feb 2021 - Apr 2021"
           icon={<JobIcon />}
           location={{ city: "Jamshedpur", country: "India" }}
@@ -63,11 +72,7 @@ export function Experience(): JSX.Element {
         />
         <VerticalTimelineElement
           icon={<CompleteIcon />}
-          iconStyle={{
-            background: "#222222",
-            boxShadow:
-              "0 0 0 4px #45CE30, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05)", // Icon container outer border
-          }}
+          iconClassName="bg-white dark:bg-[#222222] shadow-experience-icon-border-success"
         />
       </VerticalTimeline>
     </div>

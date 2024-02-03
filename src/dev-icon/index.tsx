@@ -8,7 +8,7 @@ interface DevIconProps {
 export function DevIcon({ name, colored = true }: DevIconProps): JSX.Element {
   return (
     <i
-      className={`${name} ${colored === false ? "" : "colored"} text-6xl flex justify-center rounded-md bg-gray-900 p-2`}
+      className={`${name} ${colored === false ? "" : "colored"} hover:scale-150 transition-transform text-6xl flex justify-center rounded-md p-2`}
     ></i>
   );
 }
