@@ -14,21 +14,21 @@ export function Projects(): JSX.Element {
             image={CurrencyConverterImage}
             title="Currency Converter Mobile App"
             githubLink="https://github.com/qur786/react-native-currency-converter"
-            stacks={["react native", "typescript", "sqlite", "react"]}
+            stacks={["react native", "react", "typescript", "sqlite"]}
           />
           <Project
             image={PongImage}
             title="MultiPlayer Pong Game"
             githubLink="https://github.com/qur786/multiroom-pong-game"
             deployedLink="https://multiroom-pong-game.onrender.com/"
-            stacks={["socket.io", "javascript", "canvas-api", "express.js"]}
+            stacks={["socket.io", "express.js", "javascript", "canvas-api"]}
           />
           <Project
             image={TicTacToeImage}
             imageClipPosition="0px_30%"
             title="Tic Tac Toe Mobile Game"
             githubLink="https://github.com/qur786/tic-tac-toe-mobile-app"
-            stacks={["react native", "typescript", "icons", "react"]}
+            stacks={["react native", "react", "typescript", "icons"]}
           />
         </Zoom>
       </div>
