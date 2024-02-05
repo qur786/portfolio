@@ -17,7 +17,6 @@ import { MessageForm, MessageFormProps } from "./components/MessageForm";
 import { ThemeContext } from "./context/theme-context";
 import { send } from "@emailjs/browser";
 import { useSnackbar } from "notistack";
-import { Stars } from "./components/Stars";
 
 export function App(): JSX.Element {
   const [isParticlesEngineLoaded, setIsParticlesEngineLoaded] = useState(false);
@@ -94,9 +93,6 @@ export function App(): JSX.Element {
   return (
     <main className="select-none" ref={mainRef}>
       <SocialSidebar theme={theme} toggleTheme={toggleTheme} />
-      <div className="h-screen w-full absolute top-0 left-0">
-        <Stars />
-      </div>
       <Fade triggerOnce duration={5000}>
         <Introduction
           onViewWorkClick={handleViewButtonClick}

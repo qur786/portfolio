@@ -1,3 +1,4 @@
+import { Stars } from "../Stars";
 import type { MouseEventHandler } from "react";
 
 export interface IntroductionProps {
@@ -10,6 +11,9 @@ export function Introduction({
 }: IntroductionProps): JSX.Element {
   return (
     <>
+      <div className="h-screen w-full absolute top-0 left-0">
+        <Stars />
+      </div>
       <div className="h-screen relative flex justify-center items-center flex-col gap-6 font-mono">
         <p className="text-5xl text-center">
           Hello, I'm <b className="text-red-600">Qurban</b>
