@@ -10,7 +10,7 @@
     "build": "tsc && vite build",
     "clean": "shx rm -rf dist node_modules",
     "format": "yarn lint && yarn pretty",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint . --ext ts,tsx --fix --report-unused-disable-directives --max-warnings 0",
     "pretty": "prettier-package-json && prettier src --write && sort-package-json",
     "preview": "vite preview",
     "start": "vite"
@@ -44,6 +44,7 @@
     "@vitejs/plugin-react-swc": "^3.5.0",
     "autoprefixer": "^10.4.16",
     "eslint": "^8.55.0",
+    "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "postcss": "^8.4.33",
