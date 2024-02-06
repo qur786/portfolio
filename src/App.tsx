@@ -73,9 +73,11 @@ export function App(): JSX.Element {
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
-    }).then(() => {
-      setIsParticlesEngineLoaded(true);
-    });
+    })
+      .then(() => {
+        setIsParticlesEngineLoaded(true);
+      })
+      .catch(console.log);
   }, []);
 
   useEffect(() => {

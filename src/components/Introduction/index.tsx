@@ -16,7 +16,7 @@ export function Introduction({
       </div>
       <div className="h-screen relative flex justify-center items-center flex-col gap-6 font-mono">
         <p className="text-5xl text-center">
-          Hello, I'm <b className="text-red-600">Qurban</b>
+          Hello, I&apos;m <b className="text-red-600">Qurban</b>
         </p>
         <p className="text-5xl text-center">
           A <b className="text-green-600">MERN</b> stack developer.

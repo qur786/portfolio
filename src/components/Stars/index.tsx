@@ -2,25 +2,12 @@ import { useRef, useContext } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 import { inSphere } from "maath/random";
-import type {
-  BufferGeometry,
-  NormalBufferAttributes,
-  Material,
-  Object3DEventMap,
-  Points as TPoints,
-} from "three";
+import type { Points as TPoints } from "three";
 import { ThemeContext } from "../../context/theme-context";
 
 function StarParticles(): JSX.Element {
   const { theme } = useContext(ThemeContext);
-  const ref =
-    useRef<
-      TPoints<
-        BufferGeometry<NormalBufferAttributes>,
-        Material | Material[],
-        Object3DEventMap
-      >
-    >(null);
+  const ref = useRef<TPoints>(null);
 
   useFrame((_state, delta) => {
     if (ref.current !== null) {
@@ -29,6 +16,7 @@ function StarParticles(): JSX.Element {
     }
   });
   return (
+    // eslint-disable-next-line react/no-unknown-property
     <group rotation={[0, 0, Math.PI / 4]}>
       <Points
         ref={ref}

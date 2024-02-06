@@ -15,7 +15,7 @@ import { SnackbarProvider } from "notistack";
 
 ReactGA.initialize("G-ZQW766DHW5");
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+ReactDOM.createRoot(document.getElementById("root") as HTMLDivElement).render(
   <StrictMode>
     <SnackbarProvider>
       <MobileProvider>

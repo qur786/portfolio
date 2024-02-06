@@ -7,6 +7,7 @@ interface MobileContext {
 
 export const MobileContext = createContext<MobileContext>({
   isMobile: false,
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   setIsMobile: () => {},
 });
 

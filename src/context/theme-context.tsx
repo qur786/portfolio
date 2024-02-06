@@ -19,6 +19,7 @@ export interface ThemeContext {
 
 export const ThemeContext = createContext<ThemeContext>({
   theme: getTheme(),
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   toggleTheme: () => {},
 });
 

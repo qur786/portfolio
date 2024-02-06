@@ -9,10 +9,13 @@ export function ParticlesGraph({
   isParticlesEngineLoaded,
   isMobile,
 }: ParticlesGraphProps): JSX.Element {
-  return isParticlesEngineLoaded === true ? (
+  return isParticlesEngineLoaded ? (
     <Particles
       id="tsparticles"
-      particlesLoaded={async (c) => console.log(c)}
+      particlesLoaded={async (c) => {
+        await Promise.resolve(); // To avoid lint warning about funtion not being async
+        console.log(c);
+      }}
       options={{
         style: {
           height: "100vh",
@@ -61,7 +64,7 @@ export function ParticlesGraph({
             straight: false,
           },
           number: {
-            value: isMobile === true ? 50 : 100,
+            value: isMobile ? 50 : 100,
           },
           opacity: {
             value: 0.7,
