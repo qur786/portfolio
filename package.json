@@ -19,7 +19,7 @@
     "@emailjs/browser": "^4.1.0",
     "@emotion/react": "^11.11.3",
     "@fontsource/roboto": "^5.0.8",
-    "@react-three/drei": "^9.97.0",
+    "@react-three/drei": "^9.97.3",
     "@react-three/fiber": "^8.15.16",
     "@tsparticles/engine": "^3.2.1",
     "@tsparticles/react": "^3.0.0",
