@@ -16,7 +16,7 @@
     "start": "vite"
   },
   "dependencies": {
-    "@emailjs/browser": "^3.12.1",
+    "@emailjs/browser": "^4.1.0",
     "@emotion/react": "^11.11.3",
     "@fontsource/roboto": "^5.0.8",
     "@react-three/drei": "^9.97.0",
