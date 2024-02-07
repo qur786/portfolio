@@ -57,6 +57,7 @@ export function Footer({ onMessageButtonClick }: FooterProps): JSX.Element {
             <DevIcon name="devicon-tailwindcss-original-wordmark" />
             <DevIcon name="devicon-javascript-plain" />
             <DevIcon name="devicon-typescript-plain" />
+            <DevIcon name="devicon-threejs-original-wordmark" colored={false} />
           </div>
         </div>
       </div>
