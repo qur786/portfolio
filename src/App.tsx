@@ -1,6 +1,4 @@
-import { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim";
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { Introduction, IntroductionProps } from "./components/Introduction";
 import { SocialSidebar } from "./components/SocialSidebar";
 import { About } from "./components/About";
@@ -19,7 +17,6 @@ import { send } from "@emailjs/browser";
 import { useSnackbar } from "notistack";
 
 export function App(): JSX.Element {
-  const [isParticlesEngineLoaded, setIsParticlesEngineLoaded] = useState(false);
   const { theme, toggleTheme } = useContext<ThemeContext>(ThemeContext);
   const mainRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -69,17 +66,6 @@ export function App(): JSX.Element {
       });
   };
 
-  // this should be run only once per application lifetime
-  useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
-    })
-      .then(() => {
-        setIsParticlesEngineLoaded(true);
-      })
-      .catch(console.log);
-  }, []);
-
   useEffect(() => {
     setIsMobile(isMobile);
   }, [isMobile, setIsMobile]);
@@ -96,10 +82,7 @@ export function App(): JSX.Element {
     <main className="select-none" ref={mainRef}>
       <SocialSidebar theme={theme} toggleTheme={toggleTheme} />
       <Fade triggerOnce duration={5000}>
-        <Introduction
-          onViewWorkClick={handleViewButtonClick}
-          isParticlesEngineLoaded={isParticlesEngineLoaded}
-        />
+        <Introduction onViewWorkClick={handleViewButtonClick} />
       </Fade>
       <div className="px-16" ref={aboutRef}>
         <Slide triggerOnce>

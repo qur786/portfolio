@@ -2,7 +2,6 @@ import { Stars } from "../Stars";
 import type { MouseEventHandler } from "react";
 
 export interface IntroductionProps {
-  isParticlesEngineLoaded: boolean;
   onViewWorkClick?: MouseEventHandler<HTMLButtonElement>;
 }
 

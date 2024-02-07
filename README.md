@@ -1,6 +1,6 @@
 # Qurban's Portfolio
 
-Welcome to the repository for my personal portfolio! This portfolio is built using Vite React, TypeScript, Tailwind CSS, Module CSS, tsparticles, React Awesome Reveal, and SVG icons.
+Welcome to the repository for my personal portfolio! This portfolio is built using Vite React, TypeScript, Tailwind CSS, Module CSS, Three.js, React Awesome Reveal, and SVG icons.
 
 ## Table of Contents
 
@@ -21,7 +21,7 @@ This repository contains the source code for my personal portfolio. It includes 
 - TypeScript
 - Tailwind CSS
 - Module CSS
-- tsparticles
+- Three.js
 - React Awesome Reveal
 - SVG icons
 
