@@ -2934,12 +2934,12 @@ react-async-script@^1.2.0:
     hoist-non-react-statics "^3.3.0"
     prop-types "^15.5.0"
 
-react-awesome-reveal@^4.2.7:
-  version "4.2.7"
-  resolved "https://registry.yarnpkg.com/react-awesome-reveal/-/react-awesome-reveal-4.2.7.tgz#31869d7866d9789ebf630a096bd849cd5d701c53"
-  integrity sha512-5vETORNz6df0+N+RdPlInw73WBeccfFh73JamnhfbQWwcqCmdeL0Ap5pX9RyRlTMdag5yXAH+FWN8qrnIsyWVA==
+react-awesome-reveal@^4.2.8:
+  version "4.2.8"
+  resolved "https://registry.yarnpkg.com/react-awesome-reveal/-/react-awesome-reveal-4.2.8.tgz#e770330592ee5143e71cfeccf91bc3dd4f9c054f"
+  integrity sha512-G961DVTMwFbkmg7z+M5omz8Y+iicLc9gKm8hmtwJ/lFnYx9fEg7lSY/AyaNZFXYKNfAS5lv/WzL72kNRMCJDZA==
   dependencies:
-    react-intersection-observer "^9.5.3"
+    react-intersection-observer "^9.6.0"
     react-is "^18.2.0"
 
 react-composer@^5.0.3:
@@ -2975,10 +2975,10 @@ react-intersection-observer@^8.26.2:
   resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-8.34.0.tgz#6f6e67831c52e6233f6b6cc7eb55814820137c42"
   integrity sha512-TYKh52Zc0Uptp5/b4N91XydfSGKubEhgZRtcg1rhTKABXijc4Sdr1uTp5lJ8TN27jwUsdXxjHXtHa0kPj704sw==
 
-react-intersection-observer@^9.5.3:
-  version "9.5.3"
-  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-9.5.3.tgz#f47a31ed3a0359cbbfdb91a53d7470ac2ab7b3c7"
-  integrity sha512-NJzagSdUPS5rPhaLsHXYeJbsvdpbJwL6yCHtMk91hc0ufQ2BnXis+0QQ9NBh6n9n+Q3OyjR6OQLShYbaNBkThQ==
+react-intersection-observer@^9.6.0:
+  version "9.7.0"
+  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-9.7.0.tgz#da65834ace0852e04b73cb97f0c48bdaa5b13589"
+  integrity sha512-euleEjBVaMRwSOMNVcMX5WGn74GfZ9I78nx9SUb5a0eXd0IhegjJcUliSO9Jd+xiaZ5rgFvbGoVln66lpMyUUg==
 
 react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
