@@ -2,7 +2,7 @@ import {
   PropsWithChildren,
   createContext,
   useCallback,
-  useEffect,
+  useLayoutEffect,
   useState,
 } from "react";
 import {
@@ -31,7 +31,7 @@ export function ThemeProvider({ children }: PropsWithChildren): JSX.Element {
     setTheme(getTheme());
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setAppTheme(theme);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // Update theme only one for the first time as per 'getTheme'
