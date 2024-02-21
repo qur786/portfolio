@@ -15,6 +15,7 @@ import { MessageForm, MessageFormProps } from "./components/MessageForm";
 import { ThemeContext } from "./context/theme-context";
 import { send } from "@emailjs/browser";
 import { useSnackbar } from "notistack";
+import { Stars } from "./components/Stars";
 
 export function App(): JSX.Element {
   const { theme, toggleTheme } = useContext<ThemeContext>(ThemeContext);
@@ -80,6 +81,9 @@ export function App(): JSX.Element {
 
   return (
     <main className="select-none" ref={mainRef}>
+      <div className="h-screen w-full fixed top-0 left-0">
+        <Stars />
+      </div>
       <SocialSidebar theme={theme} toggleTheme={toggleTheme} />
       <Fade triggerOnce duration={5000}>
         <Introduction onViewWorkClick={handleViewButtonClick} />
