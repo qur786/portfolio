@@ -3,6 +3,7 @@ import { Project } from "../Project";
 import CurrencyConverterImage from "./currency-converter.png";
 import PongImage from "./pong.png";
 import TicTacToeImage from "./tic-tac-toe.jpg";
+import RhythmiQImage from "./rhythmiq.png";
 
 export function Projects(): JSX.Element {
   return (
@@ -25,10 +26,21 @@ export function Projects(): JSX.Element {
           />
           <Project
             image={TicTacToeImage}
-            imageClipPosition="0px_30%"
             title="Tic Tac Toe Mobile Game"
             githubLink="https://github.com/qur786/tic-tac-toe-mobile-app"
             stacks={["react native", "react", "typescript", "icons"]}
+          />
+          <Project
+            image={RhythmiQImage}
+            title="RhythmiQ - Music Player"
+            githubLink="https://github.com/qur786/rhythmiq"
+            stacks={[
+              "react native",
+              "react",
+              "typescript",
+              "icons",
+              "react-native-track-player",
+            ]}
           />
         </Zoom>
       </div>
