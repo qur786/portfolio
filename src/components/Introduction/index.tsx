@@ -10,7 +10,7 @@ export function Introduction({
 }: IntroductionProps): JSX.Element {
   return (
     <>
-      <div className="h-screen w-full absolute top-0 left-0">
+      <div className="h-screen w-full fixed top-0 left-0">
         <Stars />
       </div>
       <div className="h-screen relative flex justify-center items-center flex-col gap-6 font-mono">
