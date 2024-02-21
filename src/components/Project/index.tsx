@@ -23,7 +23,7 @@ export function Project({
   return (
     <div className="max-w-[280px] min-h-[440px] rounded-lg border shadow-xl md:shadow-2xl bg-gray-50 dark:bg-black-elevation-1">
       <img
-        className={`w-full h-60 object-cover rounded-tl-lg rounded-tr-lg object-[${imageClipPosition}]`}
+        className={`w-full h-60 object-scale-down rounded-tl-lg rounded-tr-lg object-[${imageClipPosition}]`}
         src={image}
         alt={imageAlt}
       />
