@@ -2,7 +2,7 @@ import { Zoom } from "react-awesome-reveal";
 import { Project } from "../Project";
 import CurrencyConverterImage from "./currency-converter.png";
 import PongImage from "./pong.png";
-import TicTacToeImage from "./tic-tac-toe.jpg";
+import TicTacToeImage from "./tic-tac-toe.png";
 import RhythmiQImage from "./rhythmiq.png";
 
 export function Projects(): JSX.Element {
