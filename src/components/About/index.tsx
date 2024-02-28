@@ -1,4 +1,4 @@
-import Profile from "./square-profile.ico";
+import Profile from "./profile2.ico";
 
 export function About(): JSX.Element {
   return (
@@ -9,7 +9,7 @@ export function About(): JSX.Element {
       <img
         src={Profile}
         alt="Profile"
-        className="bg-contain w-48 h-48 relative md:left-16 md:-top-12 top-16 rounded-xl"
+        className="bg-contain w-48 h-48 relative md:left-16 md:-top-12 top-16 rounded-full"
       />
       <div className="rounded-lg md:shadow-xl shadow-2xl dark:shadow-black-shadow md:pl-20 md:pr-10 pb-6 md:pt-6 pt-16 px-4 dark:bg-black-elevation-1">
         <h2 className="text-3xl text-primary font-bold py-2 md:text-start text-center">
