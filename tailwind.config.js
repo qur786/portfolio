@@ -6,7 +6,7 @@ export default {
     extend: {
       colors: {
         primary: "#FF020A",
-        "black-elevation-1": "#2C2C2C",
+        "black-elevation-1": "#1E1E1E",
         "black-shadow": "#1F1E1E",
       },
       boxShadow: {
