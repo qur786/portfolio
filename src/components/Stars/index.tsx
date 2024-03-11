@@ -1,9 +1,9 @@
-import { useRef } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Points, PointMaterial } from "@react-three/drei";
-import { inSphere } from "maath/random";
 import type { Points as TPoints } from "three";
+import { inSphere } from "maath/random";
+import { useRef } from "react";
 import { useTheme } from "../../hooks/use-theme";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { PointMaterial, Points } from "@react-three/drei";
 
 function StarParticles(): JSX.Element {
   const { theme } = useTheme();

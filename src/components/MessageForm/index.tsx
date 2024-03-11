@@ -1,4 +1,5 @@
-import { ChangeEventHandler, MouseEventHandler, useState } from "react";
+import { useState } from "react";
+import type { ChangeEventHandler, MouseEventHandler } from "react";
 
 interface MessageDatum {
   name: string;

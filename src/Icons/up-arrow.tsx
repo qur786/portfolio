@@ -1,4 +1,4 @@
-import { IconProps } from "./utils";
+import type { IconProps } from "./utils";
 
 export function UpArrowIcon({ className }: IconProps): JSX.Element {
   return (

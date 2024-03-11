@@ -1,5 +1,5 @@
-import { Zoom } from "react-awesome-reveal";
 import { DevIcon } from "../../dev-icon";
+import { Zoom } from "react-awesome-reveal";
 
 export function Skills(): JSX.Element {
   return (

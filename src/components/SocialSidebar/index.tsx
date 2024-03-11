@@ -1,15 +1,15 @@
-import { AttentionSeeker, Fade, Slide } from "react-awesome-reveal";
 import { GithubIcon } from "../../Icons/github";
 import { GmailIcon } from "../../Icons/gmail";
 import { LinkedInIcon } from "../../Icons/linked-in";
-import { TwitterIcon } from "../../Icons/twitter";
-import { WhatsappIcon } from "../../Icons/whatsapp";
-import ReactGA from "react-ga4";
-import { MouseEventHandler } from "react";
 import { MoonIcon } from "../../Icons/moon";
+import type { MouseEventHandler } from "react";
+import ReactGA from "react-ga4";
+import { ResumeIcon } from "../../Icons/resume";
 import { SunIcon } from "../../Icons/sun";
 import type { Theme } from "../../context/utils";
-import { ResumeIcon } from "../../Icons/resume";
+import { TwitterIcon } from "../../Icons/twitter";
+import { WhatsappIcon } from "../../Icons/whatsapp";
+import { AttentionSeeker, Fade, Slide } from "react-awesome-reveal";
 
 interface SocialSidebarProps {
   theme?: Theme;

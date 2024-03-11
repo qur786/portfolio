@@ -1,12 +1,12 @@
+import { CompleteIcon } from "../../Icons/complete";
+import { ExperienceItem } from "../ExperienceItem";
+import { JobIcon } from "../../Icons/job";
+import type { Theme } from "../../context/utils";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { JobIcon } from "../../Icons/job";
-import { ExperienceItem } from "../ExperienceItem";
-import { CompleteIcon } from "../../Icons/complete";
-import type { Theme } from "../../context/utils";
 
 interface ExperienceProps {
   theme?: Theme;

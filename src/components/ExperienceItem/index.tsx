@@ -1,8 +1,8 @@
-import { VerticalTimelineElement } from "react-vertical-timeline-component";
-import { ReactNode } from "react";
 import { CompanyIcon } from "../../Icons/company";
 import { LocationIcon } from "../../Icons/location";
+import type { ReactNode } from "react";
 import type { Theme } from "../../context/utils";
+import { VerticalTimelineElement } from "react-vertical-timeline-component";
 
 interface Location {
   city: string;

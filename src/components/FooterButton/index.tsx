@@ -1,5 +1,5 @@
+import type { IconProps } from "../../Icons/utils";
 import type { ComponentType, MouseEventHandler } from "react";
-import { IconProps } from "../../Icons/utils";
 
 export interface FooterButtonProps {
   title: string;

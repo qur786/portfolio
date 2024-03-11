@@ -10,7 +10,7 @@
     "build": "tsc && vite build",
     "clean": "shx rm -rf dist node_modules",
     "format": "yarn lint && yarn pretty",
-    "lint": "eslint . --ext ts,tsx --fix --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint src --ext ts,tsx --fix --report-unused-disable-directives --max-warnings 0",
     "pretty": "prettier src --write && sort-package-json",
     "preview": "vite preview",
     "start": "vite"

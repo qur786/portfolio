@@ -1,4 +1,5 @@
-import { ForwardedRef, forwardRef, PropsWithChildren } from "react";
+import { forwardRef } from "react";
+import type { ForwardedRef, PropsWithChildren } from "react";
 
 export interface ModalProps extends PropsWithChildren {
   onClose?: () => void;
@@ -6,7 +7,7 @@ export interface ModalProps extends PropsWithChildren {
 
 export const Modal = forwardRef(function ModalComponent(
   { children, onClose }: ModalProps,
-  modalRef: ForwardedRef<HTMLDialogElement>
+  modalRef: ForwardedRef<HTMLDialogElement>,
 ): JSX.Element {
   return (
     <dialog

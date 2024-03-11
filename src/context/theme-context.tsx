@@ -1,16 +1,7 @@
-import {
-  PropsWithChildren,
-  createContext,
-  useCallback,
-  useLayoutEffect,
-  useState,
-} from "react";
-import {
-  Theme,
-  getTheme,
-  toggleAppTheme,
-  setTheme as setAppTheme,
-} from "./utils";
+import type { PropsWithChildren } from "react";
+import type { Theme } from "./utils";
+import { createContext, useCallback, useLayoutEffect, useState } from "react";
+import { getTheme, setTheme as setAppTheme, toggleAppTheme } from "./utils";
 
 export interface ThemeContext {
   theme: Theme;

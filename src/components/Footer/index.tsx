@@ -1,8 +1,9 @@
 import { CallIcon } from "../../Icons/call";
+import { DevIcon } from "../../dev-icon";
+import { FooterButton } from "../FooterButton";
+import type { FooterButtonProps } from "../FooterButton";
 import { MessageIcon } from "../../Icons/message";
 import { UpArrowIcon } from "../../Icons/up-arrow";
-import { DevIcon } from "../../dev-icon";
-import { FooterButton, FooterButtonProps } from "../FooterButton";
 
 export interface FooterProps {
   onMessageButtonClick?: () => void;

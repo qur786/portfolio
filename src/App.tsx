@@ -1,19 +1,23 @@
-import { useEffect, useRef } from "react";
-import { Introduction, IntroductionProps } from "./components/Introduction";
-import { SocialSidebar } from "./components/SocialSidebar";
 import { About } from "./components/About";
-import { Skills } from "./components/Skills";
 import { Experience } from "./components/Experience";
+import { Footer } from "./components/Footer";
+import type { FooterProps } from "./components/Footer";
+import { Introduction } from "./components/Introduction";
+import type { IntroductionProps } from "./components/Introduction";
+import { MessageForm } from "./components/MessageForm";
+import type { MessageFormProps } from "./components/MessageForm";
+import { Modal } from "./components/Modal";
+import type { ModalProps } from "./components/Modal";
 import { Projects } from "./components/Projects";
-import { Fade, Slide } from "react-awesome-reveal";
 import ReactGA from "react-ga4";
-import { Footer, FooterProps } from "./components/Footer";
-import { Modal, ModalProps } from "./components/Modal";
-import { MessageForm, MessageFormProps } from "./components/MessageForm";
+import { Skills } from "./components/Skills";
+import { SocialSidebar } from "./components/SocialSidebar";
+import { Stars } from "./components/Stars";
 import { send } from "@emailjs/browser";
 import { useSnackbar } from "notistack";
-import { Stars } from "./components/Stars";
 import { useTheme } from "./hooks/use-theme";
+import { Fade, Slide } from "react-awesome-reveal";
+import { useEffect, useRef } from "react";
 
 export function App(): JSX.Element {
   const { theme, toggleTheme } = useTheme();
@@ -34,7 +38,7 @@ export function App(): JSX.Element {
   };
 
   const handleMessageFormSubmit: MessageFormProps["onSubmit"] = (
-    messageData
+    messageData,
   ) => {
     send(
       "default_service",
@@ -45,7 +49,7 @@ export function App(): JSX.Element {
         message: messageData.message,
         from_email: messageData.email,
       },
-      "7gN_gfh4gzeFqVDUK"
+      "7gN_gfh4gzeFqVDUK",
     )
       .then(() => {
         enqueueSnackbar("Successfully sent the message.", {
