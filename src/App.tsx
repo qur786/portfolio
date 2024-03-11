@@ -17,7 +17,6 @@ import { useTheme } from "./hooks/use-theme";
 
 export function App(): JSX.Element {
   const { theme, toggleTheme } = useTheme();
-  const mainRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const messageDialogRef = useRef<HTMLDialogElement>(null);
   const { enqueueSnackbar } = useSnackbar();
@@ -72,7 +71,7 @@ export function App(): JSX.Element {
   }, []);
 
   return (
-    <main className="select-none" ref={mainRef}>
+    <main className="select-none">
       <div className="h-screen w-full fixed top-0 left-0">
         <Stars />
       </div>
