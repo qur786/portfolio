@@ -1,29 +1,24 @@
-import { useContext, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Introduction, IntroductionProps } from "./components/Introduction";
 import { SocialSidebar } from "./components/SocialSidebar";
 import { About } from "./components/About";
 import { Skills } from "./components/Skills";
 import { Experience } from "./components/Experience";
 import { Projects } from "./components/Projects";
-import { useMobile } from "./hooks";
-import { MobileContext } from "./context/mobile-context";
 import { Fade, Slide } from "react-awesome-reveal";
 import ReactGA from "react-ga4";
 import { Footer, FooterProps } from "./components/Footer";
 import { Modal, ModalProps } from "./components/Modal";
 import { MessageForm, MessageFormProps } from "./components/MessageForm";
-import { ThemeContext } from "./context/theme-context";
 import { send } from "@emailjs/browser";
 import { useSnackbar } from "notistack";
 import { Stars } from "./components/Stars";
+import { useTheme } from "./hooks/use-theme";
 
 export function App(): JSX.Element {
-  const { theme, toggleTheme } = useContext<ThemeContext>(ThemeContext);
-  const mainRef = useRef<HTMLDivElement>(null);
+  const { theme, toggleTheme } = useTheme();
   const aboutRef = useRef<HTMLDivElement>(null);
   const messageDialogRef = useRef<HTMLDialogElement>(null);
-  const isMobile = useMobile(mainRef);
-  const { setIsMobile } = useContext(MobileContext);
   const { enqueueSnackbar } = useSnackbar();
 
   const handleViewButtonClick: IntroductionProps["onViewWorkClick"] = () => {
@@ -68,10 +63,6 @@ export function App(): JSX.Element {
   };
 
   useEffect(() => {
-    setIsMobile(isMobile);
-  }, [isMobile, setIsMobile]);
-
-  useEffect(() => {
     ReactGA.send({
       hitType: "pageview",
       pageTitle: "Home",
@@ -80,7 +71,7 @@ export function App(): JSX.Element {
   }, []);
 
   return (
-    <main className="select-none" ref={mainRef}>
+    <main className="select-none">
       <div className="h-screen w-full fixed top-0 left-0">
         <Stars />
       </div>
