@@ -5,8 +5,6 @@ import { About } from "./components/About";
 import { Skills } from "./components/Skills";
 import { Experience } from "./components/Experience";
 import { Projects } from "./components/Projects";
-import { useMobile } from "./hooks";
-import { MobileContext } from "./context/mobile-context";
 import { Fade, Slide } from "react-awesome-reveal";
 import ReactGA from "react-ga4";
 import { Footer, FooterProps } from "./components/Footer";
@@ -22,8 +20,6 @@ export function App(): JSX.Element {
   const mainRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const messageDialogRef = useRef<HTMLDialogElement>(null);
-  const isMobile = useMobile(mainRef);
-  const { setIsMobile } = useContext(MobileContext);
   const { enqueueSnackbar } = useSnackbar();
 
   const handleViewButtonClick: IntroductionProps["onViewWorkClick"] = () => {
@@ -66,10 +62,6 @@ export function App(): JSX.Element {
         handleModalClose();
       });
   };
-
-  useEffect(() => {
-    setIsMobile(isMobile);
-  }, [isMobile, setIsMobile]);
 
   useEffect(() => {
     ReactGA.send({
