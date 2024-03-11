@@ -19,8 +19,9 @@ export interface ThemeContext {
 
 export const ThemeContext = createContext<ThemeContext>({
   theme: getTheme(),
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  toggleTheme: () => {},
+  toggleTheme: () => {
+    console.log("Provider did not setup correcttly.");
+  },
 });
 
 export function ThemeProvider({ children }: PropsWithChildren): JSX.Element {

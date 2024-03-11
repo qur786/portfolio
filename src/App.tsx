@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Introduction, IntroductionProps } from "./components/Introduction";
 import { SocialSidebar } from "./components/SocialSidebar";
 import { About } from "./components/About";
@@ -10,13 +10,13 @@ import ReactGA from "react-ga4";
 import { Footer, FooterProps } from "./components/Footer";
 import { Modal, ModalProps } from "./components/Modal";
 import { MessageForm, MessageFormProps } from "./components/MessageForm";
-import { ThemeContext } from "./context/theme-context";
 import { send } from "@emailjs/browser";
 import { useSnackbar } from "notistack";
 import { Stars } from "./components/Stars";
+import { useTheme } from "./hooks/use-theme";
 
 export function App(): JSX.Element {
-  const { theme, toggleTheme } = useContext<ThemeContext>(ThemeContext);
+  const { theme, toggleTheme } = useTheme();
   const mainRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const messageDialogRef = useRef<HTMLDialogElement>(null);

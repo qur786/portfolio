@@ -1,12 +1,12 @@
-import { useRef, useContext } from "react";
+import { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 import { inSphere } from "maath/random";
 import type { Points as TPoints } from "three";
-import { ThemeContext } from "../../context/theme-context";
+import { useTheme } from "../../hooks/use-theme";
 
 function StarParticles(): JSX.Element {
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useTheme();
   const ref = useRef<TPoints>(null);
 
   useFrame((_state, delta) => {
