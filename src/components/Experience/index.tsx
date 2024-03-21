@@ -25,10 +25,10 @@ export function Experience({ theme }: ExperienceProps): JSX.Element {
           company="Manufac Analytics Pvt Ltd"
           role="Software Development Engineer 1"
           work={[
-            "Engineered diverse, innovative projects, spanning single and multi-page React applications, CLI tools, web applications, and crossplatform Electron apps strategically addressing complex challenges and delivering effective solutions.",
-            "Optimized system reliability and cut bugs by 30% via rigorous Jest and Playwright testing.",
-            "Streamlined onboarding with documented workflows, reducing time by 40% for new hires.",
-            "Revamped core SaaS product's legacy code, boosting system functionality by 30%.",
+            "Engineered diverse projects, including single and multi-page React applications, React component Cli extractor, web applications, and cross-platform Electron apps.",
+            "Added rigorous Jest and Playwright testing.",
+            "Revamped the company's core app code with AWS and Mantine UI, resulting in a notable 20% boost in system functionality and a 25% reduction in code management effort.",
+            "Guided team members to enhance coding practices, and ensured strict adherence to company standards.",
           ]}
         />
         <ExperienceItem
