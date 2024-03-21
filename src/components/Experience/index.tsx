@@ -65,8 +65,9 @@ export function Experience({ theme }: ExperienceProps): JSX.Element {
           company="Adityapur Auto Cluster"
           role="Web Developer Intern"
           work={[
-            "Analyzed issues and collaborated with teams to create a storage management web app in PHP. Achieved a 40% boost in productivity compared to the previous system.",
-            "Completed research, compiled data, and produced timely reports.",
+            "Analyzed issues and led the development of a storage management web app in PHP, delivering an impressive 20% boost in productivity over the previous system.",
+            "Designed and developed the backend of the app, and added 60% of the backend code.",
+            "Documented the whole project.",
           ]}
         />
         <VerticalTimelineElement
