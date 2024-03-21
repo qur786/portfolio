@@ -52,9 +52,9 @@ export function Experience({ theme }: ExperienceProps): JSX.Element {
           company="Manufac Analytics Pvt Ltd"
           role="Front End Developer Intern"
           work={[
-            "Spearheaded front-end tasks using React, leading to a 15% improvement in UI enhancements in the company's core SaaS product.",
-            "Helped team in API integration in the Company's web app to bring the new features. Improving app functionality by 20%.",
-            "Collaborated with team to integrate PayPal payment API in the company's web app.",
+            "Added charts and UI components to the company's core app, resulting in 5% newly added functionality",
+            "Integrated API to the company's core app, 5% of total API endpoints.",
+            "Collaborated effectively on the integration of the PayPal payment API into the company's web app.",
           ]}
         />
         <ExperienceItem
