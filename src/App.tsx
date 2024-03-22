@@ -76,7 +76,7 @@ export function App(): JSX.Element {
 
   return (
     <main className="select-none">
-      <div className="h-screen w-full fixed top-0 left-0">
+      <div className="h-screen w-full absolute top-0 left-0">
         <Stars />
       </div>
       <SocialSidebar theme={theme} toggleTheme={toggleTheme} />

@@ -6,7 +6,7 @@ export function Skills(): JSX.Element {
     <div id="skills" className="md:h-screen px-4 py-8 flex flex-col gap-8">
       <h2 className="text-3xl text-primary font-bold">My Skills</h2>
       <div className="grid md:grid-cols-6 grid-cols-2 gap-4">
-        <Zoom cascade triggerOnce>
+        <Zoom triggerOnce>
           <DevIcon name="devicon-mongodb-plain-wordmark" />
           <DevIcon name="devicon-express-original-wordmark" colored={false} />
           <DevIcon name="devicon-react-original-wordmark" />
