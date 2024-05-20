@@ -4,7 +4,6 @@ import ReactGA from "react-ga4";
 import { SnackbarProvider } from "notistack";
 import { StrictMode } from "react";
 import { ThemeProvider } from "./context/theme-context.tsx";
-import "@fontsource/roboto/latin.css";
 import "./index.css";
 import "@fontsource/barlow"; // Defaults to weight 400
 import "@fontsource/barlow/100.css"; // Specify weight
