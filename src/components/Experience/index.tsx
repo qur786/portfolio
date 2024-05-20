@@ -14,7 +14,7 @@ interface ExperienceProps {
 
 export function Experience({ theme }: ExperienceProps): JSX.Element {
   return (
-    <div id="skills" className="px-0 py-8 flex flex-col gap-8">
+    <div id="experience" className="px-0 py-8 flex flex-col gap-8">
       <h2 className="text-3xl text-primary font-bold">Experience</h2>
       <VerticalTimeline lineColor="#FF020A">
         <ExperienceItem
