@@ -16,7 +16,7 @@ export default {
           "0 0 0 4px #45CE30, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05)",
       },
       fontFamily: {
-        roboto: ["Roboto", "sans-serif"],
+        barlow: ["Barlow", "Helvetica"],
       },
       animation: {
         "slide-down": "slide-down 1s ease-in-out",
