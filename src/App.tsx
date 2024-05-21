@@ -2,8 +2,8 @@ import { About } from "./components/About";
 import { Experience } from "./components/Experience";
 import { Footer } from "./components/Footer";
 import type { FooterProps } from "./components/Footer";
+import { Header } from "./components/Header";
 import { Introduction } from "./components/Introduction";
-import type { IntroductionProps } from "./components/Introduction";
 import { MessageForm } from "./components/MessageForm";
 import type { MessageFormProps } from "./components/MessageForm";
 import { Modal } from "./components/Modal";
@@ -20,14 +20,9 @@ import { Fade, Slide } from "react-awesome-reveal";
 import { useEffect, useRef } from "react";
 
 export function App(): JSX.Element {
-  const { theme, toggleTheme } = useTheme();
-  const aboutRef = useRef<HTMLDivElement>(null);
+  const { theme } = useTheme();
   const messageDialogRef = useRef<HTMLDialogElement>(null);
   const { enqueueSnackbar } = useSnackbar();
-
-  const handleViewButtonClick: IntroductionProps["onViewWorkClick"] = () => {
-    aboutRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
 
   const handleModalOpen: FooterProps["onMessageButtonClick"] = () => {
     messageDialogRef.current?.showModal();
@@ -76,14 +71,15 @@ export function App(): JSX.Element {
 
   return (
     <main className="select-none">
-      <div className="h-screen w-full fixed top-0 left-0">
+      <Header />
+      <div className="h-screen w-full absolute top-0 left-0">
         <Stars />
       </div>
-      <SocialSidebar theme={theme} toggleTheme={toggleTheme} />
+      <SocialSidebar />
       <Fade triggerOnce duration={5000}>
-        <Introduction onViewWorkClick={handleViewButtonClick} />
+        <Introduction />
       </Fade>
-      <div className="px-16" ref={aboutRef}>
+      <div className="px-16">
         <Slide triggerOnce>
           <About />
         </Slide>
