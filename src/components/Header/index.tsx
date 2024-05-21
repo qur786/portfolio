@@ -46,7 +46,7 @@ export function Header(): JSX.Element {
         </nav>
         <span className="flex flex-row gap-2 items-start">
           <a
-            href="/portfolio/Qurban-Ahmad-Latest.pdf"
+            href="/portfolio/resume.pdf"
             onClick={handleResumeClick}
             target="_blank"
           >
