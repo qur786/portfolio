@@ -12,7 +12,7 @@ export const Modal = forwardRef(function ModalComponent(
   return (
     <dialog
       ref={modalRef}
-      className="dark:bg-black-elevation-1 dark:text-white dark:shadow-black-shadow shadow-2xl md:min-w-[40%] min-w-[60%] backdrop:backdrop-contrast-[0.25] rounded-lg open:animate-slide-down"
+      className="dark:bg-black-elevation dark:text-white dark:shadow-black-shadow shadow-2xl md:min-w-[40%] min-w-[60%] backdrop:backdrop-contrast-[0.25] rounded-lg open:animate-slide-down"
     >
       <button
         className="p-4 absolute top-0 right-0 text-red-600 hover:text-red-800 font-bold"
