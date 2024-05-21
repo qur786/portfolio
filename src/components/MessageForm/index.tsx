@@ -81,7 +81,7 @@ export function MessageForm({ onSubmit }: MessageFormProps): JSX.Element {
         <button
           type="submit"
           onClick={handleSubmit}
-          className="dark:text-black-elevation-1 text-white py-1 self-end mt-2 font-bold transition-transform hover:scale-110 rounded-md bg-sky-400 w-1/3"
+          className="dark:text-black-elevation text-white py-1 self-end mt-2 font-bold transition-transform hover:scale-110 rounded-md bg-sky-400 w-1/3"
         >
           Submit
         </button>
