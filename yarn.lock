@@ -321,11 +321,6 @@
   resolved "https://registry.yarnpkg.com/@fontsource/barlow/-/barlow-5.0.13.tgz#9f890ebae0b09dfdd1af3cdf73fceba65fa1be8c"
   integrity sha512-Jk3/s/0zHPyc7zd7trOskjhVpTGn8k9tlgAUOnfeB7V8xw+E+UGcDRSYw09ahLHrFnjbjrhcJDnXhpEk6b0QlA==
 
-"@fontsource/roboto@^5.0.12":
-  version "5.0.12"
-  resolved "https://registry.yarnpkg.com/@fontsource/roboto/-/roboto-5.0.12.tgz#418f7305a3be7fc567dd154db20090f7ece7fc6c"
-  integrity sha512-x0o17jvgoSSbS9OZnUX2+xJmVRvVCfeaYJjkS7w62iN7CuJWtMf5vJj8LqgC7ibqIkitOHVW+XssRjgrcHn62g==
-
 "@heroicons/react@^2.1.1":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@heroicons/react/-/react-2.1.1.tgz#422deb80c4d6caf3371aec6f4bee8361a354dc13"
