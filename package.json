@@ -31,13 +31,13 @@
     "react-google-recaptcha": "^3.1.0",
     "react-vertical-timeline-component": "^3.6.0",
     "tailwind-merge": "^2.6.0",
-    "three": "^0.162.0"
+    "three": "^0.171.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.67",
     "@types/react-dom": "^18.2.22",
     "@types/react-vertical-timeline-component": "^3.3.6",
-    "@types/three": "^0.162.0",
+    "@types/three": "^0.171.0",
     "@typescript-eslint/eslint-plugin": "^7.3.1",
     "@typescript-eslint/parser": "^7.3.1",
     "@vitejs/plugin-react-swc": "^3.7.2",

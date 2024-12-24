@@ -1,19 +1,8 @@
 import type { PropsWithChildren } from "react";
 import type { Theme } from "./utils";
-import { createContext, useCallback, useLayoutEffect, useState } from "react";
+import { ThemeContext } from "./context";
 import { getTheme, setTheme as setAppTheme, toggleAppTheme } from "./utils";
-
-export interface ThemeContext {
-  theme: Theme;
-  toggleTheme: () => void;
-}
-
-export const ThemeContext = createContext<ThemeContext>({
-  theme: getTheme(),
-  toggleTheme: () => {
-    console.log("Provider did not setup correcttly.");
-  },
-});
+import { useCallback, useLayoutEffect, useState } from "react";
 
 export function ThemeProvider({ children }: PropsWithChildren): JSX.Element {
   const [theme, setTheme] = useState<Theme>(getTheme());
