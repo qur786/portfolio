@@ -19,7 +19,7 @@
     "strip-ansi": "6.0.1"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.3.3",
+    "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.11.4",
     "@fontsource/barlow": "^5.0.13",
     "@heroicons/react": "^2.1.1",
