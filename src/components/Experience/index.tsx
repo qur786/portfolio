@@ -19,6 +19,27 @@ export function Experience({ theme }: ExperienceProps): JSX.Element {
       <VerticalTimeline lineColor="#FF020A">
         <ExperienceItem
           theme={theme}
+          date="Dec 2024 - Present"
+          icon={<JobIcon />}
+          location={{ city: "Bengaluru", country: "India" }}
+          company="Autodesk India Pvt Ltd"
+          role="Software Development Engineer 2"
+          work={["Fixed crucial bugs"]}
+        />
+        <ExperienceItem
+          theme={theme}
+          date="July 2024 - Nov 2024"
+          icon={<JobIcon />}
+          location={{ city: "Chennai", country: "India" }}
+          company="Predigle India Pvt Ltd"
+          role="Software Engineer - L3"
+          work={[
+            "Replaced Firebase with Keycloak authentication end to end across projects.",
+            "Fixed crucial bugs and modularized code enhancing code readability and maintainability of the AI bot rule generation web app.",
+          ]}
+        />
+        <ExperienceItem
+          theme={theme}
           date="Apr 2023 - Sept 2023"
           icon={<JobIcon />}
           location={{ city: "Gurugram", country: "India" }}
@@ -33,27 +54,15 @@ export function Experience({ theme }: ExperienceProps): JSX.Element {
         />
         <ExperienceItem
           theme={theme}
-          date="Jan 2022 - Mar 2023"
+          date="July 2021 - Mar 2023"
           icon={<JobIcon />}
           location={{ city: "Gurugram", country: "India" }}
           company="Manufac Analytics Pvt Ltd"
           role="Front End Developer"
           work={[
             "Notable innovations include user activity tracking with Python and Electron, Bluetooth data reading via Web API, and real-time IoT tracking with AWS IoT, Geofencing, Lambda, and SNS.",
-            "Achieved a 90%+ score in Lighthouse by optimizing website performance.",
-            "Elevated UI standards through mobile-responsive components, charts, and forms in React (using Formik, D3.js, ECharts, ReactTable, and MUI), resulting in a 30% improvement in UI responsiveness and heightened user engagement.",
-          ]}
-        />
-        <ExperienceItem
-          theme={theme}
-          date="July 2021 - Jan 2022"
-          icon={<JobIcon />}
-          location={{ city: "Gurugram", country: "India" }}
-          company="Manufac Analytics Pvt Ltd"
-          role="Front End Developer Intern"
-          work={[
             "Added charts and UI components to the company's core app, resulting in 5% newly added functionality",
-            "Integrated API to the company's core app, 5% of total API endpoints.",
+            "Elevated UI standards through mobile-responsive components, charts, and forms in React (using Formik, D3.js, ECharts, ReactTable, and MUI), resulting in a 30% improvement in UI responsiveness and heightened user engagement.",
             "Collaborated effectively on the integration of the PayPal payment API into the company's web app.",
           ]}
         />
