@@ -61,6 +61,9 @@ export function Footer({ onMessageButtonClick }: FooterProps): JSX.Element {
             <DevIcon name="devicon-threejs-original-wordmark" colored={false} />
           </div>
         </div>
+        <div className="m-auto">
+          The site was last updated at 25th Dec, 2024.
+        </div>
       </div>
     </div>
   );
