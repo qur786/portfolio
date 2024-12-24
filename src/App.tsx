@@ -8,7 +8,7 @@ import { MessageForm } from "./components/MessageForm";
 import type { MessageFormProps } from "./components/MessageForm";
 import { Modal } from "./components/Modal";
 import type { ModalProps } from "./components/Modal";
-import { Projects } from "./components/Projects";
+// import { Projects } from "./components/Projects"; // ! Not needed for now
 import ReactGA from "react-ga4";
 import { Skills } from "./components/Skills";
 import { SocialSidebar } from "./components/SocialSidebar";
@@ -85,7 +85,8 @@ export function App(): JSX.Element {
         </Slide>
         <Skills />
         <Experience theme={theme} />
-        <Projects />
+        {/* <Projects /> */}
+        {/* ! Not needed for now */}
         <Modal ref={messageDialogRef} onClose={handleModalClose}>
           <MessageForm onSubmit={handleMessageFormSubmit} />
         </Modal>

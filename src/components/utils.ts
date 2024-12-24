@@ -3,5 +3,5 @@ export const NavLinks = {
   About: "/#about",
   Skills: "/#skills",
   Experience: "/#experience",
-  Projects: "/#projects",
+  // Projects: "/#projects", // ! Not needed for now
 } as const;
