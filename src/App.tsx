@@ -67,6 +67,24 @@ export function App(): JSX.Element {
       pageTitle: "Home",
       page: "/",
     });
+
+    const audio = new Audio("/portfolio/passion.mp3");
+    const handleMusicPlay = () => {
+      audio
+        .play()
+        .then(() => {
+          window.removeEventListener("click", handleMusicPlay);
+        })
+        .catch((error: unknown) => {
+          console.error("Error playing audio:", error);
+        });
+    };
+
+    window.addEventListener("click", handleMusicPlay);
+    return () => {
+      audio.pause();
+      window.removeEventListener("click", handleMusicPlay);
+    };
   }, []);
 
   return (
