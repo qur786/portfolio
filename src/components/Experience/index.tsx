@@ -24,7 +24,11 @@ export function Experience({ theme }: ExperienceProps): JSX.Element {
           location={{ city: "Bengaluru", country: "India" }}
           company="Autodesk India Pvt Ltd"
           role="Software Development Engineer 2"
-          work={["Fixed crucial bugs"]}
+          work={[
+            "Created API endpoints to get Azure Gallery Images.",
+            "Fixed UI and API bugs.",
+            "Added test cases to increase coverage.",
+          ]}
         />
         <ExperienceItem
           theme={theme}

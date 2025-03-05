@@ -62,7 +62,7 @@ export function Footer({ onMessageButtonClick }: FooterProps): JSX.Element {
           </div>
         </div>
         <div className="m-auto">
-          The site was last updated at 25th Dec, 2024.
+          The site was last updated at 5th March, 2025.
         </div>
       </div>
     </div>
