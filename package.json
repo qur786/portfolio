@@ -9,6 +9,8 @@
   "scripts": {
     "build": "tsc && vite build",
     "clean": "shx rm -rf dist node_modules",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "format": "yarn lint && yarn pretty",
     "lint": "eslint src --ext ts,tsx --fix --report-unused-disable-directives --max-warnings 0",
     "pretty": "prettier src --write && sort-package-json",
@@ -46,6 +48,7 @@
     "eslint-plugin-react": "^7.37.3",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.16",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.49",
     "prettier": "^3.4.2",
     "shx": "^0.3.4",
