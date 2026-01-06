@@ -9,7 +9,7 @@ export function HeroSection() {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/20 bg-cyan-500/5 backdrop-blur-md">
             <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
             <span className="text-xs font-mono text-cyan-300 tracking-wide">
-              OPEN TO WORK
+              OPEN FOR COLLABORATION
             </span>
           </div>
 
