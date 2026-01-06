@@ -3,9 +3,6 @@ import { useState } from "react";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const downloadResume = () => {
-    alert("Resume download simulation.");
-  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -40,12 +37,11 @@ export function Header() {
                 <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-cyan-400 transition-all group-hover:w-full"></span>
               </a>
             ))}
-            <button
-              onClick={downloadResume}
-              className="bg-white/10 hover:bg-white text-white hover:text-black px-5 py-2 rounded-sm text-xs font-bold tracking-wide transition-all border border-white/20"
-            >
-              Resume
-            </button>
+            <a href="/portfolio/resume.pdf" target="_blank">
+              <button className="bg-white/10 hover:bg-white text-white hover:text-black px-5 py-2 rounded-sm text-xs font-bold tracking-wide transition-all border border-white/20">
+                Resume
+              </button>
+            </a>
           </div>
 
           {/* Mobile Menu Toggle */}
