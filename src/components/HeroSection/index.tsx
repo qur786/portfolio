@@ -1,4 +1,5 @@
 import { Github, Linkedin, Twitter, Mail, ArrowDown } from "lucide-react";
+import { WhatsappIcon } from "../../Icons/whatsapp";
 
 export function HeroSection() {
   return (
@@ -44,22 +45,36 @@ export function HeroSection() {
           {/* Social Media Handles */}
           <div className="flex items-center gap-6 text-zinc-400">
             <a
-              href="#"
+              href="https://github.com/qur786"
+              target="_blank"
+              rel="noreferrer"
               className="hover:text-cyan-400 transition-colors transform hover:-translate-y-1 duration-300"
             >
               <Github className="w-6 h-6" />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/qurban-ahmad-qur786/"
+              target="_blank"
+              rel="noreferrer"
               className="hover:text-cyan-400 transition-colors transform hover:-translate-y-1 duration-300"
             >
               <Linkedin className="w-6 h-6" />
             </a>
             <a
-              href="#"
+              href="https://twitter.com/fantasticnerd67"
+              target="_blank"
+              rel="noreferrer"
               className="hover:text-cyan-400 transition-colors transform hover:-translate-y-1 duration-300"
             >
               <Twitter className="w-6 h-6" />
+            </a>
+            <a
+              href="https://wa.me/+916204789892"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-cyan-400 transition-colors transform hover:-translate-y-1 duration-300"
+            >
+              <WhatsappIcon className="w-6 h-6 fill-[currentColor]" />
             </a>
             <a
               href="mailto:ahmad76qurban@gmail.com"
