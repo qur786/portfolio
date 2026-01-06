@@ -10,19 +10,11 @@ interface HackathonItem {
 export function HackathonsSection() {
   const hackathons: HackathonItem[] = [
     {
-      rank: "1st",
+      rank: "SF",
       rankColor: "bg-gradient-to-br from-yellow-400 to-orange-500 text-black",
-      title: "Global AI Hackathon 2023",
+      title: "RaceAthon 2025",
       description:
-        'Developed "MedScan," an AI-powered diagnostic tool using TensorFlow and Python. Awarded Grand Prize out of 500+ teams.',
-    },
-    {
-      rank: "2nd",
-      rankColor:
-        "bg-gradient-to-br from-blue-400 to-cyan-500 text-black border border-zinc-700",
-      title: "FinTech Disrupt 2022",
-      description:
-        "Built a decentralized lending protocol on Ethereum. Focused on smart contract security and gas optimization.",
+        "Racethon is a competitive design-and-build event where participants model, fabricate, and optimize custom car bodies to integrate perfectly with RC chassis for high-performance racing.",
     },
   ];
   return (
@@ -63,12 +55,12 @@ export function HackathonsSection() {
                   {hack.title}
                 </h3>
                 <p className="text-zinc-400 text-sm mb-4">{hack.description}</p>
-                <a
+                {/* <a
                   href="#"
                   className="text-cyan-400 text-xs font-mono uppercase tracking-widest hover:text-white transition-colors"
                 >
                   View Submission -&gt;
-                </a>
+                </a> */}
               </div>
             </div>
           ))}
