@@ -7,39 +7,40 @@ interface ProjectItem {
   categoryColor: "cyan" | "violet" | "green";
   tags: string[];
   image: string;
+  liveUrl: string;
 }
 
 export function ProjectsSection() {
   const projects: ProjectItem[] = [
     {
-      title: "Nexus CRM",
+      title: "Computer Distributor",
       description:
-        "A full-featured Customer Relationship Management dashboard built for high-velocity sales teams. Features real-time data sync and custom analytics.",
-      category: "SAAS PLATFORM",
+        "A high-conversion digital storefront designed for a hardware wholesaler. The platform features a streamlined product showcase and a professional interface tailored to B2B clients, focusing on intuitive navigation, fast load times, and a mobile-first user experience.",
+      category: "LANDING PAGE",
       categoryColor: "cyan",
-      tags: ["Next.js", "TypeScript", "Supabase"],
-      image:
-        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop",
+      tags: ["React", "TypeScript", "Tailwind CSS"],
+      image: "/portfolio/images/computer-distributor.png",
+      liveUrl: "https://computerdistributor.in/",
     },
     {
-      title: "PayFlow API",
+      title: "Real Time Multiplayer Pong Game",
       description:
-        "Secure payment processing gateway handling 10k+ transactions daily. Implemented with strict security compliance and microservices architecture.",
-      category: "FINTECH APP",
+        "A fast-paced, synchronized web application featuring low-latency gameplay between two remote players. The project focuses on solving the challenges of real-time state synchronization and physics consistency, providing a seamless competitive experience directly in the browser with instant room joining and live scoring.",
+      category: "INTERACTIVE GAME",
       categoryColor: "violet",
-      tags: ["Node.js", "Docker", "Redis"],
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop",
+      tags: ["Node.js", "HTML", "CSS", "JavaScript", "Socket.io", "Canvas API"],
+      image: "/portfolio/images/pong.png",
+      liveUrl: "https://multiroom-pong-game.onrender.com/",
     },
     {
-      title: "StreamBoard",
+      title: "RhythmiQ - Music Player",
       description:
-        "Collaborative whiteboard application for remote engineering teams. Supports live cursor tracking, infinite canvas, and video chat integration.",
-      category: "REAL-TIME",
+        "RhythmiQ is a React Native Android app that serves as a music player for locally available songs on a smartphone. It provides a user-friendly interface with features such as a music player and a playlist screen.",
+      category: "ANDROID APP",
       categoryColor: "green",
-      tags: ["React", "WebSockets", "WebRTC"],
-      image:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000&auto=format&fit=crop",
+      tags: ["React-Native", "Android", "TypeScript"],
+      image: "/portfolio/images/rhythmiq.png",
+      liveUrl: "https://github.com/qur786/rhythmiq",
     },
   ];
   return (
@@ -56,7 +57,9 @@ export function ProjectsSection() {
             </h2>
           </div>
           <a
-            href="#"
+            href="https://github.com/qur786?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:flex items-center gap-2 text-cyan-400 hover:text-white transition-colors font-mono text-sm mt-4 md:mt-0"
           >
             VIEW GITHUB REPO <ArrowUpRight className="w-4 h-4" />
@@ -122,13 +125,18 @@ export function ProjectsSection() {
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="text-xs font-mono text-zinc-500">
+                    <span
+                      key={tag}
+                      className="px-2 py-1 bg-zinc-800 text-zinc-300 text-xs font-mono rounded-sm0"
+                    >
                       {tag}
                     </span>
                   ))}
                 </div>
                 <a
-                  href="#"
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`inline-flex items-center gap-2 text-sm font-bold text-white border-b border-transparent ${color.hoverBorder} pb-0.5 transition-all`}
                 >
                   View Case Study <ArrowRight className="w-4 h-4" />
