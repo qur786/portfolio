@@ -1,83 +1,93 @@
-import { MoonIcon } from "@heroicons/react/24/outline";
-import type { MouseEventHandler } from "react";
-import { NavLinks } from "../utils";
-import ReactGA from "react-ga4";
-import { ResumeIcon } from "../../Icons/resume";
-import { SideBar } from "../Sidebar";
-import { StyledLink } from "../StyledLink";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { useTheme } from "../../hooks/use-theme";
-import { Bars3Icon, SunIcon } from "@heroicons/react/24/solid";
 
-export function Header(): JSX.Element {
-  const [modalOpen, setModalOpen] = useState(false);
-  const { theme, toggleTheme } = useTheme();
+export function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleSidebarClose = () => {
-    setModalOpen(false);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
-
-  const toggleSidebar: MouseEventHandler<HTMLButtonElement> = () => {
-    setModalOpen((prev) => !prev);
-  };
-
-  const handleResumeClick: MouseEventHandler<HTMLAnchorElement> = () => {
-    ReactGA.event({
-      category: "Resume",
-      action: "open_resume",
-    });
-  };
-
   return (
     <>
-      <header className="fixed w-full p-4 dark:text-white backdrop-blur-sm shadow-lg flex items-center justify-between z-20">
-        <img
-          src="/portfolio/profile.ico"
-          alt="Logo"
-          className="h-12 w-24 object-contain"
-          title="Logo"
-        />
-        <nav className="hidden gap-8 md:flex">
-          {Object.entries(NavLinks).map(([title, link]) => (
-            <StyledLink href={link} key={title}>
-              {title}
-            </StyledLink>
-          ))}
-        </nav>
-        <span className="flex flex-row gap-2 items-start">
-          <a
-            href="/portfolio/resume.pdf"
-            onClick={handleResumeClick}
-            target="_blank"
-          >
-            <button title="resume">
-              <ResumeIcon className="h-8 fill-[#25CCF7] hover:scale-150 transition-transform" />
-            </button>
+      <nav className="fixed top-0 w-full z-50 border-b border-white/5 bg-black/50 backdrop-blur-xl h-20 transition-all duration-300">
+        <div className="container mx-auto px-6 h-full flex justify-between items-center">
+          <a href="#" className="flex items-center gap-3 group">
+            <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 text-white flex items-center justify-center font-bold text-xl rounded-sm">
+              <span className="font-mono">Q</span>
+            </div>
+            <div className="leading-tight">
+              <div className="font-bold tracking-tight text-white group-hover:text-cyan-400 transition-colors">
+                QURBAN AHMAD
+              </div>
+              <div className="text-[10px] tracking-widest text-zinc-500 font-mono uppercase">
+                Full Stack Engineer
+              </div>
+            </div>
           </a>
+
+          {/* Desktop Links */}
+          <div className="hidden md:flex items-center gap-8 text-sm font-medium">
+            {[
+              "Experience",
+              "Projects",
+              "Expertise",
+              "Hackathons",
+              "Academic",
+              "Contact",
+            ].map((item) => (
+              <a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className="text-zinc-400 hover:text-white transition-colors relative group"
+              >
+                {item}
+                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-cyan-400 transition-all group-hover:w-full"></span>
+              </a>
+            ))}
+            <a href="/portfolio/resume.pdf" target="_blank">
+              <button className="bg-white/10 hover:bg-white text-white hover:text-black px-5 py-2 rounded-sm text-xs font-bold tracking-wide transition-all border border-white/20">
+                Resume
+              </button>
+            </a>
+          </div>
+
+          {/* Mobile Menu Toggle */}
           <button
-            onClick={toggleTheme}
-            title={
-              theme === "dark"
-                ? "Toggle to Light Theme"
-                : "Toggle to Dark Theme"
-            }
+            className="md:hidden text-zinc-400 hover:text-white"
+            onClick={toggleMenu}
           >
-            {theme === "dark" ? (
-              <SunIcon className="h-8 fill-yellow-400 hover:scale-150 transition-transform" />
-            ) : (
-              <MoonIcon className="h-8 hover:scale-150 transition-transform" />
-            )}
+            <Menu />
           </button>
-          <button
-            title="Menu"
-            onClick={toggleSidebar}
-            className="opacity-50 hover:opacity-100 md:invisible"
+        </div>
+      </nav>
+      {/* Mobile Menu Overlay */}
+      <div
+        className={`fixed inset-0 bg-black/95 backdrop-blur-xl z-40 transition-transform duration-300 flex flex-col justify-center items-center space-y-8 ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+      >
+        <button
+          className="absolute top-6 right-6 text-zinc-400 hover:text-white"
+          onClick={toggleMenu}
+        >
+          <X className="w-8 h-8" />
+        </button>
+        {[
+          "Experience",
+          "Projects",
+          "Expertise",
+          "Hackathons",
+          "Academic",
+          "Contact",
+        ].map((item) => (
+          <a
+            key={item}
+            href={`#${item.toLowerCase()}`}
+            className="text-3xl font-bold hover:text-cyan-400"
+            onClick={toggleMenu}
           >
-            <Bars3Icon className="h-8" />
-          </button>
-        </span>
-      </header>
-      <SideBar open={modalOpen} onClose={handleSidebarClose} />
+            {item}
+          </a>
+        ))}
+      </div>
     </>
   );
 }

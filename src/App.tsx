@@ -1,115 +1,48 @@
-import { About } from "./components/About";
-import { Experience } from "./components/Experience";
-import { Footer } from "./components/Footer";
-import type { FooterProps } from "./components/Footer";
 import { Header } from "./components/Header";
-import { Introduction } from "./components/Introduction";
-import { MessageForm } from "./components/MessageForm";
-import type { MessageFormProps } from "./components/MessageForm";
-import { Modal } from "./components/Modal";
-import type { ModalProps } from "./components/Modal";
-// import { Projects } from "./components/Projects"; // ! Not needed for now
-import ReactGA from "react-ga4";
-import { Skills } from "./components/Skills";
-import { SocialSidebar } from "./components/SocialSidebar";
-import { Stars } from "./components/Stars";
-import { send } from "@emailjs/browser";
-import { useSnackbar } from "notistack";
-import { useTheme } from "./hooks/use-theme";
-import { Fade, Slide } from "react-awesome-reveal";
-import { useEffect, useRef } from "react";
+import { HeroSection } from "./components/HeroSection";
+import { ExperienceSection } from "./components/ExperienceSection";
+import { ProjectsSection } from "./components/ProjectsSection";
+import { HackathonsSection } from "./components/HackathonsSection";
+import { SkillsSection } from "./components/ExpertiseSection";
+import { EducationHobbiesSection } from "./components/EducationHobbiesSection";
+import { Footer } from "./components/Footer";
+import { ThreeJSBackground } from "./components/ThreeJSBackground";
+import { useRef, useEffect } from "react";
 
-export function App(): JSX.Element {
-  const { theme } = useTheme();
-  const messageDialogRef = useRef<HTMLDialogElement>(null);
-  const { enqueueSnackbar } = useSnackbar();
+export function App() {
+  const observerRef = useRef<IntersectionObserver | null>(null);
 
-  const handleModalOpen: FooterProps["onMessageButtonClick"] = () => {
-    messageDialogRef.current?.showModal();
-  };
-
-  const handleModalClose: ModalProps["onClose"] = () => {
-    messageDialogRef.current?.close();
-  };
-
-  const handleMessageFormSubmit: MessageFormProps["onSubmit"] = (
-    messageData,
-  ) => {
-    send(
-      "default_service",
-      "template_3r9yy7s",
-      {
-        to_name: "Qurban",
-        from_name: messageData.name,
-        message: messageData.message,
-        from_email: messageData.email,
-      },
-      "7gN_gfh4gzeFqVDUK",
-    )
-      .then(() => {
-        enqueueSnackbar("Successfully sent the message.", {
-          variant: "success",
-        });
-      })
-      .catch(() => {
-        enqueueSnackbar("Some error occured while sending the message.", {
-          variant: "error",
-        });
-      })
-      .finally(() => {
-        handleModalClose();
-      });
-  };
-
+  // --- Scroll Reveal Observer ---
   useEffect(() => {
-    ReactGA.send({
-      hitType: "pageview",
-      pageTitle: "Home",
-      page: "/",
-    });
-
-    const audio = new Audio("/portfolio/passion.mp3");
-    const handleMusicPlay = () => {
-      audio
-        .play()
-        .then(() => {
-          window.removeEventListener("click", handleMusicPlay);
-        })
-        .catch((error: unknown) => {
-          console.error("Error playing audio:", error);
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          }
         });
-    };
+      },
+      { threshold: 0.1, rootMargin: "0px" },
+    );
 
-    window.addEventListener("click", handleMusicPlay);
-    return () => {
-      audio.pause();
-      window.removeEventListener("click", handleMusicPlay);
-    };
+    const elements = document.querySelectorAll(".slide-up");
+    elements.forEach((el) => observerRef.current?.observe(el));
+
+    return () => observerRef.current?.disconnect();
   }, []);
 
   return (
-    <main className="select-none">
+    <div className="antialiased selection:bg-cyan-500/30 selection:text-cyan-200 bg-[#050505] text-white min-h-screen font-sans overflow-x-hidden">
+      <ThreeJSBackground />
+      <div className="fixed inset-0 z-0 bg-tech-grid pointer-events-none"></div>
       <Header />
-      <div className="h-screen w-full absolute top-0 left-0">
-        <Stars />
-      </div>
-      <SocialSidebar />
-      <Fade triggerOnce duration={5000}>
-        <Introduction />
-      </Fade>
-      <div className="px-16">
-        <Slide triggerOnce>
-          <About />
-        </Slide>
-        <Skills />
-        <Experience theme={theme} />
-        {/* <Projects /> */}
-        {/* ! Not needed for now */}
-        <Modal ref={messageDialogRef} onClose={handleModalClose}>
-          <MessageForm onSubmit={handleMessageFormSubmit} />
-        </Modal>
-      </div>
-      <Footer onMessageButtonClick={handleModalOpen} />
-    </main>
+      <HeroSection />
+      <ExperienceSection />
+      <ProjectsSection />
+      <SkillsSection />
+      <HackathonsSection />
+      <EducationHobbiesSection />
+      <Footer />
+    </div>
   );
 }
