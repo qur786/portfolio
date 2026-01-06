@@ -27,7 +27,7 @@ export function Header() {
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center gap-8 text-sm font-medium">
-            {["Experience", "Projects", "Stack", "Hackathons"].map((item) => (
+            {["Experience", "Projects", "Skills", "Hackathons"].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -63,7 +63,7 @@ export function Header() {
         >
           <X className="w-8 h-8" />
         </button>
-        {["Experience", "Projects", "Stack", "Hackathons", "Contact"].map(
+        {["Experience", "Projects", "Skills", "Hackathons", "Contact"].map(
           (item) => (
             <a
               key={item}

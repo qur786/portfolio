@@ -3,7 +3,7 @@ import { Terminal, Layout, Server } from "lucide-react";
 export function SkillsSection() {
   return (
     <section
-      id="stack"
+      id="skills"
       className="py-32 bg-zinc-900/30 relative z-10 backdrop-blur-sm"
     >
       <div className="container mx-auto px-6">

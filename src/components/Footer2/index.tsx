@@ -35,18 +35,43 @@ export function Footer() {
                 </h5>
                 <ul className="space-y-3 text-zinc-400">
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
+                    <a
+                      href="https://github.com/qur786"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-colors"
+                    >
                       GitHub
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
+                    <a
+                      href="https://www.linkedin.com/in/qurban-ahmad-qur786/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="hover:text-white transition-colors"
+                    >
                       LinkedIn
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
+                    <a
+                      href="https://twitter.com/fantasticnerd67"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="hover:text-white transition-colors"
+                    >
                       Twitter
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://wa.me/+916204789892"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="hover:text-white transition-colors"
+                    >
+                      Whatsapp
                     </a>
                   </li>
                 </ul>
@@ -74,10 +99,10 @@ export function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#stack"
+                      href="#skills"
                       className="hover:text-white transition-colors"
                     >
-                      Stack
+                      Skills
                     </a>
                   </li>
                   <li>

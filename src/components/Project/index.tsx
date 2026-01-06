@@ -7,7 +7,7 @@ interface ProjectProps {
   title: string;
   deployedLink?: string;
   githubLink: string;
-  stacks: string[];
+  skills: string[];
   imageClipPosition?: string;
 }
 
@@ -17,7 +17,7 @@ export function Project({
   deployedLink,
   image,
   imageAlt,
-  stacks,
+  skills,
   imageClipPosition = "0px_25%",
 }: ProjectProps): JSX.Element {
   return (
@@ -29,14 +29,14 @@ export function Project({
       />
       <div className="min-h-48 flex flex-col justify-between gap-2">
         <div className="px-2 py-2 font-bold text-xl text-center">{title}</div>
-        {stacks.length > 0 ? (
+        {skills.length > 0 ? (
           <div className="flex flex-row justify-start flex-wrap px-2 gap-2">
-            {stacks.slice(0, 6).map((stack) => (
+            {skills.slice(0, 6).map((skill) => (
               <p
-                key={stack}
+                key={skill}
                 className="rounded-xl text-sm bg-sky-500 dark:bg-[#1f1f86] px-2"
               >
-                {stack}
+                {skill}
               </p>
             ))}
           </div>
