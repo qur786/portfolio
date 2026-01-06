@@ -9,28 +9,75 @@ interface ExperienceItem {
 export function ExperienceSection() {
   const experiences: ExperienceItem[] = [
     {
-      role: "Senior Engineer",
-      company: "TechNova Systems",
-      period: "2023 — Present",
+      role: "Software Development Engineer 2",
+      company: "Autodesk India Pvt Ltd",
+      period: "Dec 2024 — Present",
       description:
-        "Leading the migration of legacy monoliths to a microservices architecture using Node.js and Kubernetes. Improved system uptime by 99.9% and reduced server costs by 30%. Mentoring a team of 4 junior developers and establishing code quality standards.",
-      tags: ["Node.js", "AWS", "Microservices"],
+        "Created complete user interfaces for self service cloud orchestration app. Added serverless handlers to orchestrate cloud machines. Added unit test cases and increased test coverage upto 75%.",
+      tags: ["Nest.js", "React", "Next.js", "TypeScript", "Azure"],
     },
     {
-      role: "Full Stack Dev",
-      company: "CreativePulse",
-      period: "2021 — 2023",
+      role: "Software Engineer - L3",
+      company: "Predigle India Pvt Ltd",
+      period: "July 2024 — Nov 2024",
       description:
-        "Developed high-performance e-commerce platforms for enterprise clients. Implemented real-time inventory tracking using WebSockets and optimized frontend load times by 40% through lazy loading and server-side rendering with Next.js.",
-      tags: ["React", "Next.js", "PostgreSQL"],
+        "Replaced Firebase with Keycloak authentication end to end across projects. Fixed crucial bugs and modularized code enhancing code readability and maintainability of the AI bot rule generation web app.",
+      tags: [
+        "Django",
+        "Angular",
+        "Google Cloud",
+        "AI",
+        "Machine Learning",
+        "Python",
+      ],
     },
     {
-      role: "Junior Developer",
-      company: "WebSolutions",
-      period: "2020 — 2021",
+      role: "Software Developer Engineer 1",
+      company: "Manufac Analytics Pvt Ltd",
+      period: "April 2023 — Sept 2023",
       description:
-        "Collaborated with design teams to translate Figma prototypes into pixel-perfect HTML/CSS. Built responsive landing pages and maintained legacy PHP applications.",
-      tags: ["JavaScript", "CSS/SCSS", "PHP"],
+        "Engineered diverse projects including single and multi-page web applications. Revamped the company’s SaaS product code with AWS and Mantine UI, resulting in a notable 10% boost in the system functionality and a 25% reduction in code management effort. Guided and helped team members enhance coding practices.",
+      tags: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "AWS",
+        "Material UI",
+        "D3.js",
+        "SPA",
+      ],
+    },
+    {
+      role: "Front End Developer",
+      company: "Manufac Analytics Pvt Ltd",
+      period: "July 2021 — March 2023",
+      description:
+        "Created mobile-responsive components, charts, and forms in React and various libraries such as Formik, D3.js, ECharts, ReactTable, and MUI. Notable innovations include a user activity tracker desktop app, Bluetooth device data reading via Web API, and real-time IoT tracking of devices with AWS IoT, Geofencing, Lambda, and SNS.",
+      tags: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "AWS",
+        "Material UI",
+        "D3.js",
+        "SPA",
+      ],
+    },
+    {
+      role: "Web Developer Intern",
+      company: "Adityapur Auto Cluster",
+      period: "Feb 2021 — April 2021",
+      description:
+        "Analyzed issues and worked on the development of a storage management web app in PHP, delivering an impressive 20% boost in productivity over the previous system.",
+      tags: [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "Bootstrap",
+        "JQuery",
+        "PHP",
+        "MySQL",
+      ],
     },
   ];
   return (
@@ -60,7 +107,7 @@ export function ExperienceSection() {
                 <div className="text-cyan-400 font-mono text-sm mb-2">
                   {exp.company}
                 </div>
-                <span className="text-zinc-500 font-mono text-xs">
+                <span className="text-zinc-300 font-mono text-xs">
                   {exp.period}
                 </span>
               </div>
@@ -74,7 +121,7 @@ export function ExperienceSection() {
                 <div className="text-cyan-400 font-mono text-sm">
                   {exp.company}
                 </div>
-                <span className="text-zinc-500 font-mono text-xs">
+                <span className="text-zinc-300 font-mono text-xs">
                   {exp.period}
                 </span>
               </div>
@@ -86,7 +133,7 @@ export function ExperienceSection() {
                   {exp.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2 py-1 bg-zinc-800 text-zinc-400 text-xs font-mono rounded-sm"
+                      className="px-2 py-1 bg-zinc-800 text-zinc-300 text-xs font-mono rounded-sm"
                     >
                       {tag}
                     </span>
