@@ -1,5 +1,15 @@
 import { Terminal, Layout, Server } from "lucide-react";
 
+function getSkillLevel(level: number) {
+  return level > 80
+    ? "Advanced"
+    : level > 60
+      ? "Intermediate"
+      : level > 40
+        ? "Familiar"
+        : "Novice";
+}
+
 export function SkillsSection() {
   return (
     <section
@@ -52,18 +62,31 @@ export function SkillsSection() {
               </div>
               <div className="space-y-4">
                 {[
-                  { name: "React / Next.js", level: "95%" },
-                  { name: "TypeScript", level: "90%" },
+                  { name: "React.js", level: 95 },
+                  { name: "Redux", level: 85 },
+                  { name: "Next.js", level: 80 },
+                  { name: "TypeScript / JavaScript", level: 95 },
+                  { name: "Angular", level: 75 },
+                  { name: "HTML / CSS", level: 90 },
+                  { name: "Tailwind CSS", level: 90 },
+                  { name: "SASS", level: 80 },
+                  {
+                    name: "Material UI / Mantine UI / D3.js / ECharts.js / Charts.js",
+                    level: 85,
+                  },
+                  { name: "Storybook.js", level: 85 },
                 ].map((skill) => (
                   <div key={skill.name}>
                     <div className="flex justify-between text-sm mb-1">
                       <span className="text-zinc-300">{skill.name}</span>
-                      <span className="text-zinc-500">Advanced</span>
+                      <span className="text-zinc-500">
+                        {getSkillLevel(skill.level)}
+                      </span>
                     </div>
                     <div className="h-1 bg-zinc-800 rounded-full overflow-hidden">
                       <div
                         className="h-full bg-cyan-500"
-                        style={{ width: skill.level }}
+                        style={{ width: `${skill.level.toString()}%` }}
                       ></div>
                     </div>
                   </div>
@@ -86,18 +109,31 @@ export function SkillsSection() {
               </div>
               <div className="space-y-4">
                 {[
-                  { name: "Node.js / Express", level: "92%" },
-                  { name: "AWS / Docker", level: "80%" },
+                  { name: "Node.js / Express / Nest.js", level: 92 },
+                  { name: "AWS / Azure", level: 80 },
+                  {
+                    name: "MongoDB / MySQL / DynamoDB / CosmosDB / MSSQL",
+                    level: 80,
+                  },
+                  { name: "Django", level: 60 },
+                  { name: "Docker / Kubernetes", level: 65 },
+                  { name: "Citrix", level: 60 },
+                  { name: "REST API", level: 90 },
+                  { name: "GraphQL", level: 80 },
+                  { name: "Webpack / Bable / ESLint / Prettier", level: 90 },
+                  { name: "Playwright / Jest", level: 85 },
                 ].map((skill) => (
                   <div key={skill.name}>
                     <div className="flex justify-between text-sm mb-1">
                       <span className="text-zinc-300">{skill.name}</span>
-                      <span className="text-zinc-500">Advanced</span>
+                      <span className="text-zinc-500">
+                        {getSkillLevel(skill.level)}
+                      </span>
                     </div>
                     <div className="h-1 bg-zinc-800 rounded-full overflow-hidden">
                       <div
                         className="h-full bg-violet-500"
-                        style={{ width: skill.level }}
+                        style={{ width: `${skill.level.toString()}%` }}
                       ></div>
                     </div>
                   </div>
