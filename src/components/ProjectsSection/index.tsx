@@ -46,7 +46,7 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="py-32 relative z-10">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 slide-up">
+        <div className="flex flex-col md:flex-row md:justify-between  mb-16 slide-up">
           <div>
             {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
             <span className="font-mono text-xs text-cyan-400 tracking-widest block mb-2">
@@ -60,7 +60,7 @@ export function ProjectsSection() {
             href="https://github.com/qur786?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:flex items-center gap-2 text-cyan-400 hover:text-white transition-colors font-mono text-sm mt-4 md:mt-0"
+            className="flex items-center gap-2 text-cyan-400 hover:text-white transition-colors font-mono text-sm mt-4 md:mt-0"
           >
             VIEW GITHUB REPO <ArrowUpRight className="w-4 h-4" />
           </a>
