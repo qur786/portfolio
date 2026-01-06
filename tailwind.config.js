@@ -20,7 +20,7 @@ export default {
       },
       animation: {
         "slide-down": "slide-down 1s ease-in-out",
-        "slide-up": "slide-down 1s ease-in-out reverse",
+        // "slide-up": "slide-down 1s ease-in-out reverse",
       },
       keyframes: {
         "slide-down": {

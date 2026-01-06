@@ -24,16 +24,6 @@ module.exports = {
       { allowConstantExport: true },
     ],
     "@typescript-eslint/consistent-type-imports": "error",
-    "sort-imports": [
-      "error",
-      {
-        ignoreCase: false,
-        ignoreDeclarationSort: false,
-        ignoreMemberSort: false,
-        memberSyntaxSortOrder: ["single", "multiple", "all", "none"],
-        allowSeparatedGroups: false,
-      },
-    ],
   },
   settings: {
     react: {
