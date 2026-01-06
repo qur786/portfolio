@@ -18,7 +18,11 @@ export function SkillsSection() {
             </h2>
             <p className="text-zinc-400 leading-relaxed mb-8">
               I specialize in the JavaScript/TypeScript ecosystem, building
-              end-to-end solutions that are secure, scalable, and maintainable.
+              secure, scalable solutions with React.js, Next.js, and Nest.js. I
+              architect cloud-native environments using AWS and Azure,
+              complemented by a professional background in Angular and Django,
+              and a passion for mobile development through Android side
+              projects.
             </p>
             <div className="p-4 bg-zinc-900 border border-zinc-800 rounded-sm">
               <div className="flex items-center gap-3 mb-2">

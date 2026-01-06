@@ -39,8 +39,8 @@ export function App() {
       <HeroSection />
       <ExperienceSection />
       <ProjectsSection />
-      <HackathonsSection />
       <SkillsSection />
+      <HackathonsSection />
       <EducationHobbiesSection />
       <Footer />
     </div>
