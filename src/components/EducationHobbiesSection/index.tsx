@@ -1,4 +1,4 @@
-import { Camera, Gamepad2, Keyboard, Mountain } from "lucide-react";
+import { Camera, BookOpenText, Clapperboard, Box } from "lucide-react";
 
 export function EducationHobbiesSection() {
   return (
@@ -14,23 +14,16 @@ export function EducationHobbiesSection() {
             <div className="space-y-8">
               <div className="group">
                 <h4 className="text-xl font-bold text-white group-hover:text-green-400 transition-colors">
-                  BS Computer Science
+                  BS Information Technology
                 </h4>
-                <p className="text-zinc-400">University of Technology</p>
+                <p className="text-zinc-400">MRS. KMPM Vocational College</p>
                 <span className="text-xs font-mono text-zinc-500">
-                  2016 — 2020
+                  2018 — 2021
                 </span>
                 <p className="text-sm text-zinc-500 mt-2">
-                  Specialization in Artificial Intelligence & Software
-                  Architecture. Graduated Magna Cum Laude.
+                  Specialization in Software Engineering & Software
+                  Architecture. Graduated with Honors.
                 </p>
-              </div>
-              <div className="group">
-                <h4 className="text-xl font-bold text-white group-hover:text-green-400 transition-colors">
-                  Cloud Architect Cert
-                </h4>
-                <p className="text-zinc-400">AWS Certification</p>
-                <span className="text-xs font-mono text-zinc-500">2022</span>
               </div>
             </div>
           </div>
@@ -43,14 +36,18 @@ export function EducationHobbiesSection() {
             <h3 className="text-3xl font-bold text-white mb-8">Offline Mode</h3>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { icon: Camera, title: "Photography", sub: "Urban & Street" },
-                { icon: Gamepad2, title: "Gaming", sub: "Competitive FPS" },
+                { icon: Camera, title: "Photography", sub: "Nature & People" },
                 {
-                  icon: Keyboard,
-                  title: "Keyboards",
-                  sub: "Building Customs",
+                  icon: BookOpenText,
+                  title: "Reading",
+                  sub: "Novels, Fiction & Biographies",
                 },
-                { icon: Mountain, title: "Hiking", sub: "Nature Trails" },
+                {
+                  icon: Clapperboard,
+                  title: "Watching",
+                  sub: "Movies & Series",
+                },
+                { icon: Box, title: "3D Modeling", sub: "Cars" },
               ].map((hobby, i) => (
                 <div
                   key={i}
