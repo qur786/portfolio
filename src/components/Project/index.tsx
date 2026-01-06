@@ -7,7 +7,7 @@ interface ProjectProps {
   title: string;
   deployedLink?: string;
   githubLink: string;
-  skills: string[];
+  expertise: string[];
   imageClipPosition?: string;
 }
 
@@ -17,7 +17,7 @@ export function Project({
   deployedLink,
   image,
   imageAlt,
-  skills,
+  expertise,
   imageClipPosition = "0px_25%",
 }: ProjectProps): JSX.Element {
   return (
@@ -29,14 +29,14 @@ export function Project({
       />
       <div className="min-h-48 flex flex-col justify-between gap-2">
         <div className="px-2 py-2 font-bold text-xl text-center">{title}</div>
-        {skills.length > 0 ? (
+        {expertise.length > 0 ? (
           <div className="flex flex-row justify-start flex-wrap px-2 gap-2">
-            {skills.slice(0, 6).map((skill) => (
+            {expertise.slice(0, 6).map((exp) => (
               <p
-                key={skill}
+                key={exp}
                 className="rounded-xl text-sm bg-sky-500 dark:bg-[#1f1f86] px-2"
               >
-                {skill}
+                {exp}
               </p>
             ))}
           </div>

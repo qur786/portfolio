@@ -3,7 +3,7 @@ import { HeroSection } from "./components/HeroSection";
 import { ExperienceSection } from "./components/ExperienceSection";
 import { ProjectsSection } from "./components/ProjectsSection";
 import { HackathonsSection } from "./components/HackathonsSection";
-import { SkillsSection } from "./components/SkillsSection";
+import { SkillsSection } from "./components/ExpertiseSection";
 import { EducationHobbiesSection } from "./components/EducationHobbiesSection";
 import { Footer } from "./components/Footer2";
 import { ThreeJSBackground } from "./components/ThreeJSBackground";

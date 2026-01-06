@@ -13,7 +13,7 @@ function getSkillLevel(level: number) {
 export function SkillsSection() {
   return (
     <section
-      id="skills"
+      id="expertise"
       className="py-32 bg-zinc-900/30 relative z-10 backdrop-blur-sm"
     >
       <div className="container mx-auto px-6">
@@ -75,18 +75,18 @@ export function SkillsSection() {
                     level: 85,
                   },
                   { name: "Storybook.js", level: 85 },
-                ].map((skill) => (
-                  <div key={skill.name}>
+                ].map((exp) => (
+                  <div key={exp.name}>
                     <div className="flex justify-between text-sm mb-1">
-                      <span className="text-zinc-300">{skill.name}</span>
+                      <span className="text-zinc-300">{exp.name}</span>
                       <span className="text-zinc-500">
-                        {getSkillLevel(skill.level)}
+                        {getSkillLevel(exp.level)}
                       </span>
                     </div>
                     <div className="h-1 bg-zinc-800 rounded-full overflow-hidden">
                       <div
                         className="h-full bg-cyan-500"
-                        style={{ width: `${skill.level.toString()}%` }}
+                        style={{ width: `${exp.level.toString()}%` }}
                       ></div>
                     </div>
                   </div>
@@ -122,18 +122,18 @@ export function SkillsSection() {
                   { name: "GraphQL", level: 80 },
                   { name: "Webpack / Bable / ESLint / Prettier", level: 90 },
                   { name: "Playwright / Jest", level: 85 },
-                ].map((skill) => (
-                  <div key={skill.name}>
+                ].map((exp) => (
+                  <div key={exp.name}>
                     <div className="flex justify-between text-sm mb-1">
-                      <span className="text-zinc-300">{skill.name}</span>
+                      <span className="text-zinc-300">{exp.name}</span>
                       <span className="text-zinc-500">
-                        {getSkillLevel(skill.level)}
+                        {getSkillLevel(exp.level)}
                       </span>
                     </div>
                     <div className="h-1 bg-zinc-800 rounded-full overflow-hidden">
                       <div
                         className="h-full bg-violet-500"
-                        style={{ width: `${skill.level.toString()}%` }}
+                        style={{ width: `${exp.level.toString()}%` }}
                       ></div>
                     </div>
                   </div>

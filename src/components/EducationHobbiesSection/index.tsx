@@ -2,7 +2,10 @@ import { Camera, BookOpenText, Clapperboard, Box } from "lucide-react";
 
 export function EducationHobbiesSection() {
   return (
-    <section className="py-24 relative z-10 border-t border-white/5">
+    <section
+      id="academic"
+      className="py-24 relative z-10 border-t border-white/5"
+    >
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div className="slide-up">
@@ -10,7 +13,7 @@ export function EducationHobbiesSection() {
             <span className="font-mono text-xs text-green-400 tracking-widest block mb-4">
               // ACADEMICS
             </span>
-            <h3 className="text-3xl font-bold text-white mb-8">Education</h3>
+            <h3 className="text-3xl font-bold text-white mb-8">Academic</h3>
             <div className="space-y-8">
               <div className="group">
                 <h4 className="text-xl font-bold text-white group-hover:text-green-400 transition-colors">

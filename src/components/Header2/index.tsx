@@ -27,7 +27,14 @@ export function Header() {
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center gap-8 text-sm font-medium">
-            {["Experience", "Projects", "Skills", "Hackathons"].map((item) => (
+            {[
+              "Experience",
+              "Projects",
+              "Expertise",
+              "Hackathons",
+              "Academic",
+              "Contact",
+            ].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -63,18 +70,23 @@ export function Header() {
         >
           <X className="w-8 h-8" />
         </button>
-        {["Experience", "Projects", "Skills", "Hackathons", "Contact"].map(
-          (item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className="text-3xl font-bold hover:text-cyan-400"
-              onClick={toggleMenu}
-            >
-              {item}
-            </a>
-          ),
-        )}
+        {[
+          "Experience",
+          "Projects",
+          "Expertise",
+          "Hackathons",
+          "Academic",
+          "Contact",
+        ].map((item) => (
+          <a
+            key={item}
+            href={`#${item.toLowerCase()}`}
+            className="text-3xl font-bold hover:text-cyan-400"
+            onClick={toggleMenu}
+          >
+            {item}
+          </a>
+        ))}
       </div>
     </>
   );

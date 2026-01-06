@@ -99,10 +99,10 @@ export function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#skills"
+                      href="#expertise"
                       className="hover:text-white transition-colors"
                     >
-                      Skills
+                      Expertise
                     </a>
                   </li>
                   <li>
@@ -111,6 +111,14 @@ export function Footer() {
                       className="hover:text-white transition-colors"
                     >
                       Hackathons
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#academic"
+                      className="hover:text-white transition-colors"
+                    >
+                      Academic
                     </a>
                   </li>
                 </ul>
