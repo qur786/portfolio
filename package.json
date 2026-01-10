@@ -9,8 +9,6 @@
   "scripts": {
     "build": "tsc && vite build",
     "clean": "shx rm -rf dist node_modules",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d build",
     "format": "yarn lint && yarn pretty",
     "lint": "eslint src --ext ts,tsx --fix --report-unused-disable-directives --max-warnings 0",
     "pretty": "prettier src --write && sort-package-json",
